@@ -1,0 +1,106 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OpenEPCIS – openEpcis</title>
+    <link>https://Aravinda93.github.io/tags/openepcis/</link>
+    <description>Recent content in openEpcis on OpenEPCIS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://Aravinda93.github.io/tags/openepcis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: EPCIS</title>
+      <link>https://Aravinda93.github.io/docs/introduction/epcis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://Aravinda93.github.io/docs/introduction/epcis/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;epcis&#34;&gt;EPCIS:&lt;/h2&gt;
+&lt;p&gt;EPCIS is an open ISO/IEC/GS1 standard that allows visibility data information to be captured and shared within an organization or between multiple organizations in the form of an event. The EPCIS event data can be used for all physical objects such as assets, products, logical units, reusable transport items, etc., or can also be used for digital objects such as music downloads, electronic books, electronic coupons, subscriptions, etc. The EPCIS standard was designed to improve cooperation between trading partners by exchanging comprehensive information on physical and digital items. The initial version of EPCIS 1.0 was released at the beginning of 2007. Later, EPCIS 1.1 and 1.2 were released in 2014 and 2016 respectively with various enhancements. The latest version, EPCIS 2.0, is published in June 2022 with a lot of significant enhancements.&lt;/p&gt;
+&lt;p&gt;The main objective of the EPCIS data is to provide visibility information within a specific business process. The following figure 1 describes how EPCIS data may be generated within a simple business process.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./Fig1.jpg&#34; alt=&#34;Figure 1: Generation of EPCIS events in a simple business process.&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Above figure depicts a simplified business process in which a manufacturer produces an item, which is then packed and shipped to the Retailer DC (Distribution Center). The item is received by Retailer DC, who then sends it to the appropriate Retail Store. The item is received by the retail store and moved to a sales area where a consumer can purchase it. The simplified flow of goods can consist of the following critical tracking events: packing, shipping, receiving the items, etc. At every step within these business processes, an EPCIS event is created. This EPCIS event provides information on what exactly was occurring to the items at that particular step. The entirety of all these EPCIS events provides a complete picture of the whole business process.&lt;/p&gt;
+&lt;p&gt;EPCIS events consist of context information comprising the five different dimensions What, When, Where, Why, and How. Each of these dimensions consists of multiple fields that make up the event information. Each dimension is independent of one another and not mandatory to include all dimensions/fields of dimensions in the EPCIS event. For example, the following pieces of information are produced for four dimensions when a product is shipped from the manufacturer to retail DC in the V2 business process mentioned above:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;What&lt;/strong&gt;: It contains what items or containers were sent to DC.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;When&lt;/strong&gt;: It contains the date-time information when the items were shipped, along with the respective time zone offset information.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Where&lt;/strong&gt;: It contains information about the location from where the shipment was sent. Also, where the items are expected to be after the event has occurred.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Why&lt;/strong&gt;: It contains the business context of the information. For example, the business step in this particular event is shipping.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;areas-of-application-for-epcis&#34;&gt;Areas of application for EPCIS:&lt;/h2&gt;
+&lt;p&gt;EPCIS can stitch together individual events that have occurred over time in a particular supply chain within an organization or across multiple organizations. Hence, EPCIS provides many applications, such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Tracking&lt;/strong&gt;: An organization can find exactly where the objects are present within the supply chain using the most recent EPCIS event.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Tracing&lt;/strong&gt;: An organization can track the objects to their origin using all EPCIS events associated with the particular object.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Analysing&lt;/strong&gt;: All the EPCIS events collected over a particular time can be interpreted in a specific business context.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Automation&lt;/strong&gt;: EPCIS events can trigger various other business processes in real-time.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Verification&lt;/strong&gt;: Comparison of the real-time status of the object using the current EPCIS event and the anticipated state of the object.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;benefits-of-epcis&#34;&gt;Benefits of EPCIS:&lt;/h2&gt;
+&lt;p&gt;EPCIS can be used in various industries such as automotive, healthcare, food services, transport, retail, etc. It provides many benefits to organizations and customers, depending on the type of industry sector. Following are some most common beneficial aspects of the EPCIS standard in various industry sectors:&lt;/p&gt;
+&lt;p&gt;• Identify the origin of the object to support anti-counterfeit measures.&lt;/p&gt;
+&lt;p&gt;• Identify a chain of custody for an object along with date and time information.&lt;/p&gt;
+&lt;p&gt;• Validation of digital coupons in real-time.&lt;/p&gt;
+&lt;p&gt;• Recognise the freshness of the product.&lt;/p&gt;
+&lt;p&gt;• Provide notification on various attributes such as location, timing, status, quantity, or quality of the product in real-time.&lt;/p&gt;
+&lt;p&gt;• Ensure that items reach the consumers at the right location and time.&lt;/p&gt;
+&lt;p&gt;• Increase consumer protection.&lt;/p&gt;
+&lt;h2 id=&#34;openepcis&#34;&gt;OpenEPCIS:&lt;/h2&gt;
+&lt;p&gt;benelog GmbH &amp;amp; Co. KG is an organization located in Kerpen, Germany that focuses on development of software and system architecture. The developed software and applications operate effectively and efficiently in the fields of big data processing, complex, scalable, cloud-based environments. benelog GmbH &amp;amp; Co. KG designed and developed OpenEPCIS implementation based on the EPCIS standard. We assist businesses in seamlessly and successfully integrating the EPCIS standard into their supply chain management systems by using OpenEPCIS. We also contributed to the standardization of EPCIS 2.0 as a core member of the GS1 group. We have created several open source tools and projects associated with EPCIS standards as part of our contribution to the EPCIS community, which any entity can utilize for their use (Note: more on the tools and projects discussed later in this documentation). Email us at &lt;a href=&#34;mailto:example@example.io&#34;&gt;example@example.io&lt;/a&gt; if you would like to contact us with any questions or to collaborate.&lt;/p&gt;
+&lt;h2 id=&#34;references&#34;&gt;References:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Read more about EPCIS: &lt;a href=&#34;https://confluence.company-group.com/display/OEPCISDOC/EPCIS+in+a+Nutshell&#34;&gt;https://confluence.company-group.com/display/OEPCISDOC/EPCIS+in+a+Nutshell&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;style type=&#34;text/css&#34;&gt;
+    img {
+        width: 600px;
+        display: block;
+        margin: 0 auto
+    }
+&lt;/style&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Documentation</title>
+      <link>https://Aravinda93.github.io/docs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://Aravinda93.github.io/docs/</guid>
+      <description>
+        
+        
+        &lt;p&gt;This section provides an introduction to EPCIS, OpenEPCIS, related projects and several other OpenEPCIS-related topics.&lt;/p&gt;
+&lt;p&gt;Please refer to the &lt;a href=&#34;https://Aravinda93.github.io/docs/introduction/&#34;&gt;EPCIS&lt;/a&gt; section which provides overview of the EPCIS.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

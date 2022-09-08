@@ -2,84 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://Aravinda93.github.io/docs/overview/</loc>
+    <loc>https://Aravinda93.github.io/docs/introduction/epcis/</loc>
   </url><url>
-    <loc>https://Aravinda93.github.io/docs/tasks/beds/</loc>
-    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+    <loc>https://Aravinda93.github.io/docs/introduction/</loc>
   </url><url>
-    <loc>https://Aravinda93.github.io/docs/tasks/ponycopters/configuring-ponycopters/</loc>
-    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+    <loc>https://Aravinda93.github.io/docs/document-format-converter/</loc>
   </url><url>
-    <loc>https://Aravinda93.github.io/docs/getting-started/</loc>
-    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+    <loc>https://Aravinda93.github.io/docs/document-version-converter/</loc>
   </url><url>
-    <loc>https://Aravinda93.github.io/docs/examples/</loc>
-    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+    <loc>https://Aravinda93.github.io/docs/event-hash-generator/</loc>
   </url><url>
-    <loc>https://Aravinda93.github.io/docs/tasks/ponycopters/launching-ponycopters/</loc>
-    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+    <loc>https://Aravinda93.github.io/docs/identifiers-converter/</loc>
   </url><url>
-    <loc>https://Aravinda93.github.io/docs/tutorials/multi-bear/</loc>
-    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://Aravinda93.github.io/docs/tasks/porridge/</loc>
-    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://Aravinda93.github.io/docs/concepts/</loc>
-  </url><url>
-    <loc>https://Aravinda93.github.io/docs/tasks/task/</loc>
-    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://Aravinda93.github.io/docs/tutorials/tutorial2/</loc>
-    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://Aravinda93.github.io/docs/tasks/</loc>
-    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://Aravinda93.github.io/docs/tutorials/</loc>
-    <lastmod>2017-01-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://Aravinda93.github.io/docs/reference/</loc>
-    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://Aravinda93.github.io/docs/contribution-guidelines/</loc>
-  </url><url>
-    <loc>https://Aravinda93.github.io/blog/news/</loc>
-    <lastmod>2018-10-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://Aravinda93.github.io/blog/releases/</loc>
-    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
+    <loc>https://Aravinda93.github.io/docs/test-data-generator/</loc>
   </url><url>
     <loc>https://Aravinda93.github.io/docs/</loc>
-    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://Aravinda93.github.io/blog/2018/10/06/easy-documentation-with-docsy/</loc>
-    <lastmod>2018-10-06T00:00:00+00:00</lastmod>
+    <loc>https://Aravinda93.github.io/privacy/</loc>
   </url><url>
-    <loc>https://Aravinda93.github.io/blog/</loc>
-    <lastmod>2018-10-06T00:00:00+00:00</lastmod>
+    <loc>https://Aravinda93.github.io/imprint/</loc>
   </url><url>
-    <loc>https://Aravinda93.github.io/</loc>
-    <lastmod>2018-10-06T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://Aravinda93.github.io/de/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://Aravinda93.github.io/"
-                />
+    <loc>https://Aravinda93.github.io/about/</loc>
   </url><url>
-    <loc>https://Aravinda93.github.io/blog/2018/10/06/the-second-blog-post/</loc>
-    <lastmod>2018-10-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://Aravinda93.github.io/blog/2018/01/04/another-great-release/</loc>
-    <lastmod>2018-01-04T00:00:00+00:00</lastmod>
+    <loc>https://Aravinda93.github.io/tags/benelog/</loc>
   </url><url>
     <loc>https://Aravinda93.github.io/categories/</loc>
-    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -91,23 +38,41 @@
                 href="https://Aravinda93.github.io/categories/"
                 />
   </url><url>
-    <loc>https://Aravinda93.github.io/tags/docs/</loc>
-    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+    <loc>https://Aravinda93.github.io/tags/epcis/</loc>
   </url><url>
-    <loc>https://Aravinda93.github.io/docs/getting-started/example-page/</loc>
-    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+    <loc>https://Aravinda93.github.io/tags/four/</loc>
   </url><url>
-    <loc>https://Aravinda93.github.io/categories/examples/</loc>
-    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+    <loc>https://Aravinda93.github.io/tags/gs1/</loc>
   </url><url>
-    <loc>https://Aravinda93.github.io/docs/reference/parameter-reference/</loc>
-    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+    <loc>https://Aravinda93.github.io/categories/home/</loc>
   </url><url>
-    <loc>https://Aravinda93.github.io/tags/sample/</loc>
-    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+    <loc>https://Aravinda93.github.io/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://Aravinda93.github.io/de/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://Aravinda93.github.io/"
+                />
+  </url><url>
+    <loc>https://Aravinda93.github.io/tags/imprint/</loc>
+  </url><url>
+    <loc>https://Aravinda93.github.io/tags/introduction/</loc>
+  </url><url>
+    <loc>https://Aravinda93.github.io/tags/one/</loc>
+  </url><url>
+    <loc>https://Aravinda93.github.io/tags/openepcis/</loc>
+  </url><url>
+    <loc>https://Aravinda93.github.io/categories/openepcis/</loc>
+  </url><url>
+    <loc>https://Aravinda93.github.io/tags/privacy/</loc>
+  </url><url>
+    <loc>https://Aravinda93.github.io/search/</loc>
   </url><url>
     <loc>https://Aravinda93.github.io/tags/</loc>
-    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -119,18 +84,6 @@
                 href="https://Aravinda93.github.io/tags/"
                 />
   </url><url>
-    <loc>https://Aravinda93.github.io/tags/test/</loc>
-    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://Aravinda93.github.io/docs/tasks/ponycopters/</loc>
-    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://Aravinda93.github.io/about/</loc>
-  </url><url>
-    <loc>https://Aravinda93.github.io/community/</loc>
-  </url><url>
-    <loc>https://Aravinda93.github.io/categories/placeholders/</loc>
-  </url><url>
-    <loc>https://Aravinda93.github.io/search/</loc>
+    <loc>https://Aravinda93.github.io/tags/two/</loc>
   </url>
 </urlset>

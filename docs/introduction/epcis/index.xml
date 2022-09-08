@@ -1,0 +1,17 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OpenEPCIS – EPCIS</title>
+    <link>https://Aravinda93.github.io/docs/introduction/epcis/</link>
+    <description>Recent content in EPCIS on OpenEPCIS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://Aravinda93.github.io/docs/introduction/epcis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

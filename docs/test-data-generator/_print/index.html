@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.101.0" />
+<link rel="canonical" type="text/html" href="https://Aravinda93.github.io/docs/test-data-generator/">
+<link rel="alternate" type="application/rss&#43;xml" href="https://Aravinda93.github.io/docs/test-data-generator/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+<title>OpenEPCIS&nbsp; | Test Data Generator
+  </title>
+<meta name="description" content="This page provides information on generating sequence of EPCIS test data events.
+">
+<meta property="og:title" content="Test Data Generator" />
+<meta property="og:description" content="This page provides information on generating sequence of EPCIS test data events.
+" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://Aravinda93.github.io/docs/test-data-generator/" /><meta property="og:site_name" content="OpenEPCIS" />
+
+<meta itemprop="name" content="Test Data Generator">
+<meta itemprop="description" content="This page provides information on generating sequence of EPCIS test data events.
+"><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Test Data Generator"/>
+<meta name="twitter:description" content="This page provides information on generating sequence of EPCIS test data events.
+"/>
+
+
+
+
+<link rel="preload" href="/scss/main.min.4b9e8164431a8f99d19923c56221ffb0b9a533a62fd70e45fc397bc1a75b7517.css" as="style">
+<link href="/scss/main.min.4b9e8164431a8f99d19923c56221ffb0b9a533a62fd70e45fc397bc1a75b7517.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body class="td-section">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 250 250" enable-background="new 0 0 250 250"><g id="layer2" transform="translate(1286.5947,194.25082)" inkscape:groupmode="layer" inkscape:label="Lenses"><path id="path3965" inkscape:connector-curvature="0" fill="#333" d="M-1173.803-189.05c-56.813 6.035-101.962 51.184-107.997 107.997h94.792c2.841-5.705 7.501-10.365 13.206-13.206V-189.05zm25.989.0v94.807c5.71 2.833 10.357 7.486 13.199 13.19h94.793C-1045.859-137.873-1090.993-183.023-1147.814-189.05zM-1281.8-55.064c6.027 56.821 51.175 101.962 107.997 107.999v-94.801c-5.713-2.841-10.365-7.481-13.206-13.198H-1281.8zm147.185.0c-2.842 5.717-7.489 10.357-13.199 13.198v94.801c56.821-6.028 101.962-51.178 107.992-107.999H-1134.615z"/><radialGradient id="path3124_1_" cx="1135.7129" cy="-5179.2236" r="3542.8374" fx="837.5844" fy="-6918.5396" gradientTransform="matrix(0.0599 -0.0171 -0.0125 -0.0439 -1331.4193 -289.2803)" gradientUnits="userSpaceOnUse"><stop offset="0" style="stop-color:#4C6DB4"/><stop offset=".6154" style="stop-color:#2C6BA7"/><stop offset=".7923" style="stop-color:#104B86"/><stop offset="1" style="stop-color:#16477F"/></radialGradient><path id="path3124" inkscape:export-ydpi="15.98" inkscape:export-xdpi="15.98" inkscape:export-filename="/data/text4139.png" inkscape:connector-curvature="0" fill="url(#path3124_1_)" stroke="#010101" stroke-width=".0915" d="M-1176.078-191.327c-56.813 6.035-101.965 51.187-108 108h94.801c2.832-5.71 7.489-10.358 13.199-13.199v-94.801zM-1150.09-191.327v94.808c5.717 2.84 10.357 7.482 13.199 13.192h94.791C-1048.135-140.141-1093.27-185.293-1150.09-191.327zM-1284.078-57.333c6.027 56.813 51.187 101.964 108 107.999V-44.14c-5.71-2.835-10.367-7.482-13.199-13.192H-1284.078zm147.187.0c-2.834 5.71-7.482 10.357-13.199 13.192v94.807c56.828-6.035 101.962-51.178 107.99-107.999H-1136.891z"/></g></svg></span><span class="font-weight-bold">OpenEPCIS</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/about/" ><span>About us</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link active" href="/docs/" ><span class="active">Documentation</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/privacy/" ><span>Privacy</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/imprint/" ><span>Imprint</span></a>
+			</li>
+			
+			
+			
+			<li class="nav-item dropdown mr-4 d-none d-lg-block">
+				
+
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	English
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	
+		<a class="dropdown-item" href="/de/">Deutsch</a>
+	
+</div>
+			</li>
+			
+		</ul>
+	</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+This is the multi-page printable view of this section.
+<a href="#" onclick="print();return false;">Click here to print</a>.
+</p><p>
+<a href="/docs/test-data-generator/">Return to the regular view of this page</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">Test Data Generator</h1>
+<div class="lead">This page provides information on generating sequence of EPCIS test data events.</div>
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+
+    </ul>
+
+
+<div class="content">
+      <h2 id="introduction">Introduction:</h2>
+<p>The problem for various solution providers and user companies adopting EPCIS for their projects is to generate test data for testing purposes (load tests, populating test databases, etc.). OpenEPCIS Test Data Generator was developed to assist the EPCIS community by making it simple to generate test data (e.g. hundreds or thousands of events). Regardless of the industry, use case, or supply chain system, the developed application provides a single solution for creating test events. It saves time and effort for the various organizations because they don&rsquo;t have to build, maintain, or incorporate new capabilities of EPCIS into their test data production technologies. Based on the information provided by users and their organizational needs, the application can create bulk EPCIS events. These EPCIS events are compliant with EPCIS 2.0, the most recent version of the EPCIS, and events are generated in JSON/JSON-LD format. It also includes the option to generate events and identifiers in both URN and WebURI format.</p>
+<h2 id="usage">Usage:</h2>
+<ul>
+<li>
+<p><strong>Web application</strong>:
+The web application is beneficial to users who are new to the EPCIS world as it visually provides all the components of the EPCIS which are segregated based on different dimensions. It is very easy to provide values for necessary fields based on the requirement or supply chain and generate the EPCIS events accordingly. The web application can be accessed by using the link: <a href="https://test-data-generator.openepcis.io/">https://test-data-generator.openepcis.io/</a>.</p>
+</li>
+<li>
+<p><strong>cURL command</strong>:
+Client URL or popularly known as cURL is a command-line utility that is used to send and receive data from or to a server. This technology is suited for automation since it is designed to work without user interaction. OpenEPCIS Test Data Generator supports the generation of EPCIS events using the cURL command.  Users can make requests to the Test Data Generator service (<a href="https://test-data-api.openepcis.io/api/generateTestData?pretty=true">https://test-data-api.openepcis.io/api/generateTestData?pretty=true</a>) by using their preferred InputTemplate information in JSON format.</p>
+</li>
+<li>
+<p><strong>API endpoint</strong>:
+Users can make use of API endpoint to generate test data events. The required template with all information can be sent to Restful API end point which will be analysed and events are generated. Finally, these events are sent as response to user. Users can access the REST endpoint in Swagger-UI for OpenEPCIS Test Data Generator using the link: <a href="https://test-data-api.openepcis.io/q/swagger-ui/">https://test-data-api.openepcis.io/q/swagger-ui/</a>.</p>
+</li>
+</ul>
+
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="OpenEPCIS" aria-label="OpenEPCIS">
+    <a class="text-white" target="_blank" rel="noopener" href="https://openepcis.io/" aria-label="OpenEPCIS">
+      <em class="fa fa-globe"></em>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitHub Account for OpenEPCIS" aria-label="GitHub Account for OpenEPCIS">
+    <a class="text-white" target="_blank" rel="noopener" href="https://github.com/openepcis" aria-label="GitHub Account for OpenEPCIS">
+      <em class="fab fa-github"></em>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Contact us for any issues/queries/collaboration" aria-label="Contact us for any issues/queries/collaboration">
+    <a class="text-white" target="_blank" rel="noopener" href="mailto:example@example.com" aria-label="Contact us for any issues/queries/collaboration">
+      <em class="fa fa-envelope"></em>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Privacy Policy of OpenEPCIS" aria-label="Privacy Policy of OpenEPCIS">
+    <a class="text-white" target="_blank" rel="noopener" href="/privacy/" aria-label="Privacy Policy of OpenEPCIS">
+      <em class="fa-solid fa-shield-halved"></em>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Imprint of OpenEPCIS" aria-label="Imprint of OpenEPCIS">
+    <a class="text-white" target="_blank" rel="noopener" href="/imprint/" aria-label="Imprint of OpenEPCIS">
+      <em class="fa-solid fa-stamp"></em>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2022 OpenEPCIS All Rights Reserved</small>
+        <div>
+          <small class="ml-1"><a href="/privacy/" target="_blank" rel="noopener">Privacy Policy</a></small>
+          <small class="ml-1"><a href="/imprint/" target="_blank" rel="noopener">Imprint</a></small>
+                  
+          <small class="ml-2"><a href="/about/">About Us</a></small>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+    integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA=="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+<script src='/js/tabpane-persist.js'></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.72a17f630de43b961a554934a49ac1db3e5c28537ecca842209b11a5095eca62.js" integrity="sha256-cqF/Yw3kO5YaVUk0pJrB2z5cKFN&#43;zKhCIJsRpQleymI=" crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+</html>

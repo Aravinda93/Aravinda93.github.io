@@ -1,0 +1,34 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OpenEPCIS – gs1</title>
+    <link>https://Aravinda93.github.io/tags/gs1/</link>
+    <description>Recent content in gs1 on OpenEPCIS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://Aravinda93.github.io/tags/gs1/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Introduction</title>
+      <link>https://Aravinda93.github.io/docs/introduction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://Aravinda93.github.io/docs/introduction/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;background&#34;&gt;Background:&lt;/h2&gt;
+&lt;p&gt;The supply chain system is made up of several organizations, events, people, and tools that are participating in delivering services or goods to customers. All physical and digital products progress through some form of supply chain activities before reaching the possession of customers. The accessibility and visibility of the product data throughout its life cycle in the supply chain is the primary concern for the organization as it needs to track the products in real-time and if required convey the relevant information to customers or other organizations. If each organization or entity involved in the supply chain system uses its own schema or model to keep track of the items then it is very difficult to track the products end-to-end and makes it hard for an organization to communicate with other organizations and share the data. To address this issue, there was a need for a standard that could be implemented by all businesses within their supply chain system so as to enable tracking, tracing, and monitoring of goods at every step of the supply chain. Hence, GS1 introduced the global standard known as EPCIS (Electronic Product Code Information Services).&lt;/p&gt;
+&lt;h2 id=&#34;gs1-global-standard-one&#34;&gt;GS1 (Global Standard One):&lt;/h2&gt;
+&lt;p&gt;The GS1 is a non-profit organization that develops and maintains standards for the identification, capture, and sharing of information. GS1 was established in April 1974 and is based in Brussels, Belgium. GS1 standards are being used by over 2 million businesses throughout the world. In 1974, GS1 standardized the EAN/UPC (European Article Number/Universal Product Code) barcode, which is still used and printed on a wide range of items today. GS1 operates in various industries like retail, healthcare, logistics, food service, technical industries, etc. GS1 has developed a standard for creating and sharing visibility data within and across multiple organizations known as EPCIS (Electronic Product Code Information Services). Using the standards designed by GS1 various trading partners such as customers, suppliers, distributors, logistic service providers, retailers, etc. can use a common language for communication in their supply chain. The main goal of GS1 standards is to enhance the physical and digital supply chain performance, safety, security, and accessibility. GS1 has around 115 member organizations in various countries across the globe.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

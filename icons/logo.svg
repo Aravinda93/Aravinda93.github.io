@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 250 250" enable-background="new 0 0 250 250" xml:space="preserve">
+    <g id="layer2" transform="translate(1286.5947,194.25082)" inkscape:groupmode="layer" inkscape:label="Lenses">
+        <path id="path3965" inkscape:connector-curvature="0" fill="#333333" d="M-1173.803-189.05
+            c-56.813,6.035-101.962,51.184-107.997,107.997h94.792c2.841-5.705,7.501-10.365,13.206-13.206V-189.05z M-1147.814-189.05v94.807
+            c5.71,2.833,10.357,7.486,13.199,13.19h94.793C-1045.859-137.873-1090.993-183.023-1147.814-189.05z M-1281.8-55.064
+            c6.027,56.821,51.175,101.962,107.997,107.999v-94.801c-5.713-2.841-10.365-7.481-13.206-13.198H-1281.8z M-1134.615-55.064
+            c-2.842,5.717-7.489,10.357-13.199,13.198v94.801c56.821-6.028,101.962-51.178,107.992-107.999H-1134.615z"/>
+        
+        <radialGradient id="path3124_1_" cx="1135.7129" cy="-5179.2236" r="3542.8374" fx="837.5844" fy="-6918.5396" gradientTransform="matrix(0.0599 -0.0171 -0.0125 -0.0439 -1331.4193 -289.2803)" gradientUnits="userSpaceOnUse">
+            <stop  offset="0" style="stop-color:#4C6DB4"/>
+            <stop  offset="0.6154" style="stop-color:#2C6BA7"/>
+            <stop  offset="0.7923" style="stop-color:#104B86"/>
+            <stop  offset="1" style="stop-color:#16477F"/>
+        </radialGradient>
+        
+        <path id="path3124" inkscape:export-ydpi="15.98" inkscape:export-xdpi="15.98" inkscape:export-filename="/data/text4139.png" inkscape:connector-curvature="0" fill="url(#path3124_1_)" stroke="#010101" stroke-width="0.0915" d="
+            M-1176.078-191.327c-56.813,6.035-101.965,51.187-108,108h94.801c2.832-5.71,7.489-10.358,13.199-13.199V-191.327z
+             M-1150.09-191.327v94.808c5.717,2.84,10.357,7.482,13.199,13.192h94.791C-1048.135-140.141-1093.27-185.293-1150.09-191.327
+            L-1150.09-191.327z M-1284.078-57.333c6.027,56.813,51.187,101.964,108,107.999V-44.14c-5.71-2.835-10.367-7.482-13.199-13.192
+            H-1284.078z M-1136.891-57.333c-2.834,5.71-7.482,10.357-13.199,13.192v94.807c56.828-6.035,101.962-51.178,107.99-107.999
+            H-1136.891z"/>
+    </g>
+</svg>

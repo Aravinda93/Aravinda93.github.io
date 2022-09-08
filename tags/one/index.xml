@@ -1,0 +1,30 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OpenEPCIS – ONE</title>
+    <link>https://Aravinda93.github.io/tags/one/</link>
+    <description>Recent content in ONE on OpenEPCIS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="https://Aravinda93.github.io/tags/one/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Event Hash Generator</title>
+      <link>https://Aravinda93.github.io/docs/event-hash-generator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://Aravinda93.github.io/docs/event-hash-generator/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
