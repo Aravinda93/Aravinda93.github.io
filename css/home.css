@@ -1,0 +1,18 @@
+.projects-item-regular:hover .fa-hover-show {
+    display: inline-block;
+  }
+  
+.projects-item-regular .fa-hover-show,
+.projects-item-regular:hover .fa-hover-hidden {
+  display: none;
+}
+
+.service-item:hover .fa-hover-show {
+  display: inline-block;
+}
+
+.service-item .fa-hover-show,
+.service-item:hover .fa-hover-hidden {
+  display: none;
+}
+  

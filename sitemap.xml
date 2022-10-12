@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <sitemap>
-    <loc>https://Aravinda93.github.io/de/sitemap.xml</loc>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>https://Aravinda93.github.io/en/sitemap.xml</loc>
-    
-  </sitemap>
-  
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://openepcis.github.io/docs/introduction/</loc>
+  </url><url>
+    <loc>https://openepcis.github.io/docs/epcis/</loc>
+  </url><url>
+    <loc>https://openepcis.github.io/docs/document-format-converter/</loc>
+  </url><url>
+    <loc>https://openepcis.github.io/docs/document-version-converter/</loc>
+  </url><url>
+    <loc>https://openepcis.github.io/docs/event-hash-generator/</loc>
+  </url><url>
+    <loc>https://openepcis.github.io/docs/identifiers-converter/</loc>
+  </url><url>
+    <loc>https://openepcis.github.io/docs/test-data-generator/</loc>
+  </url><url>
+    <loc>https://openepcis.github.io/docs/</loc>
+  </url><url>
+    <loc>https://openepcis.github.io/privacy/</loc>
+  </url><url>
+    <loc>https://openepcis.github.io/imprint/</loc>
+  </url><url>
+    <loc>https://openepcis.github.io/categories/</loc>
+  </url><url>
+    <loc>https://openepcis.github.io/</loc>
+  </url><url>
+    <loc>https://openepcis.github.io/tags/</loc>
+  </url>
+</urlset>

@@ -1,11 +1,17 @@
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>OpenEPCIS | Documentation</title>
+
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="generator" content="Hugo 0.101.0" />
-<link rel="alternate" type="text/html" href="https://Aravinda93.github.io/docs/identifiers-converter/_print/">
-<link rel="alternate" type="application/rss&#43;xml" href="https://Aravinda93.github.io/docs/identifiers-converter/index.xml">
+<link rel="alternate" type="text/html" href="https://openepcis.github.io/docs/identifiers-converter/_print/">
+<link rel="alternate" type="application/rss&#43;xml" href="https://openepcis.github.io/docs/identifiers-converter/index.xml">
 <meta name="robots" content="index, follow">
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -13,115 +19,101 @@
 <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
 <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
-<title>OpenEPCIS&nbsp; | Identifier Converter
-  </title>
-<meta name="description" content="This page provides information on Identifier Converter.
-">
+
+<meta name="description" content="OpenEPCIS solution to transform EPCIS identifiers from URN to DL WebURI and vice versa.">
 <meta property="og:title" content="Identifier Converter" />
-<meta property="og:description" content="This page provides information on Identifier Converter.
-" />
+<meta property="og:description" content="OpenEPCIS solution to transform EPCIS identifiers from URN to DL WebURI and vice versa." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://Aravinda93.github.io/docs/identifiers-converter/" /><meta property="og:site_name" content="OpenEPCIS" />
+<meta property="og:url" content="https://openepcis.github.io/docs/identifiers-converter/" /><meta property="og:site_name" content="OpenEPCIS" />
 
 <meta itemprop="name" content="Identifier Converter">
-<meta itemprop="description" content="This page provides information on Identifier Converter.
-"><meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="OpenEPCIS solution to transform EPCIS identifiers from URN to DL WebURI and vice versa."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Identifier Converter"/>
-<meta name="twitter:description" content="This page provides information on Identifier Converter.
-"/>
+<meta name="twitter:description" content="OpenEPCIS solution to transform EPCIS identifiers from URN to DL WebURI and vice versa."/>
 
 
 
 
-<link rel="preload" href="/scss/main.min.4b9e8164431a8f99d19923c56221ffb0b9a533a62fd70e45fc397bc1a75b7517.css" as="style">
-<link href="/scss/main.min.4b9e8164431a8f99d19923c56221ffb0b9a533a62fd70e45fc397bc1a75b7517.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.eb4439104c9cdd117ae850120f6bb1e7cbaa8f61aab3167765c74b27363ee063.css" as="style">
+<link href="/scss/main.min.eb4439104c9cdd117ae850120f6bb1e7cbaa8f61aab3167765c74b27363ee063.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
   crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+<link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/openepcis-styles.css"/>
+<link rel="stylesheet" href="/css/animated.css"/>
+<link rel="stylesheet" href="/css/owl.css"/>
+<link rel="icon" type="image/x-icon" href="/images/openepcis-icon.ico">
 
   </head>
-  <body class="td-section">
-    <header>
-      
-<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
-        <a class="navbar-brand" href="/">
-		<span class="navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 250 250" enable-background="new 0 0 250 250"><g id="layer2" transform="translate(1286.5947,194.25082)" inkscape:groupmode="layer" inkscape:label="Lenses"><path id="path3965" inkscape:connector-curvature="0" fill="#333" d="M-1173.803-189.05c-56.813 6.035-101.962 51.184-107.997 107.997h94.792c2.841-5.705 7.501-10.365 13.206-13.206V-189.05zm25.989.0v94.807c5.71 2.833 10.357 7.486 13.199 13.19h94.793C-1045.859-137.873-1090.993-183.023-1147.814-189.05zM-1281.8-55.064c6.027 56.821 51.175 101.962 107.997 107.999v-94.801c-5.713-2.841-10.365-7.481-13.206-13.198H-1281.8zm147.185.0c-2.842 5.717-7.489 10.357-13.199 13.198v94.801c56.821-6.028 101.962-51.178 107.992-107.999H-1134.615z"/><radialGradient id="path3124_1_" cx="1135.7129" cy="-5179.2236" r="3542.8374" fx="837.5844" fy="-6918.5396" gradientTransform="matrix(0.0599 -0.0171 -0.0125 -0.0439 -1331.4193 -289.2803)" gradientUnits="userSpaceOnUse"><stop offset="0" style="stop-color:#4C6DB4"/><stop offset=".6154" style="stop-color:#2C6BA7"/><stop offset=".7923" style="stop-color:#104B86"/><stop offset="1" style="stop-color:#16477F"/></radialGradient><path id="path3124" inkscape:export-ydpi="15.98" inkscape:export-xdpi="15.98" inkscape:export-filename="/data/text4139.png" inkscape:connector-curvature="0" fill="url(#path3124_1_)" stroke="#010101" stroke-width=".0915" d="M-1176.078-191.327c-56.813 6.035-101.965 51.187-108 108h94.801c2.832-5.71 7.489-10.358 13.199-13.199v-94.801zM-1150.09-191.327v94.808c5.717 2.84 10.357 7.482 13.199 13.192h94.791C-1048.135-140.141-1093.27-185.293-1150.09-191.327zM-1284.078-57.333c6.027 56.813 51.187 101.964 108 107.999V-44.14c-5.71-2.835-10.367-7.482-13.199-13.192H-1284.078zm147.187.0c-2.834 5.71-7.482 10.357-13.199 13.192v94.807c56.828-6.035 101.962-51.178 107.99-107.999H-1136.891z"/></g></svg></span><span class="font-weight-bold">OpenEPCIS</span>
-	</a>
-	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
-		<ul class="navbar-nav mt-2 mt-lg-0">
-			
-			
-			<li class="nav-item mr-4 mb-2 mb-lg-0">
-				
-				
-				
-				
-				
-				
-				
-				
-				<a class="nav-link" href="/about/" ><span>About us</span></a>
-			</li>
-			
-			<li class="nav-item mr-4 mb-2 mb-lg-0">
-				
-				
-				
-				
-				
-				
-				
-				
-				<a class="nav-link active" href="/docs/" ><span class="active">Documentation</span></a>
-			</li>
-			
-			<li class="nav-item mr-4 mb-2 mb-lg-0">
-				
-				
-				
-				
-				
-				
-				
-				
-				<a class="nav-link" href="/privacy/" ><span>Privacy</span></a>
-			</li>
-			
-			<li class="nav-item mr-4 mb-2 mb-lg-0">
-				
-				
-				
-				
-				
-				
-				
-				
-				<a class="nav-link" href="/imprint/" ><span>Imprint</span></a>
-			</li>
-			
-			
-			
-			<li class="nav-item dropdown mr-4 d-none d-lg-block">
-				
+  <body>
+    
 
-<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	English
-</a>
-<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-	
-		<a class="dropdown-item" href="/de/">Deutsch</a>
-	
-</div>
-			</li>
-			
-		</ul>
-	</div>
-</nav>
+<header class="header-area header-sticky wow " data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav navbar">
+            
+            <a href="/" class="logo">
+              <img src="/images/openepcis-logo.png" alt="OpenEPCIS" width="75" height="75">
+            </a>
+            <ul class="nav">
+              
+              <li class="scroll-to-section active" active-class="active" exact><a href="/"><span >Home</span></a></li>
+              
+              <li class="scroll-to-section">
+                
+                
+                
+                
+                
+                
+                
+                
+                <a href="/docs/" ><span  class="active">Documentation</span></a>
+              </li>
+              
+              <li class="scroll-to-section">
+                
+                
+                
+                
+                
+                
+                
+                
+                <a href="/privacy/" ><span >Privacy</span></a>
+              </li>
+              
+              <li class="scroll-to-section">
+                
+                
+                
+                
+                
+                
+                
+                
+                <a href="/imprint/" ><span >Imprint</span></a>
+              </li>
+              
+            </ul>
+            <a class='menu-trigger'>
+              <span>Menu</span>
+            </a>
+            
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  
 
-    </header>
-    <div class="container-fluid td-outer">
+    <div class="container-fluid td-outer" style="padding-top:4.7%">
       <div class="td-main">
         <div class="row flex-xl-nowrap">
           <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
@@ -133,29 +125,14 @@
     </button>
   </form>
   <nav class="collapse td-sidebar-nav" id="td-section-nav">
-    <div class="nav-item dropdown d-block d-lg-none">
-      
-
-<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	English
-</a>
-<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-	
-		<a class="dropdown-item" href="/de/">Deutsch</a>
-	
-</div>
-    </div>
     <ul class="td-sidebar-nav__section pr-md-3 ul-0">
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
   <a href="/docs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Documentation</span></a>
   <ul class="ul-1">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsintroduction-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsintroduction-li">
   <a href="/docs/introduction/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsintroduction"><span class="">Introduction</span></a>
-  <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsintroductionepcis-li">
-  <a href="/docs/introduction/epcis/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsintroductionepcis"><span class="">EPCIS</span></a>
-</li>
-  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsepcis-li">
+  <a href="/docs/epcis/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsepcis"><span class="">EPCIS</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdocument-format-converter-li">
   <a href="/docs/document-format-converter/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdocument-format-converter"><span class="">Document Format Converter</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdocument-version-converter-li">
@@ -193,35 +170,6 @@
 
   
   
-    <div class="taxonomy taxonomy-terms-cloud taxo-tags">
-      
-        <h5 class="taxonomy-title">Tags</h5>
-      
-      <ul class="taxonomy-terms">
-        
-          <li><a class="taxonomy-term" href="https://Aravinda93.github.io/tags/benelog/" data-taxonomy-term="benelog"><span class="taxonomy-label">benelog</span><span class="taxonomy-count">1</span></a></li>
-        
-          <li><a class="taxonomy-term" href="https://Aravinda93.github.io/tags/epcis/" data-taxonomy-term="epcis"><span class="taxonomy-label">epcis</span><span class="taxonomy-count">5</span></a></li>
-        
-          <li><a class="taxonomy-term" href="https://Aravinda93.github.io/tags/four/" data-taxonomy-term="four"><span class="taxonomy-label">FOUR</span><span class="taxonomy-count">1</span></a></li>
-        
-          <li><a class="taxonomy-term" href="https://Aravinda93.github.io/tags/gs1/" data-taxonomy-term="gs1"><span class="taxonomy-label">gs1</span><span class="taxonomy-count">1</span></a></li>
-        
-          <li><a class="taxonomy-term" href="https://Aravinda93.github.io/tags/imprint/" data-taxonomy-term="imprint"><span class="taxonomy-label">Imprint</span><span class="taxonomy-count">1</span></a></li>
-        
-          <li><a class="taxonomy-term" href="https://Aravinda93.github.io/tags/introduction/" data-taxonomy-term="introduction"><span class="taxonomy-label">introduction</span><span class="taxonomy-count">3</span></a></li>
-        
-          <li><a class="taxonomy-term" href="https://Aravinda93.github.io/tags/one/" data-taxonomy-term="one"><span class="taxonomy-label">ONE</span><span class="taxonomy-count">1</span></a></li>
-        
-          <li><a class="taxonomy-term" href="https://Aravinda93.github.io/tags/openepcis/" data-taxonomy-term="openepcis"><span class="taxonomy-label">openEpcis</span><span class="taxonomy-count">2</span></a></li>
-        
-          <li><a class="taxonomy-term" href="https://Aravinda93.github.io/tags/privacy/" data-taxonomy-term="privacy"><span class="taxonomy-label">Privacy</span><span class="taxonomy-count">1</span></a></li>
-        
-          <li><a class="taxonomy-term" href="https://Aravinda93.github.io/tags/two/" data-taxonomy-term="two"><span class="taxonomy-label">TWO</span><span class="taxonomy-count">1</span></a></li>
-        
-      </ul>
-    </div>
-  
 
 	
 		
@@ -233,41 +181,18 @@
 
   
   
-    <div class="taxonomy taxonomy-terms-cloud taxo-categories">
-      
-        <h5 class="taxonomy-title">Categories</h5>
-      
-      <ul class="taxonomy-terms">
-        
-          <li><a class="taxonomy-term" href="https://Aravinda93.github.io/categories/home/" data-taxonomy-term="home"><span class="taxonomy-label">Home</span><span class="taxonomy-count">1</span></a></li>
-        
-          <li><a class="taxonomy-term" href="https://Aravinda93.github.io/categories/openepcis/" data-taxonomy-term="openepcis"><span class="taxonomy-label">OpenEPCIS</span><span class="taxonomy-count">1</span></a></li>
-        
-      </ul>
-    </div>
-  
 
 	
 
           </aside>
-          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main" style="text-align: justify;">
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
             
   
 
-            <nav aria-label="breadcrumb" class="td-breadcrumbs">
-  <ol class="breadcrumb">
-  <li class="breadcrumb-item">
-    <a href="https://Aravinda93.github.io/docs/">Documentation</a>
-  </li>
-  <li class="breadcrumb-item active" aria-current="page">
-    <a href="https://Aravinda93.github.io/docs/identifiers-converter/">Identifier Converter</a>
-  </li>
-  </ol>
-</nav>
             
 <div class="td-content">
 	<h1>Identifier Converter</h1>
-  <div class="lead">This page provides information on Identifier Converter.</div>
+  <div class="lead">OpenEPCIS solution to transform EPCIS identifiers from URN to DL WebURI and vice versa.</div>
 	<header class="article-meta">
 		
 
@@ -283,7 +208,68 @@
 
 		
 	</header>
-	
+	<h2 id="introduction">Introduction</h2>
+<p>Every digital or physical object such as documents, locations, products, assets, etc. is identified by universal identifiers. Starting from EPCIS 2.0, these universal Identifiers can be either represented using the EPC URI (Pure Identity URI) or Digital Link WebURI (until EPCIS 1.2 these identifiers were represented using only URN format). Applications that are using the EPCIS standard must use one of the syntaxes to identify the objects. Pure Identity URI is represented using the URN (Uniform Resource Name) format. An example of an SSCC (Serial Shipping Container Code) represented using the URN format is as follows:<br>
+urn:epc:id:sscc: 234567.18901234567</p>
+<p>Digital Link URI (Uniform Resource Identifier) is a newly introduced format with EPCIS 2.0 in which identifiers can be represented using the Web URI format. The above SSCC identifier example can be represented in Digital Link URI format as follows:<br>
+<a href="https://id.gs1.org/00/123456789012345675">https://id.gs1.org/00/123456789012345675</a></p>
+<p>In certain scenarios organization likes to make use of both formats for better visibility and accessibility so they need the option to translate the from URN to DL URI and vice versa. Hence, this OpenEPCIS utility has been developed which can convert the standard application identifiers from URN to Digital Link URI format and vice versa. It can be used independently or in conjunction with the other OpenEPCIS standard. It supports the following identifier types:</p>
+<ul>
+<li>Supported instance-level identifiers:
+<ul>
+<li>SSCC : Serial Shipping Container Code</li>
+<li>GTIN with serial (SGTIN) : Serialised Global Trade Item Number</li>
+<li>UPUI : Unit Pack Identifier</li>
+<li>GDTI with serial : Global Document Type Identifier</li>
+<li>SGCN with serial : Serialised Global Coupon Number</li>
+<li>GINC : Global Identification Number for Consignment</li>
+<li>GSIN : Global Shipment Identification Number</li>
+<li>GRAI with serial : Global Returnable Asset Identifier</li>
+<li>GIAI : Global Individual Asset Identifier</li>
+<li>ITIP : Individual Trade Item Piece</li>
+<li>CPI with serial :  Component/Part Identifier</li>
+<li>GSRN : Global Service Relation Number - Recipient</li>
+<li>GSRNP : Global Service Relation Number – Provider</li>
+</ul>
+</li>
+<li>Supported class-level identifiers:
+<ul>
+<li>GTIN : Global Trade Item Number</li>
+<li>GTIN + Lot (LGTIN) : GTIN + Batch/Lot</li>
+<li>GDTI without serial</li>
+<li>SGCN without serial</li>
+<li>GRAI without serial</li>
+<li>CPI without serial</li>
+</ul>
+</li>
+<li>Supported location/party identifiers:
+<ul>
+<li>GLN with extension : Global Location Number without extension</li>
+<li>GLN without extension : Global Location Number with extension</li>
+<li>Party GLN : Party Global Location Number</li>
+</ul>
+</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<p>Depending on expertise and easy of access, users can access the application in various ways. OpenEPCIS identifiers converter application has been published in following formats:</p>
+<ul>
+<li>
+<p><strong>Web application</strong>: The tool is available as a web application that users can access directly to acquire the converted EPCIS identifier by providing either an URN or DL WebURI EPCIS identifiers as input. The web application can be accessed from <a href="https://tools.openepcis.io/openepcis-ui/Identifiersconverter">here</a>.</p>
+</li>
+<li>
+<p><strong>API endpoint</strong>: With their identifiers serving as request, users/developers can use the API endpoint to send request to OpenEPCIS identifier converter and receive back the converted identifier as a response. These API’s can also be used directly online or from within another application code.  Users can access the REST endpoint using Swagger-UI from <a href="https://tools.openepcis.io/q/swagger-ui/#/Identifier%20Converter%20Resource">here</a>.</p>
+</li>
+<li>
+<p><strong>Application code</strong>: The application has been primarily developed using the Java programming language. Users can obtain and utilize the code from <a href="https://github.com/openepcis/openepcis-epc-digitallink-translator">here</a>.</p>
+</li>
+</ul>
+<h2 id="quick-links">Quick links</h2>
+<ul>
+<li><a href="https://tools.openepcis.io/openepcis-ui/Identifiersconverter">Identifier converter</a></li>
+<li><a href="https://tools.openepcis.io/q/swagger-ui/#/Identifier%20Converter%20Resource">Identifier converter API endpoint</a></li>
+<li><a href="https://github.com/openepcis/openepcis-epc-digitallink-translator">Identifier converter code</a></li>
+</ul>
+
         <div class="section-index">
     
     
@@ -304,106 +290,15 @@
           </main>
         </div>
       </div>
-      
-<footer class="bg-dark py-5 row d-print-none">
-  <div class="container-fluid mx-sm-5">
-    <div class="row">
-      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
-        
-        
-        
-      </div>
-      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
-        
-        
-        
-<ul class="list-inline mb-0">
-  
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="OpenEPCIS" aria-label="OpenEPCIS">
-    <a class="text-white" target="_blank" rel="noopener" href="https://openepcis.io/" aria-label="OpenEPCIS">
-      <em class="fa fa-globe"></em>
-    </a>
-  </li>
-  
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitHub Account for OpenEPCIS" aria-label="GitHub Account for OpenEPCIS">
-    <a class="text-white" target="_blank" rel="noopener" href="https://github.com/openepcis" aria-label="GitHub Account for OpenEPCIS">
-      <em class="fab fa-github"></em>
-    </a>
-  </li>
-  
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Contact us for any issues/queries/collaboration" aria-label="Contact us for any issues/queries/collaboration">
-    <a class="text-white" target="_blank" rel="noopener" href="mailto:example@example.com" aria-label="Contact us for any issues/queries/collaboration">
-      <em class="fa fa-envelope"></em>
-    </a>
-  </li>
-  
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Privacy Policy of OpenEPCIS" aria-label="Privacy Policy of OpenEPCIS">
-    <a class="text-white" target="_blank" rel="noopener" href="/privacy/" aria-label="Privacy Policy of OpenEPCIS">
-      <em class="fa-solid fa-shield-halved"></em>
-    </a>
-  </li>
-  
-  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Imprint of OpenEPCIS" aria-label="Imprint of OpenEPCIS">
-    <a class="text-white" target="_blank" rel="noopener" href="/imprint/" aria-label="Imprint of OpenEPCIS">
-      <em class="fa-solid fa-stamp"></em>
-    </a>
-  </li>
-  
-</ul>
-
-        
-        
-      </div>
-      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2022 OpenEPCIS All Rights Reserved</small>
-        <div>
-          <small class="ml-1"><a href="/privacy/" target="_blank" rel="noopener">Privacy Policy</a></small>
-          <small class="ml-1"><a href="/imprint/" target="_blank" rel="noopener">Imprint</a></small>
-                  
-          <small class="ml-2"><a href="/about/">About Us</a></small>
-        
-        </div>
-      </div>
     </div>
-  </div>
-</footer>
-
-
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
-    integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA=="
-    crossorigin="anonymous"></script>
-
-
-
-
-
-<script src='/js/tabpane-persist.js'></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script src="/js/main.min.72a17f630de43b961a554934a49ac1db3e5c28537ecca842209b11a5095eca62.js" integrity="sha256-cqF/Yw3kO5YaVUk0pJrB2z5cKFN&#43;zKhCIJsRpQleymI=" crossorigin="anonymous"></script>
-
-
-
-
+    
+     
+ <script src="/vendor/jquery/jquery.min.js"></script>
+ <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+ <script src="/js/owl-carousel.js"></script>
+ <script src="/js/animation.js"></script>
+ <script src="/js/imagesloaded.js"></script>
+ <script src="/js/popup.js"></script>
+ <script src="/js/custom.js"></script>
   </body>
 </html>
