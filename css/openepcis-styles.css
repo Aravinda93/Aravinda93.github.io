@@ -1449,7 +1449,7 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 50px;
-  padding-top: 300px;
+  padding-top: 16%;
   padding-bottom: 10px;
 }
 
@@ -1640,7 +1640,7 @@ responsive
   }
   .projects-item-regular {
     margin-bottom: 30px;
-    padding-top: 20%;
+    padding-top: 16%;
   }
   .our-portfolio .owl-nav {
     display: none !important;
@@ -1668,7 +1668,7 @@ responsive
     margin-bottom: 45px;
   }
   footer {
-    padding-top: 200px;
+    padding-top: 16%;
     text-align: center;
   }
   .footer-widget ul {

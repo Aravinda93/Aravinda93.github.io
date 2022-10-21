@@ -140,7 +140,7 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsevent-hash-generator-li">
   <a href="/docs/event-hash-generator/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsevent-hash-generator"><span class="">Event Hash Generator</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsidentifiers-converter-li">
-  <a href="/docs/identifiers-converter/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsidentifiers-converter"><span class="">Identifier Converter</span></a>
+  <a href="/docs/identifiers-converter/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsidentifiers-converter"><span class="">Identifier/Vocabulary Converter</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstest-data-generator-li">
   <a href="/docs/test-data-generator/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docstest-data-generator"><span class="">Test Data Generator</span></a>
 </li>
@@ -155,6 +155,21 @@
             
             
 
+
+<div class="td-toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#usage">Usage</a>
+      <ul>
+        <li><a href="#web-application">Web Application</a></li>
+        <li><a href="#api-endpoint">API Endpoint</a></li>
+        <li><a href="#command-line">Command Line</a></li>
+        <li><a href="#application-code">Application Code</a></li>
+      </ul>
+    </li>
+    <li><a href="#quick-links">Quick Links</a></li>
+  </ul>
+</nav></div>
 
 
 
@@ -211,26 +226,53 @@
 	<h2 id="introduction">Introduction</h2>
 <p>The newest EPCIS version i.e. EPCIS 2.0, offers several improvements over earlier versions, including the inclusion of sensor data (How dimension), a new event type (AssociationEvent), a new property (PersistentDisposition), etc. which were not supported in earlier versions as standard EPCIS attributes. Additionally, EPCIS 1.2 used &lt;extension&gt; wrappers to include some of the common EPCIS attribute information; however, in EPCIS 2.0, these &lt;extension&gt; wrappers will be removed to make the event more simpler and straightforward. The implementers may view this as a major change. Therefore, a tool was required to make it simple for implementers to switch from EPCIS 1.2 to EPCIS 2.0 XML documents and vice versa. Also, support the EPCIS standard with backward and forward compatibility. The OpenEPCIS team identified the issue and created a tool that makes it simple to convert XML EPCIS documents from version 1.2 to 2.0 and vice versa.</p>
 <h2 id="usage">Usage</h2>
-<ul>
-<li>
-<p><strong>Web application</strong>:
-The tool is available as a web application that users can access directly to acquire the converted EPCIS XML document by providing either an 1.2 version or 2.0 version document as input. The web application is available <a href="https://tools.openepcis.io/openepcis-ui/">here</a>.</p>
-</li>
-<li>
-<p><strong>API endpoint</strong>:
-With EPCIS document serving as request, users/developers can use the API to send request to OpenEPCIS&rsquo;s document version converter API and receive back the converted document as a response. These API&rsquo;s can also be used directly online or from within another application code.  Users can access the REST endpoint using Swagger-UI from <a href="https://tools.openepcis.io/q/swagger-ui/#/Document%20Version%20Converter%20Resource">here</a>.</p>
-</li>
-<li>
-<p><strong>Application code</strong>:
-The utility has been developed using Java with Apache Xalan. The code is available at the OpenEPCIS GitHub account and can be accessed directly or as dependencies for other projects. The complete code can be found <a href="https://github.com/openepcis">here</a>.</p>
-</li>
-</ul>
-<h2 id="quick-links">Quick links</h2>
+<p>Following section provides quick overview of how to convert the XML EPCIS document from 1.2v to 2.0v:</p>
+<h3 id="web-application">Web Application</h3>
+<p>The tool is available as a web application that users can access directly to acquire the converted EPCIS XML document by providing either an 1.2 version or 2.0 version document as input. The web application is available <a href="https://tools.openepcis.io/openepcis-ui/">here</a>.</p>
+<h3 id="api-endpoint">API Endpoint</h3>
+<p>With EPCIS document serving as request, users/developers can use the API to send request to OpenEPCIS&rsquo;s document version converter API and receive back the converted document as a response. These API&rsquo;s can also be used directly online or from within another application code.  Users can access the REST endpoint using Swagger-UI from <a href="https://tools.openepcis.io/q/swagger-ui/#/Document%20Version%20Converter%20Resource">here</a>.</p>
+<h3 id="command-line">Command Line</h3>
+<p>Client URL or popularly known as cURL is a command-line utility that is used to send and receive data from or to a server. As many developers and users prefer using this utility over normal web applications, OpenEPCIS Document Version Converter supports the conversion of XML document using the cURL command. Users can make requests to the Document Format Converter service <code>https://tools.openepcis.io/api/documentDownscaling</code> or <code>https://tools.openepcis.io/api/documentUpscaling</code> using their preferred document. Following is an example of a cURL request to convert the 1.2v XML document to 2.0v XML:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#a40000">curl</span> <span style="color:#a40000">-X</span> <span style="color:#a40000">&#39;POST&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">&#39;https:</span><span style="color:#8f5902;font-style:italic">//tools.openepcis.io/api/documentUpscaling&#39; \
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#a40000">-H</span> <span style="color:#a40000">&#39;accept:</span> <span style="color:#a40000">application/xml&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">-H</span> <span style="color:#a40000">&#39;Content-Type:</span> <span style="color:#a40000">application/xml&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">-d</span> <span style="color:#a40000">&#39;&lt;?xml</span> <span style="color:#a40000">version=</span><span style="color:#4e9a06">&#34;1.0&#34;</span> <span style="color:#a40000">encoding=</span><span style="color:#4e9a06">&#34;UTF-8&#34;</span><span style="color:#a40000">?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a40000">&lt;epcis:EPCISDocument</span> <span style="color:#a40000">xmlns:epcis=</span><span style="color:#4e9a06">&#34;urn:epcglobal:epcis:xsd:1&#34;</span> <span style="color:#a40000">schemaVersion=</span><span style="color:#4e9a06">&#34;1.2&#34;</span>
+</span></span><span style="display:flex;"><span>                     <span style="color:#a40000">creationDate=</span><span style="color:#4e9a06">&#34;2005-07-11T11:30:47.0Z&#34;</span><span style="color:#a40000">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a40000">&lt;EPCISBody&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a40000">&lt;EventList&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a40000">&lt;ObjectEvent&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a40000">&lt;eventTime&gt;</span><span style="color:#0000cf;font-weight:bold">2005-04-04</span><span style="color:#a40000">T</span><span style="color:#0000cf;font-weight:bold">20</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">33</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">31.116</span><span style="color:#0000cf;font-weight:bold">-06</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">00</span><span style="color:#a40000">&lt;/eventTime&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a40000">&lt;eventTimeZoneOffset&gt;</span><span style="color:#0000cf;font-weight:bold">-06</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">00</span><span style="color:#a40000">&lt;/eventTimeZoneOffset&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a40000">&lt;epcList&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#a40000">&lt;epc&gt;urn:epc:id:sgtin:</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#0000cf;font-weight:bold">614141.107346</span><span style="color:#a40000">.</span><span style="color:#0000cf;font-weight:bold">2018</span><span style="color:#a40000">&lt;/epc&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a40000">&lt;/epcList&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a40000">&lt;action&gt;OBSERVE&lt;/action&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a40000">&lt;extension&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#a40000">&lt;extension&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#a40000">&lt;sensorElementList&gt;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#a40000">&lt;sensorElement&gt;</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#a40000">&lt;sensorMetadata</span> <span style="color:#a40000">time=</span><span style="color:#4e9a06">&#34;2021-05-27T13:50:00.000+01:00&#34;</span><span style="color:#a40000">/&gt;</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#a40000">&lt;sensorReport</span> <span style="color:#a40000">type=</span><span style="color:#4e9a06">&#34;gs1:MT-Length&#34;</span> <span style="color:#a40000">component=</span><span style="color:#4e9a06">&#34;Northing&#34;</span> <span style="color:#a40000">value=</span><span style="color:#4e9a06">&#34;-477979.89&#34;</span> <span style="color:#a40000">uom=</span><span style="color:#4e9a06">&#34;MTR&#34;</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#a40000">coordinateReferenceSystem=</span><span style="color:#4e9a06">&#34;http://www.opengis.net/def/crs/EPSG/0/27700&#34;</span><span style="color:#a40000">/&gt;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#a40000">&lt;/sensorElement&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#a40000">&lt;/sensorElementList&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#a40000">&lt;/extension&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a40000">&lt;/extension&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a40000">&lt;example:myField</span> <span style="color:#a40000">xmlns:example=</span><span style="color:#4e9a06">&#34;http://ns.example.com/epcis&#34;</span><span style="color:#a40000">&gt;Example</span> <span style="color:#a40000">of</span> <span style="color:#a40000">a</span> <span style="color:#a40000">vendor/user</span> <span style="color:#a40000">extension&lt;/example:myField&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a40000">&lt;/ObjectEvent&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a40000">&lt;/EventList&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a40000">&lt;/EPCISBody&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a40000">&lt;/epcis:EPCISDocument&gt;&#39;</span>
+</span></span></code></pre></div><h3 id="application-code">Application Code</h3>
+<p>The utility has been developed using Java with Apache Xalan. The code is available at the OpenEPCIS GitHub account and can be accessed directly or as dependencies for other projects. The complete code can be found <a href="https://github.com/openepcis/EPCIS/tree/master/XSL">here</a>.</p>
+<h2 id="quick-links">Quick Links</h2>
 <ul>
 <li><a href="https://ref.gs1.org/tools/epcis/xsl/">GS1 publication</a></li>
 <li><a href="https://tools.openepcis.io/openepcis-ui/">Web application</a></li>
 <li><a href="https://tools.openepcis.io/q/swagger-ui/#Document%20Version%20Converter%20Resource">API endpoint</a></li>
-<li><a href="https://github.com/openepcis">Application code</a></li>
+<li><a href="https://github.com/openepcis/EPCIS/tree/master/XSL">Application code</a></li>
 </ul>
 
         <div class="section-index">

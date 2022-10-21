@@ -20,16 +20,16 @@
 <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<meta name="description" content="OpenEPCIS solution for generating EPCIS test data events for all user cases/supply chain.">
+<meta name="description" content="OpenEPCIS solution for generating EPCIS test data events for all use cases/supply chain.">
 <meta property="og:title" content="Test Data Generator" />
-<meta property="og:description" content="OpenEPCIS solution for generating EPCIS test data events for all user cases/supply chain." />
+<meta property="og:description" content="OpenEPCIS solution for generating EPCIS test data events for all use cases/supply chain." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://openepcis.github.io/docs/test-data-generator/" /><meta property="og:site_name" content="OpenEPCIS" />
 
 <meta itemprop="name" content="Test Data Generator">
-<meta itemprop="description" content="OpenEPCIS solution for generating EPCIS test data events for all user cases/supply chain."><meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="OpenEPCIS solution for generating EPCIS test data events for all use cases/supply chain."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Test Data Generator"/>
-<meta name="twitter:description" content="OpenEPCIS solution for generating EPCIS test data events for all user cases/supply chain."/>
+<meta name="twitter:description" content="OpenEPCIS solution for generating EPCIS test data events for all use cases/supply chain."/>
 
 
 
@@ -140,7 +140,7 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsevent-hash-generator-li">
   <a href="/docs/event-hash-generator/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsevent-hash-generator"><span class="">Event Hash Generator</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsidentifiers-converter-li">
-  <a href="/docs/identifiers-converter/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsidentifiers-converter"><span class="">Identifier Converter</span></a>
+  <a href="/docs/identifiers-converter/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsidentifiers-converter"><span class="">Identifier/Vocabulary Converter</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstest-data-generator-li">
   <a href="/docs/test-data-generator/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id="m-docstest-data-generator"><span class="td-sidebar-nav-active-item">Test Data Generator</span></a>
 </li>
@@ -155,6 +155,27 @@
             
             
 
+
+<div class="td-toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#local-set-up">Local set-up</a>
+      <ul>
+        <li><a href="#running-with-podman">Running with Podman</a></li>
+        <li><a href="#running-with-docker">Running with Docker</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a>
+      <ul>
+        <li><a href="#web-application">Web application</a></li>
+        <li><a href="#api-endpoint">API endpoint</a></li>
+        <li><a href="#command-line">Command Line</a></li>
+        <li><a href="#application-code">Application code</a></li>
+      </ul>
+    </li>
+    <li><a href="#quick-links">Quick links</a></li>
+  </ul>
+</nav></div>
 
 
 
@@ -192,7 +213,7 @@
             
 <div class="td-content">
 	<h1>Test Data Generator</h1>
-  <div class="lead">OpenEPCIS solution for generating EPCIS test data events for all user cases/supply chain.</div>
+  <div class="lead">OpenEPCIS solution for generating EPCIS test data events for all use cases/supply chain.</div>
 	<header class="article-meta">
 		
 
@@ -209,25 +230,161 @@
 		
 	</header>
 	<h2 id="introduction">Introduction</h2>
-<p>The problem for various solution providers and user companies adopting EPCIS for their projects is to generate test data for testing purposes (load tests, populating test databases, etc.). OpenEPCIS Test Data Generator was developed to assist the EPCIS community by making it simple to generate test data (e.g. hundreds or thousands of events). Regardless of the industry, use case, or supply chain system, the developed application provides a single solution for creating test events. It saves time and effort for the various organizations because they don&rsquo;t have to build, maintain, or incorporate new capabilities of EPCIS into their test data production technologies. Based on the information provided by users and their organizational needs, the application can create bulk EPCIS events. These EPCIS events are compliant with EPCIS 2.0, the most recent version of the EPCIS, and events are generated in JSON/JSON-LD format. It also includes the option to generate events and identifiers in both URN and WebURI format.</p>
-<h2 id="usage">Usage</h2>
+<p>The problem for various solution providers and user companies adopting EPCIS for their projects is to generate test data for testing purposes (load tests, populating test databases, etc.). OpenEPCIS Test Data Generator was developed to assist the EPCIS community by making it simple to generate test data (e.g. hundreds or thousands of events). Regardless of the industry, use case, or supply chain system, the developed application provides a single solution for creating test events. It saves time and effort for the various organizations because they don’t have to build, maintain, or incorporate new capabilities of EPCIS into their test data production technologies. Based on the information provided by users and their organizational needs, the application can create bulk EPCIS events. These EPCIS events are compliant with EPCIS 2.0, the most recent version of the EPCIS, and events are generated in JSON/JSON-LD format. It also includes the option to generate events and identifiers in both URN and WebURI format</p>
+<h2 id="local-set-up">Local set-up</h2>
+<p>On your local system, the OpenEPCIS Test Data Generator can be set up in various ways. The following section explains how to quickly set up the application using Podman and Docker.</p>
+<h3 id="running-with-podman">Running with Podman</h3>
+<p>As a prerequisite, you must install Podman on your system (Podman is an open-source software platform for fast-developing, testing, and deploying applications). Please refer to the following links for further information about Podman and for installation guidelines:
+<br>
+ </p>
+<p>Official Podman: <a href="https://github.com/containers/podman">https://github.com/containers/podman</a><br>
+Documentation: <a href="https://github.com/containers/podman/tree/main/docs">https://github.com/containers/podman/tree/main/docs</a><br>
+Installation instruction for Windows/macOS: <a href="https://podman.io/getting-started/installation">https://podman.io/getting-started/installation</a>
+<br>
+ </p>
+<p>Run the following command in a terminal or command prompt after installing Podman on your local machine:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#a40000">podman</span> <span style="color:#a40000">run</span> <span style="color:#a40000">--rm</span> <span style="color:#a40000">-t</span> <span style="color:#a40000">--name</span> <span style="color:#a40000">testdata-generator</span> <span style="color:#a40000">-p</span> <span style="color:#0000cf;font-weight:bold">8080</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">8080</span> <span style="color:#a40000">openepcis/testdata-generator</span>
+</span></span></code></pre></div><h3 id="running-with-docker">Running with Docker</h3>
+<p>Docker has to be installed on your system as a prerequisite (Note: Commercial usage of Docker is subject to license restrictions). Please refer to the following pages for further information about Docker and for installation guidelines:
+<br>
+ </p>
+<p>For Windows: <a href="https://docs.docker.com/desktop/install/windows-install/">https://docs.docker.com/desktop/install/windows-install/</a><br>
+For macOS: <a href="https://docs.docker.com/desktop/install/mac-install/">https://docs.docker.com/desktop/install/mac-install/</a><br>
+For Linux: <a href="https://docs.docker.com/desktop/install/linux-install/">https://docs.docker.com/desktop/install/linux-install/</a>
+<br>
+ </p>
+<p>To run the testdata generator you can simply use the <a href="https://hub.docker.com/repository/docker/openepcis/testdata-generator">Testdata Generator Docker</a> image provided on docker hub.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#a40000">docker</span> <span style="color:#a40000">run</span> <span style="color:#a40000">--rm</span> <span style="color:#a40000">-t</span> <span style="color:#a40000">--name</span> <span style="color:#a40000">testdata-generator</span> <span style="color:#a40000">-p</span> <span style="color:#0000cf;font-weight:bold">8080</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">8080</span> <span style="color:#a40000">openepcis/testdata-generator</span>
+</span></span></code></pre></div><h2 id="usage">Usage</h2>
+<p>Following section provides quick overview of how to generate EPCIS events:</p>
+<h3 id="web-application">Web application</h3>
+<p>The web application is beneficial to users who are new to the EPCIS world as it visually provides all the components of the EPCIS which are segregated based on different dimensions. It is very easy to provide values for necessary fields based on the requirement or supply chain and generate the EPCIS events accordingly. The web application can be fround from <a href="https://test-data-generator.openepcis.io/">here</a>.</p>
+<h3 id="api-endpoint">API endpoint</h3>
+<p>Software developers wishing to explore the tool’s underlying APIs (e.g. to understand how a request and response body of an API call looks like) might be interested in the Swagger-UI page. Swagger-UI is an open source application that generates a web page which lists all the APIs according to the OpenAPI standard. The page gives a summary and visually illustrates various features of the APIs such as their request and response bodies. If you have installed and executed a Podman container as described in the set-up section, you should be able to access it via the <a href="http://localhost:8080/q/swagger-ui/">URL</a>. You can start making requests to the Test Data Generator service API by using an input template. Of course, you can also use the Swagger-UI page to generate test data (there is no limit as with the web application), but it is not as performant as using the command line.</p>
+<h3 id="command-line">Command Line</h3>
+<p>Especially in cases where you need large amounts of test data (i.e. more than 1,000 events), open your command line or terminal and issue a cURL (Client URL) request. If you followed the instructions for setting up the Podman container as described in the set-up section, you should be able to make a cURL request using your input template to API endpoint: <code>http://localhost:8080/api/generateTestData?pretty=true</code>. An exemplary cURL request with a sample InputTemplate (which you can replace with your own) looks as follows:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#a40000">curl</span> <span style="color:#a40000">-X</span> <span style="color:#a40000">&#39;POST&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">&#39;http:</span><span style="color:#8f5902;font-style:italic">//localhost:8080/api/generateTestData?pretty=true&#39; \
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#a40000">-H</span> <span style="color:#a40000">&#39;accept:</span> <span style="color:#a40000">application/json&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">-H</span> <span style="color:#a40000">&#39;Content-Type:</span> <span style="color:#a40000">application/json&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">-d</span> <span style="color:#a40000">&#39;</span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;events&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;nodeId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;eventType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ObjectEvent&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;eventCount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;locationPartyIdentifierSyntax&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;URN&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;ordinaryEvent&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;action&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ADD&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;eventID&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;eventTime&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;timeZoneOffset&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;+02:00&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;fromTime&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2022-10-01T10:22:16+02:00&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;toTime&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2022-10-31T10:22:16+02:00&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;businessStep&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;COMMISSIONING&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;disposition&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ACTIVE&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;referencedIdentifier&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;identifierId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;epcCount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;classCount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}],</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;parentReferencedIdentifier&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;outputReferencedIdentifier&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;identifiers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;identifierId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;objectIdentifierSyntax&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;URN&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;instanceData&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;sgtin&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;identifierType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;sgtin&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;gcpLength&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;sgtin&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;40584954485984&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;serialType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;random&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;randomCount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;randomType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;NUMERIC&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;randomMinLength&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;randomMaxLength&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;classData&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;parentData&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">&#39;</span>
+</span></span></code></pre></div><h3 id="application-code">Application code</h3>
+<p>The developed OpenEPCIS Test Data Generator application has been divided into 3 modules <a href="https://github.com/openepcis/epcis-testdata-generator/tree/main/testdata-generator-common">testdata-generator-common</a>, <a href="https://github.com/openepcis/epcis-testdata-generator/tree/main/testdata-generator-rest-api">testdata-generator-rest-api</a>, and <a href="https://github.com/openepcis/epcis-testdata-generator/tree/main/testdata-generator-ui">testdata-generator-ui</a>. Following is the overview of the individual module:</p>
+<h4 id="testdata-generator-commonhttpsgithubcomopenepcisepcis-testdata-generatortreemaintestdata-generator-common-generic-java-library-for-generating-testdata-events"><a href="https://github.com/openepcis/epcis-testdata-generator/tree/main/testdata-generator-common">testdata-generator-common</a> (Generic java library for generating testdata events)</h4>
+<p>This is the core of the OpenEPCIS Test Data Generator where the events are actually generated. It includes the logic for generating the events and formatting the values according to the EPCIS standard. To make the application memory efficient and to generate a large number of test events quickly only one event information is stored in memory at a time. It employs the Reactive Stream approach to do the same. This module has been developed primarily using Java with some additional libraries such as Jackson, Lombok, SmallRye Mutiny etc.</p>
+<h4 id="testdata-generator-rest-apihttpsgithubcomopenepcisepcis-testdata-generatortreemaintestdata-generator-rest-api-rest-service-wrapper-for-generating-testdata-events"><a href="https://github.com/openepcis/epcis-testdata-generator/tree/main/testdata-generator-rest-api">testdata-generator-rest-api</a> (REST service wrapper for generating testdata events)</h4>
+<p>This is the service that acts as a bridge between the front-end and back-end server. When a user provides the input information in the form of InputTemplate to generate the test data events then this service module will capture that information and validates it. If the InputTemplate adheres to all the constraints and rules then it&rsquo;s sent to the backend server (<a href="https://github.com/openepcis/epcis-testdata-generator/tree/main/testdata-generator-common">testdata-generator-common</a>) to generate the events. This service can also be directly accessed via the cURL command or Swagger-UI. This module has been developed using the latest technologies such as Java with the Quarkus framework. However, it also utilizes some libraries such as Jackson, OpenAPI, Hibernate validator, etc.</p>
+<h4 id="testdata-generator-uitestdata-generator-uihttpsgithubcomopenepcisepcis-testdata-generatortreemaintestdata-generator-ui-user-interface-for-generating-testdata-events"><a href="%5Btestdata-generator-ui%5D(https://github.com/openepcis/epcis-testdata-generator/tree/main/testdata-generator-ui)">testdata-generator-ui</a> (user interface for generating testdata events)</h4>
+<p>This is the user&rsquo;s view of the application where users can interact with various fields of EPCIS and provide the necessary values. Also, It does the task of converting the user-provided values
+into the InputTemplate required for the subsequent modules. It has been developed primarily using the technologies such as  HTML (HyperText Markup Language), JavaScript library Nuxt.js/Vue.js, and
+CSS(Cascading Style Sheets). It also includes some important front-end libraries/frameworks such as Drawflow, Bootstrap, Bootstrap icons, CodeMirror, etc.</p>
+<h4 id="direct-usage">Direct usage</h4>
+<p>The <a href="%5Btestdata-generator-common%5D(https://github.com/openepcis/epcis-testdata-generator/tree/main/testdata-generator-common)/src/main/java/io/openepcis/testdata/generator/EPCISEventGenerator.java">EPCISEventGenerator class</a> within <a href="%5Btestdata-generator-common%5D(https://github.com/openepcis/epcis-testdata-generator/tree/main/testdata-generator-common)">testdata-generator-common</a> contains the Java method <code>generate</code> for producing test data events. To generate events, you must have the proper <code>inputTemplate</code> JSON prepared with all necessary data, which you can pass to the following method to obtain the required events:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// Pass the required JSON inputTemplate to generate EPCIS testdata events.
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">EPCISEventGenerator</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">generate</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">inputTemplate</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">collect</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">asList</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">await</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">indefinitely</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">forEach</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">e</span> <span style="color:#ce5c00;font-weight:bold">-</span> <span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">try</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">println</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">e</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toString</span><span style="color:#ce5c00;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ce5c00;font-weight:bold">}</span> <span style="color:#204a87;font-weight:bold">catch</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">JsonProcessingException</span> <span style="color:#000">ex</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">throw</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">CompletionException</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">ex</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">});</span>
+</span></span></code></pre></div><p>Sample inputTemplate:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;events&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;nodeId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;eventType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ObjectEvent&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;eventCount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;locationPartyIdentifierSyntax&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;URN&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;ordinaryEvent&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;action&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ADD&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;eventID&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;eventTime&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;timeZoneOffset&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;+02:00&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;fromTime&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2022-04-01T18:30:04+02:00&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;toTime&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2022-04-05T18:30:04+02:00&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;recordTimeType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;CURRENT_TIME&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;businessStep&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;COMMISSIONING&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;disposition&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ACTIVE&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;referencedIdentifier&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;identifierId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;epcCount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;classCount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}],</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;parentReferencedIdentifier&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;outputReferencedIdentifier&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;identifiers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;identifierId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;objectIdentifierSyntax&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;URN&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;instanceData&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;sgtin&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;identifierType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;sgtin&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;gcpLength&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;sgtin&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;89384989388934&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;serialType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;range&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;rangeFrom&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">100</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;rangeTo&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">110</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;classData&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;grai&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;identifierType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;grai&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;gcpLength&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;quantityType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;uom&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;serialType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;grai&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;8384783874378&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;classIdentifiersCount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;parentData&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h2 id="quick-links">Quick links</h2>
 <ul>
-<li>
-<p><strong>Web application</strong>:
-The web application is beneficial to users who are new to the EPCIS world as it visually provides all the components of the EPCIS which are segregated based on different dimensions. It is very easy to provide values for necessary fields based on the requirement or supply chain and generate the EPCIS events accordingly. The web application can be fround from <a href="https://test-data-generator.openepcis.io/">here</a>.</p>
-</li>
-<li>
-<p><strong>API endpoint</strong>:
-Users can make use of API endpoint to generate test data events. The required template with all information can be sent to Restful API end point which will be analysed and events are generated. Finally, these events are sent as response to user. Users can access the REST endpoint using Swagger-UI from <a href="https://test-data-generator.openepcis.io/q/swagger-ui">here</a>.</p>
-</li>
-<li>
-<p><strong>Application code</strong>:
-The utility&rsquo;s back-end has been developed using Java and web application using Nuxtjs. The code is available at the OpenEPCIS GitHub account and can be accessed directly or as dependencies for other projects. The complete code can be from <a href="https://github.com/openepcis/epcis-testdata-generator">here</a>.</p>
-</li>
-</ul>
-<h2 id="quick-links">Quick links</h2>
-<ul>
-<li><a href="https://confluence.company-group.com/display/OEPCISDOC/OpenEPCIS+Test+Data+Generator">More details on Confluence page</a></li>
 <li><a href="https://test-data-generator.openepcis.io/">Web application</a></li>
 <li><a href="https://test-data-generator.openepcis.io/q/swagger-ui">API endpoint</a></li>
 <li><a href="https://github.com/openepcis/epcis-testdata-generator">Application code</a></li>

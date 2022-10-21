@@ -21,14 +21,14 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <meta name="description" content="OpenEPCIS solution to transform EPCIS identifiers from URN to DL WebURI and vice versa.">
-<meta property="og:title" content="Identifier Converter" />
+<meta property="og:title" content="Identifier/Vocabulary Converter" />
 <meta property="og:description" content="OpenEPCIS solution to transform EPCIS identifiers from URN to DL WebURI and vice versa." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://openepcis.github.io/docs/identifiers-converter/" /><meta property="og:site_name" content="OpenEPCIS" />
 
-<meta itemprop="name" content="Identifier Converter">
+<meta itemprop="name" content="Identifier/Vocabulary Converter">
 <meta itemprop="description" content="OpenEPCIS solution to transform EPCIS identifiers from URN to DL WebURI and vice versa."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Identifier Converter"/>
+<meta name="twitter:title" content="Identifier/Vocabulary Converter"/>
 <meta name="twitter:description" content="OpenEPCIS solution to transform EPCIS identifiers from URN to DL WebURI and vice versa."/>
 
 
@@ -140,7 +140,7 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsevent-hash-generator-li">
   <a href="/docs/event-hash-generator/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsevent-hash-generator"><span class="">Event Hash Generator</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsidentifiers-converter-li">
-  <a href="/docs/identifiers-converter/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id="m-docsidentifiers-converter"><span class="td-sidebar-nav-active-item">Identifier Converter</span></a>
+  <a href="/docs/identifiers-converter/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id="m-docsidentifiers-converter"><span class="td-sidebar-nav-active-item">Identifier/Vocabulary Converter</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstest-data-generator-li">
   <a href="/docs/test-data-generator/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docstest-data-generator"><span class="">Test Data Generator</span></a>
 </li>
@@ -155,6 +155,21 @@
             
             
 
+
+<div class="td-toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#usage">Usage</a>
+      <ul>
+        <li><a href="#web-application">Web Application</a></li>
+        <li><a href="#api-endpoint">API Endpoint</a></li>
+        <li><a href="#command-line">Command Line</a></li>
+        <li><a href="#application-code">Application code</a></li>
+      </ul>
+    </li>
+    <li><a href="#quick-links">Quick links</a></li>
+  </ul>
+</nav></div>
 
 
 
@@ -191,7 +206,7 @@
 
             
 <div class="td-content">
-	<h1>Identifier Converter</h1>
+	<h1>Identifier/Vocabulary Converter</h1>
   <div class="lead">OpenEPCIS solution to transform EPCIS identifiers from URN to DL WebURI and vice versa.</div>
 	<header class="article-meta">
 		
@@ -209,63 +224,99 @@
 		
 	</header>
 	<h2 id="introduction">Introduction</h2>
-<p>Every digital or physical object such as documents, locations, products, assets, etc. is identified by universal identifiers. Starting from EPCIS 2.0, these universal Identifiers can be either represented using the EPC URI (Pure Identity URI) or Digital Link WebURI (until EPCIS 1.2 these identifiers were represented using only URN format). Applications that are using the EPCIS standard must use one of the syntaxes to identify the objects. Pure Identity URI is represented using the URN (Uniform Resource Name) format. An example of an SSCC (Serial Shipping Container Code) represented using the URN format is as follows:<br>
-urn:epc:id:sscc: 234567.18901234567</p>
-<p>Digital Link URI (Uniform Resource Identifier) is a newly introduced format with EPCIS 2.0 in which identifiers can be represented using the Web URI format. The above SSCC identifier example can be represented in Digital Link URI format as follows:<br>
-<a href="https://id.gs1.org/00/123456789012345675">https://id.gs1.org/00/123456789012345675</a></p>
-<p>In certain scenarios organization likes to make use of both formats for better visibility and accessibility so they need the option to translate the from URN to DL URI and vice versa. Hence, this OpenEPCIS utility has been developed which can convert the standard application identifiers from URN to Digital Link URI format and vice versa. It can be used independently or in conjunction with the other OpenEPCIS standard. It supports the following identifier types:</p>
-<ul>
-<li>Supported instance-level identifiers:
-<ul>
-<li>SSCC : Serial Shipping Container Code</li>
-<li>GTIN with serial (SGTIN) : Serialised Global Trade Item Number</li>
-<li>UPUI : Unit Pack Identifier</li>
-<li>GDTI with serial : Global Document Type Identifier</li>
-<li>SGCN with serial : Serialised Global Coupon Number</li>
-<li>GINC : Global Identification Number for Consignment</li>
-<li>GSIN : Global Shipment Identification Number</li>
-<li>GRAI with serial : Global Returnable Asset Identifier</li>
-<li>GIAI : Global Individual Asset Identifier</li>
-<li>ITIP : Individual Trade Item Piece</li>
-<li>CPI with serial :  Component/Part Identifier</li>
-<li>GSRN : Global Service Relation Number - Recipient</li>
-<li>GSRNP : Global Service Relation Number – Provider</li>
-</ul>
-</li>
-<li>Supported class-level identifiers:
-<ul>
-<li>GTIN : Global Trade Item Number</li>
-<li>GTIN + Lot (LGTIN) : GTIN + Batch/Lot</li>
-<li>GDTI without serial</li>
-<li>SGCN without serial</li>
-<li>GRAI without serial</li>
-<li>CPI without serial</li>
-</ul>
-</li>
-<li>Supported location/party identifiers:
-<ul>
-<li>GLN with extension : Global Location Number without extension</li>
-<li>GLN without extension : Global Location Number with extension</li>
-<li>Party GLN : Party Global Location Number</li>
-</ul>
-</li>
-</ul>
+<p>Every digital or physical object such as documents, locations, products, assets, etc. is identified by universal identifiers. Starting from EPCIS 2.0, these universal Identifiers can be either represented using the EPC URI (Pure Identity URI) or Digital Link WebURI (until EPCIS 1.2 these identifiers were represented using only URN format). Applications that are using the EPCIS standard must use one of the syntaxes to identify the objects. Pure Identity URI is represented using the URN (Uniform Resource Name) format. An example of an SSCC (Serial Shipping Container Code) represented using the URN format is as follows:</p>
+<p align="center">urn:epc:id:sscc: 234567.18901234567</p>
+<p>Digital Link URI (Uniform Resource Identifier) is a newly introduced format with EPCIS 2.0 in which identifiers can be represented using the Web URI format. The above SSCC identifier example can be represented in Digital Link URI format as follows:</p>
+<p align="center">https://id.gs1.org/00/123456789012345675</p>
+<p>In certain scenarios organization likes to make use of both formats for better visibility and accessibility so they need the option to translate the from URN to DL URI and vice versa. Hence, this OpenEPCIS utility has been developed which can convert the standard application identifiers from URN to Digital Link URI format and vice versa. It can be used independently or in conjunction with the other OpenEPCIS standard. It supports the following identifier types:
+<br>
+ </p>
+<p>Supported instance-level identifiers:</p>
+<p>SSCC : Serial Shipping Container Code<br>
+GTIN with serial (SGTIN) : Serialised Global Trade Item Number<br>
+UPUI : Unit Pack Identifier<br>
+GDTI with serial : Global Document Type Identifier<br>
+SGCN with serial : Serialised Global Coupon Number<br>
+GINC : Global Identification Number for Consignment<br>
+GSIN : Global Shipment Identification Number<br>
+GRAI with serial : Global Returnable Asset Identifier<br>
+GIAI : Global Individual Asset Identifier<br>
+ITIP : Individual Trade Item Piece<br>
+CPI with serial :  Component/Part Identifier<br>
+GSRN : Global Service Relation Number - Recipient<br>
+GSRNP : Global Service Relation Number – Provider<br>
+<br>
+Supported class-level identifiers:</p>
+<p>GTIN : Global Trade Item Number<br>
+GTIN + Lot (LGTIN) : GTIN + Batch/Lot<br>
+GDTI without serial<br>
+SGCN without serial<br>
+GRAI without serial<br>
+CPI without serial<br>
+<br>
+Supported location/party identifiers:</p>
+<p>GLN with extension : Global Location Number without extension<br>
+GLN without extension : Global Location Number with extension<br>
+Party GLN : Party Global Location Number</p>
 <h2 id="usage">Usage</h2>
-<p>Depending on expertise and easy of access, users can access the application in various ways. OpenEPCIS identifiers converter application has been published in following formats:</p>
+<p>Following section provides quick overview of how to convert EPCIS identifier from digital link URI to URN and vice versa:</p>
+<h3 id="web-application">Web Application</h3>
+<p>The tool is available as a web application that users can access directly to acquire the converted EPCIS identifier by providing either an URN or DL WebURI EPCIS identifiers as input. The web application can be accessed from <a href="https://tools.openepcis.io/openepcis-ui/Identifiersconverter">here</a>.</p>
+<h3 id="api-endpoint">API Endpoint</h3>
+<p>With their identifiers serving as request, users/developers can use the API endpoint to send request to OpenEPCIS identifier converter and receive back the converted identifier as a response. These API’s can also be used directly online or from within another application code.  Users can access the REST endpoint using Swagger-UI from <a href="https://tools.openepcis.io/q/swagger-ui/#/Identifier%20Converter%20Resource">here</a>.</p>
+<h3 id="command-line">Command Line</h3>
+<p>Client URL or popularly known as cURL is a command-line utility that is used to send and receive data from or to a server. As many developers and users prefer using this utility over normal web applications, OpenEPCIS Identifiers Converter supports the conversion of EPCIS identifiers using the cURL command. Users can make requests to the service <code>https://tools.openepcis.io/api/urnConverter</code> or <code>https://tools.openepcis.io/api/webURIConverter</code> using their preferred identifier. Following is an example of a cURL request to convert URN to digitallink web URI:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#a40000">curl</span> <span style="color:#a40000">-X</span> <span style="color:#a40000">&#39;POST&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">&#39;https:</span><span style="color:#8f5902;font-style:italic">//tools.openepcis.io/api/webURIConverter&#39; \
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#a40000">-H</span> <span style="color:#a40000">&#39;accept:</span> <span style="color:#a40000">application/json&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">-H</span> <span style="color:#a40000">&#39;Content-Type:</span> <span style="color:#a40000">text/plain&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">-d</span> <span style="color:#a40000">&#39;urn:epc:id:sgtin:</span><span style="color:#0000cf;font-weight:bold">234567890.1123</span><span style="color:#a40000">.</span><span style="color:#0000cf;font-weight:bold">9999</span><span style="color:#a40000">&#39;</span>
+</span></span></code></pre></div><h3 id="application-code">Application code</h3>
+<p>The application has been primarily developed using the Java programming language. Users can obtain and utilize the code from <a href="https://github.com/openepcis/openepcis-epc-digitallink-translator">here</a>.</p>
+<h4 id="conversion-from-urn-to-dl-uri">Conversion from URN to DL URI</h4>
+<p>To convert the URN to DL URI call the following method and pass the URN which needs to be converted:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">ConverterUtil</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toURI</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">inputURN</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span></code></pre></div><p>The utility automatically detects the identifier type and converts it to the corresponding DL URI format. This method returns a String. If the inputURN does follow the GS1 identifier syntax format then it will throw an corresponding Exception.</p>
+<p>Following is an example of converting the SGTIN from URN to DL URI:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">println</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">ConverterUtil</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toURI</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;urn:epc:id:sgtin:2345678901.123.9999&#34;</span><span style="color:#ce5c00;font-weight:bold">));</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">//https://id.gs1.org/01/12345678901231/21/9999
+</span></span></span></code></pre></div><h4 id="conversion-from-dl-uri-to-urn">Conversion from DL URI to URN</h4>
+<p>To convert from DL URI to URN call the following method and pass the existing DL URI and GCP length:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">ConverterUtil</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toURN</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">inputURI</span><span style="color:#ce5c00;font-weight:bold">,</span><span style="color:#000">gcpLength</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span></code></pre></div><p>The utility automatically detects the DL URI type and converts it to the corresponding URN format. This method returns the <code>Map&lt;String, String&gt;</code> with various information. If the <code>inputURI</code> does follow the GS1 identifier syntax format then it throws corresponding Exception.</p>
+<p>Following is an example of converting the SGTIN from URN to DL URI:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">println</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">ConverterUtil</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toURN</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;https://id.gs1.org/01/12345678901231/21/9999&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">10</span><span style="color:#ce5c00;font-weight:bold">));</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// {gtin=12345678901231, asURN=urn:epc:id:sgtin:2345678901.123.9999, asCaptured=https://example.com/path/01/12345678901231/21/9999, serial=9999, canonicalDL=https://id.gs1.org/01/12345678901231/21/9999}
+</span></span></span></code></pre></div><h4 id="conversion-from-class-level-urn-to-web-uri">Conversion from class level URN to Web URI</h4>
+<p>To convert the class level URN to Web URI invoke the following method and pass the the existing URN. The code will automatically detect the type of identifier and converts it to appropriate Web URI. If any error found in the identifier then same will be displayed.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">ConverterUtil</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toURIForClassLevelIdentifier</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">inputURN</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span></code></pre></div><p>Following is an example of converting GTIN from URN to Web URI:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">println</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">ConverterUtil</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toURIForClassLevelIdentifier</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;urn:epc:idpat:sgtin:3489348.939489.*&#34;</span><span style="color:#ce5c00;font-weight:bold">));</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">//https://id.gs1.org/01/93489348394895
+</span></span></span></code></pre></div><h4 id="conversion-from-class-level-web-uri-to-urn">Conversion from class level Web URI to URN</h4>
+<p>To convert the Class level DL URI to URN invoke the following method and pass the existing DL URI with or without GCP Length. If GCP Length has not been provided then the code will automatically detect the GCP Length based on the GS1 standards.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">ConverterUtil</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toURNForClassLevelIdentifier</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">inputURI</span><span style="color:#ce5c00;font-weight:bold">,</span><span style="color:#000">gcpLength</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">ConverterUtil</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toURNForClassLevelIdentifier</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">inputURI</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span></code></pre></div><p>Following is an example of converting GTIN from Web URI to URN</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">println</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">ConverterUtil</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toURNForClassLevelIdentifier</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;https://id.gs1.org/01/88588588585452&#34;</span><span style="color:#ce5c00;font-weight:bold">));</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">//{gtin=88588588585452, asURN=urn:epc:idpat:sgtin:8588588.858545.*, asCaptured=https://example.com/path/01/88588588585452, canonicalDL=https://id.gs1.org/01/88588588585452}
+</span></span></span></code></pre></div><h4 id="conversion-from-urn-to-bare-string">Conversion from URN to Bare String</h4>
+<p>To convert the URN formatted CBV values into bare string, call the following method and pass the CBV string:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">ConverterUtil</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toBareStringVocabulary</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">eventVocabulary</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span></code></pre></div><p>Following is an example of converting cbv formatted business step value to bare string:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">ConverterUtil</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toBareStringVocabulary</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;urn:epcglobal:cbv:bizstep:inspecting&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">//inspecting
+</span></span></span></code></pre></div><h4 id="conversion-from-bare-string-to-urn">Conversion from Bare String to URN</h4>
+<p>To convert the bare string values to URN formatted CBV values, call the following method and pass the bare string:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">ConverterUtil</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toUrnVocabulary</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">eventVocabulary</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span></code></pre></div><p>Following is an example of converting bare string business step value to CBV formatted value:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">ConverterUtil</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toUrnVocabulary</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;inspecting&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">//urn:epcglobal:cbv:bizstep:inspecting
+</span></span></span></code></pre></div><h2 id="quick-links">Quick links</h2>
 <ul>
-<li>
-<p><strong>Web application</strong>: The tool is available as a web application that users can access directly to acquire the converted EPCIS identifier by providing either an URN or DL WebURI EPCIS identifiers as input. The web application can be accessed from <a href="https://tools.openepcis.io/openepcis-ui/Identifiersconverter">here</a>.</p>
-</li>
-<li>
-<p><strong>API endpoint</strong>: With their identifiers serving as request, users/developers can use the API endpoint to send request to OpenEPCIS identifier converter and receive back the converted identifier as a response. These API’s can also be used directly online or from within another application code.  Users can access the REST endpoint using Swagger-UI from <a href="https://tools.openepcis.io/q/swagger-ui/#/Identifier%20Converter%20Resource">here</a>.</p>
-</li>
-<li>
-<p><strong>Application code</strong>: The application has been primarily developed using the Java programming language. Users can obtain and utilize the code from <a href="https://github.com/openepcis/openepcis-epc-digitallink-translator">here</a>.</p>
-</li>
-</ul>
-<h2 id="quick-links">Quick links</h2>
-<ul>
-<li><a href="https://tools.openepcis.io/openepcis-ui/Identifiersconverter">Identifier converter</a></li>
+<li><a href="https://tools.openepcis.io/openepcis-ui/Identifiersconverter">Web application</a></li>
 <li><a href="https://tools.openepcis.io/q/swagger-ui/#/Identifier%20Converter%20Resource">Identifier converter API endpoint</a></li>
 <li><a href="https://github.com/openepcis/openepcis-epc-digitallink-translator">Identifier converter code</a></li>
 </ul>

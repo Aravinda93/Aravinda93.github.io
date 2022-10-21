@@ -15,7 +15,7 @@
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 <title>OpenEPCIS&nbsp; | Documentation
   </title>
-<meta name="description" content="Welcome to the OpenEPCIS user guide! This section provides an introduction to EPCIS and detailed documentation users need, to understand and …">
+<meta name="description" content="Welcome to the OpenEPCIS user guide! This section provides an introduction to EPCIS and detailed documentation users need to understand and …">
 <meta property="og:title" content="Documentation" />
 <meta property="og:description" content="An overview of the OpenEPCIS projects, artifacts, tools, and documentation developed by OpenEPCIS." />
 <meta property="og:type" content="website" />
@@ -228,7 +228,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>6: <a href="#pg-791d2388792b9454677840d7ff389eba">Identifier Converter</a></li>
+<li>6: <a href="#pg-791d2388792b9454677840d7ff389eba">Identifier/Vocabulary Converter</a></li>
 
 
     
@@ -268,7 +268,7 @@ This is the multi-page printable view of this section.
 
 
 <div class="content">
-      <p>Welcome to the OpenEPCIS user guide! This section provides an introduction to EPCIS and detailed documentation users need, to understand and successfully use/integrate various open-source projects based on EPCIS standard.</p>
+      <p>Welcome to the OpenEPCIS user guide! This section provides an introduction to EPCIS and detailed documentation users need to understand and successfully use/integrate various open-source projects based on EPCIS standard.</p>
 <p>Please refer to the <a href="/docs/introduction/">EPCIS</a> section to delve into the OpenEPCIS world.</p>
 
 </div>
@@ -294,7 +294,9 @@ This is the multi-page printable view of this section.
 	<h1 id="pg-e74dc031c69016f227f3aa7d249a0b2b">1 - Introduction</h1>
     <div class="lead">Why EPCIS is necessary and how it can help organizations of all sizes and types.</div>
 	<h2 id="background">Background</h2>
-<p>The supply chain system can consist of a single organisation or multiple numbers of them, that are involved in providing clients or consumers with services or products. All physical and digital products progress through some form of supply chain activities before reaching the possession of customers. The accessibility and visibility of the product data throughout its life cycle in the supply chain is the primary concern for the organization as it needs to track the products in real-time and if required convey the relevant information to customers or other organizations. If organizations or entities involved in the supply chain system use their own schema or model to keep track of the items then it is very difficult to track the products end-to-end which make it hard for an organization to communicate with other organizations and share the data. To address this issue, there was a need for a standard that could be implemented within the supply chain system so as to enable tracking, tracing, and monitoring of goods at every step. Hence, GS1 introduced the global standard known as EPCIS (Electronic Product Code Information Services).</p>
+<p>The supply chain system can consist of a single organisation or multiple numbers of them, that are involved in providing clients or consumers with services or products. All physical and digital products progress through some form of supply chain activities before reaching the possession of customers. The accessibility and visibility of the product data throughout its life cycle in the supply chain is the primary concern for the organization as it needs to track the products in real-time and if required convey the relevant information to customers or other organizations. If organizations or entities involved in the supply chain system use their own schema or model to keep track of the items then it is very difficult to track the products end-to-end which make it hard for an organization to communicate with other organizations and share the data. To address this issue, there was a need for a standard that could be implemented within the supply chain system so as to enable tracking, tracing, and monitoring of goods at every step. Hence, GS1 introduced the global standard known as EPCIS (Electronic Product Code Information Services).
+<br>
+ </p>
 <p>Using the EPCIS standard organizations can generate and exchange visibility data within the organization or across different organizations. Even if a single entity is in charge of the development and delivery of the entire product, it is essential to keep track of all activities and processes so that the company can monitor all of its resources and operations in order to provide complete transparency and uplift user or client trust. EPCIS has been designed such that businesses of any size, shape and type can implement and take advantage of it. It offers total adaptability to meet different business and regulatory requirements.</p>
 <h2 id="gs1-global-standard-one">GS1 (Global Standard One)</h2>
 <p>The GS1 is a non-profit organization that develops and maintains standards for the identification, capture, and sharing of information. GS1 was established in April 1974 and is based in Brussels, Belgium. GS1 standards are being used by over 2 million businesses throughout the world. In 1974, GS1 standardized the EAN/UPC (European Article Number/Universal Product Code) barcode, which is still used and printed on a wide range of items today. GS1 operates in various industries like retail, healthcare, logistics, food service, technical industries, etc. GS1 has developed a standard for creating and sharing visibility data within and across multiple organizations known as EPCIS (Electronic Product Code Information Services). Using the standards designed by GS1 various trading partners such as customers, suppliers, distributors, logistic service providers, retailers, etc. can use a common language for communication in their supply chain. The main goal of GS1 standards is to enhance the physical and digital supply chain performance, safety, security, and accessibility. GS1 has around 115 member organizations in various countries across the globe.</p>
@@ -327,11 +329,12 @@ This is the multi-page printable view of this section.
     
 	<h1 id="pg-93a6e13d13f1dac629930a54fc35b89b">2 - EPCIS</h1>
     <div class="lead">Discover the specifics of EPCIS, how it works, and what OpenEPCIS is.</div>
-	<h2 id="introduction--history">Introduction &amp; history</h2>
+	<h2 id="introduction--history">Introduction &amp; History</h2>
 <p>EPCIS is an open ISO/IEC/GS1 standard that allows visibility data information to be captured and shared within an organization or between multiple organizations in the form of an event. The EPCIS standard is beneficial to organizations that move products between stages within the same organization as well as between organizations. The EPCIS event data can be used for all physical objects such as assets, products, logical units, reusable transport items, etc., or can also be used for digital objects such as music downloads, electronic books, electronic coupons, subscriptions, etc. The EPCIS standard was designed to improve cooperation between trading partners by exchanging comprehensive information on physical and digital items. The initial version of EPCIS 1.0 was released at the beginning of 2007. Later, EPCIS 1.1 and 1.2 were released in 2014 and 2016 respectively with various enhancements. The latest version, EPCIS 2.0, is published in June 2022 with a lot of significant enhancements.</p>
 <p>The main objective of the EPCIS data is to provide visibility information within a specific business process. The following figure 1 describes how EPCIS data may be generated within a simple business process.</p>
-<p><img src="./Fig1.jpg" alt="Figure 1: Generation of EPCIS events in a simple business process."></p>
+<p><img src="./Figure_1_Supply_Chain.png" alt="Figure 1: Generation of EPCIS events in a simple business process."></p>
 <p id="refImage" align="center">Figure 1: Generation of EPCIS events in a simple business process.</p>
+&nbsp;
 <p>Above figure depicts a simplified business process in which a manufacturer produces an item, which is then packed and shipped to the Retailer DC (Distribution Center). The item is received by Retailer DC, who then sends it to the appropriate Retail Store. The item is received by the retail store and moved to a sales area where a consumer can purchase it. The simplified flow of goods can consist of the following critical tracking events: packing, shipping, receiving the items, etc. At every step within these business processes, an EPCIS event is created. This EPCIS event provides information on what exactly was occurring to the items at that particular step. The entirety of all these EPCIS events provides a complete picture of the whole business process.</p>
 <p>EPCIS events consist of context information comprising the five different dimensions What, When, Where, Why, and How. Each of these dimensions consists of multiple fields that make up the event information. Each dimension is independent of one another and not mandatory to include all dimensions/fields of dimensions in the EPCIS event. For example, the following pieces of information are produced for four dimensions when a product is shipped from the manufacturer to retail DC in the V2 business process mentioned above:</p>
 <ul>
@@ -376,24 +379,267 @@ This is the multi-page printable view of this section.
 <p>• Provide notification on various attributes such as location, timing, status, quantity, or quality of the product in real-time.</p>
 <p>• Ensure that items reach the consumers at the right location and time.</p>
 <p>• Increase consumer protection.</p>
-<h2 id="openepcis">OpenEPCIS</h2>
+<h2 id="epcis-event-types">EPCIS event types</h2>
+<p>The five dimensions of the EPCIS provide information related to various activities in the real world for physical objects and in the virtual world for digital objects. However, there are five types of events available in EPCIS that are used based on the type of the process occurring to objects. All these event types can include the five dimensions of the EPCIS, but each of the dimensions may have different attributes/fields depending on the type of the event.</p>
+<h3 id="objectevent">ObjectEvent</h3>
+<p>An ObjectEvent represents the EPCIS event information occurring to one or many physical or digital objects. In other words, they represent simple observations of business objects. Instance-level EPC (Electronic Product Code) or class-level EPC without any relationship may appear in the ObjectEvent. A simple example is a pallet that is shipped or received using the pallet’s SSCC (Serial Shipping Container Code).</p>
+<h3 id="aggregationevent">AggregationEvent</h3>
+<p>An AggregationEvent is used when one or more objects are either aggregated together or disaggregated. In this type of event, there is a strong physical relationship between the aggregated objects, and they are present at the same location at a given time until they are disaggregated. The AggregationEvent is reversible - meaning that upon the disaggregation, original objects can be obtained. Examples related to this type of event are the packing of cases onto a pallet or the unloading of a container.</p>
+<h3 id="transactionevent">TransactionEvent</h3>
+<p>A TransactionEvent represents the type of EPCIS event in which one or several physical or digital objects are associated or disassociated with business transactions—for example, linking the pallet and cases of the milk cartons to its commercial invoice.</p>
+<h3 id="transformationevent">TransformationEvent</h3>
+<p>A TransformationEvent is used when one or more physical or digital objects are consumed entirely or partially, and corresponding outputs are produced. Unlike the AggregationEvent, a TransformationEvent is not reversible. Hence, after a transformation, the original objects cannot be recovered. Also, the process of transformation may occur over a considerable amount of time—for example, the mixing of several ingredients to bake a chocolate cake. Since all the ingredients are already mixed, there is no way to recover them back.</p>
+<h3 id="associationevent">AssociationEvent</h3>
+<p>An AssociationEvent describes the association or disassociation of one or more physical or digital objects with their respective parent object or with a particular location. It is a bit similar to the AggregationEvent, but AggregationEvents do not allow the correlation of objects with the physical location. Also, in some instances, the association can be permanent. Identical to the AggregationEvent, there is a close correlation between the associated objects. All the associated objects appear together at the same place at the same time until they are disaggregated. An AssociationEvent is used when the objects need to be associated with the physical location or for long-term association. For example, an AssociationEvent is used to construct the wagon using various objects such as screws, tires, sensors, etc. which can be later used to transport the vegetables or cosmetic cases using the AggregationEvent. If an AggregationEvent was used to construct the wagon, then it may not be easy to distinguish between the disaggregation of the transferred objects and the wagon.</p>
+<h2 id="dimensions-of-epcis">Dimensions of EPCIS</h2>
+<p>As mentioned previously EPCIS events consist of context information in the form of five dimensions. Each of these dimensions consists of various other fields depending on the type of the event. Following are the five dimensions:</p>
+<h3 id="what">What</h3>
+<p>The What dimension of an EPCIS event comprises identifiers of the physical or digital objects that were involved in the particular event. For each business object, GS1 provides appropriate identification schemes, for instance, GTIN (Global Trade Item Number), SGTIN (GTIN with serial number), SSCC (Serial Shipping Container Code), GIAI (Global Individual Asset Identifier), etc. The following figure 2 describes various attributes available in the What dimension based on different event types:
+<br>
+ </p>
+<p><img src="./Figure_2_What.png" alt="Figure 2: Attributes of What dimension corresponds to respective event types."></p>
+<p id="refImage" align="center">Figure 2: Attributes of What dimension corresponds to respective event types.</p>
+<p><strong>Instance Level</strong>:</p>
+<p>When an identifier is associated with each participating object, it is called an instance-level identifier. Therefore, no two objects can be related to the same identifier. For example, manufacturers may use a unique number to differentiate each product, such as a toy, phone, etc. Instance level identifiers are represented using the EPC. GS1-compliant values of instance-level identifiers can either be represented as an EPC URI (Uniform Resource Identifier) or GS1 Digital Link URI format.
+<br>
+ </p>
+<p><strong>Class level</strong>:</p>
+<p>If multiple objects are associated with the same identifier, then these types of identifiers may be considered class-level identifiers. For example, an identifier can be attached to a pallet which may consist of hundreds of produced toys. Class level identifiers can also, populate the Quantity element. The structure of the Quantity element consists of the following items:</p>
+<p>EPC Class: A class level identifier to which the specified quantity of objects belongs.</p>
+<p>Quantity: It is an optional field indicating how many or how much of the EPC Class. If not provided, it is assumed to be of an unknown quantity.</p>
+<p>UOM: It stands for Unit Of Measure. It is an optional field, and if provided, indicates the measurement of the quantity by a specific unit code (e.g. KGM for a kilogram).</p>
+<h3 id="when">When</h3>
+<p>The When dimension of an EPCIS event provides information related to the date and time of the event. The following figure 3 provides an overview of the attributes available in the When dimension:
+<br>
+ </p>
+<p><img src="./Figure_3_When.png" alt="Figure 3: Attributes of When dimension."></p>
+<p id="refImage" align="center">Figure 3: Attributes of When dimension.</p>
+<p><strong>Event time</strong>:</p>
+<p>It is the date and time at which the event took place. For example, if the objects are received at a docking station on the destination, then an event is triggered. This event includes the exact date and time at which objects were received as event time.
+<br>
+ </p>
+<p><strong>Event time zone offset</strong>:</p>
+<p>It consists of the time zone in which the event took place. It is essential to display the EPCIS event information with regard to the local time zone; hence time zone offset is critical. For example, if an item is shipped from Germany to India, then the triggered event includes the time zone offset as Germany time zone (Central Europe Time). This time zone information is used on the receiving side, and information can be displayed in IST (Indian Standard Time) time zone.
+<br>
+ </p>
+<p><strong>Record time</strong>:</p>
+<p>It is the date and time at which an EPCIS event is stored in the EPCIS repository. The record time does not provide information concerning the business steps of the EPCIS event. In contrast to other EPCIS event data, this is not captured at the time of event creation. It is used just for reference which may be useful when retrieving the data from the EPCIS repository.</p>
+<h3 id="where">Where</h3>
+<p>The Where dimension of an EPCIS event provides information corresponding to the actual physical location where the event took place. It can also offer information about where precisely the items are present after the event. The following figure 4 provides an overview of attributes available in the Where dimension of an EPCIS event:
+<br>
+ </p>
+<p><img src="./Figure_4_Where.png" alt="Figure 4: Attributes of Where dimension."></p>
+<p id="refImage" align="center">Figure 4: Attributes of Where dimension.</p>
+<p><strong>Read point</strong>:</p>
+<p>Read point is the exact location where the actual event took place. The event capturing devices such as RFID readers can determine the read point of the event. Consider if the receiving site or docking station receives a box of objects. It is now made to pass through a door portal where scanning is carried out then the location identifier tied to the door is populated as the Read Point for that event.
+<br>
+ </p>
+<p><strong>Business location</strong>:</p>
+<p>It is the location of items after the particular business process step. Business location is the position where items are considered to be placed or present after a specific event. Suppose the box of items is collected at the receiving side and passes through the door portal to record the receiving event. Following the event, the items are placed in a warehouse, then the location identifier tied to the warehouse acts as Business Location in the EPCIS event.</p>
+<h3 id="why">Why</h3>
+<p>The Why dimension of an EPCIS event represents the business context of the event. The following figure 5 provides an overview of attributes available in the Why dimension:
+<br>
+ </p>
+<p><img src="./Figure_5_Why.png" alt="Figure 5: Attributes of Why dimension."></p>
+<p id="refImage" align="center">Figure 5: Attributes of Why dimension.</p>
+<p><strong>Business step</strong>:</p>
+<p>The business step attribute indicates what type of process was taking place at the time of the event within the context of the business. Some examples of the business step from CBV (Core Business Vocabulary) include receiving, picking, shipping, etc.
+<br>
+ </p>
+<p><strong>Disposition</strong>:</p>
+<p>The disposition attribute represents the state of the object immediately after the current EPCIS event. Some vocabularies for the disposition fields from CBV (Core Business Vocabulary) are expired, recalled, active, in_transit, etc. For example: If the business step of the current EPCIS event is shipping, then the disposition field can be populated with the keyword in_transit.
+<br>
+ </p>
+<p><strong>Persistent Disposition</strong>:</p>
+<p>The persistent disposition field is newly introduced with EPCIS 2.0 latest version. It includes one or more business conditions of the object participating in the event after a particular event in a business process. The one or more values in this field can be set or unset independently
+of each other. The values provided for this attribute are assumed to be in the set condition until it is explicitly unset. According to the CBV, the field values for persistent disposition are similar to the disposition field.
+<br>
+ </p>
+<p><strong>Business Transaction</strong>:</p>
+<p>In this field, one or more business transactions corresponding to the EPCIS event may be represented. Some examples of the business transactions from CBV are inv (invoice), PO (purchase order), desadv (dispatch advice), etc. The business transaction is constructed using two fields:</p>
+<p>Type: This is an optional field that indicates what kind of transaction this particular business transaction denotes.</p>
+<p>Business Transaction: An identifier representing a particular business transaction.
+<br>
+ </p>
+<p><strong>Source and Destination</strong>:</p>
+<p>As the name itself implies, whenever the ownership or possession of the items shifts, these attributes provide additional business context information. In a complex business process, each of the business steps may be carried out by different parties, so it is vital to include the details related to all the parties that are involved in the process. The attributes of the Where dimension read point and business location provide information on the physical location where the business step took place. However, the source and destination attributes indicate the entities that are involved, along with the optional physical location of the business process.</p>
+<p> </p>
+<p>In a multi-step supply chain process, some or all of the events generated using the EPCIS can have the same source and destination information. Following are the fields that structure the source and destination fields:</p>
+<p>Source and Destination type: It denotes the type of source/destination. There are three types of source/destination types.</p>
+<p>Owning party: It indicates the party who owns the objects at the initial or final endpoint.</p>
+<p>Processing party: It denotes the parties who currently have the physical procession of the objects at the initial or final endpoint such as third-party delivery services.</p>
+<p>Location: It refers to the physical location of the start or end of the business step.</p>
+<h3 id="how">How</h3>
+<p>The How dimension of an EPCIS event contains the information related to the list of sensor elements. It denotes the condition of the objects as captured by the sensor devices such as temperature, pressure, speed, etc. The sensor element structure consists of sensor metadata and sensor report. Each parent of the sensor element can have only one metadata and several sensor elements, This is the newly introduced dimension with EPCIS 2.0. The following figure 6 provides an overview of How dimensions:
+<br>
+ </p>
+<p><img src="./Figure_6_How.png" alt="Figure 6: Attributes of How dimension."></p>
+<p id="refImage" align="center">Figure 6: Attributes of How dimension.</p>
+<p><strong>Sensor Metadata</strong>:</p>
+<p>It is an optional parameter that contains metadata attributes. If included, this metadata is applicable for all sensor report elements which belong to the particular sensor element. Some fields that are available in metadata are time, start time, end time, device id, etc.
+<br>
+ </p>
+<p><strong>Sensor Report</strong>:</p>
+<p>It is an element that contains one or more attributes that provide information sensor reading. For example, the sensor report may contain information about the temperature, pressure, speed, etc. of the objects. It may also include other attributes such as time, device id, value, UOM, etc.</p>
+<h3 id="additional-fields">Additional fields</h3>
+<p>Apart from the fields that are available in the five dimensions, EPCIS provides some additional fields that can or must be part of the events depending on the type of event. The following figure 7 provides an overview of some additional fields that can enhance the meaning of the EPCIS events:
+<br>
+ </p>
+<p><img src="./Figure_7_Others.png" alt="Figure 7: Additional attributes available in the EPCIS event."></p>
+<p id="refImage" align="center">Figure 7: Additional attributes available in the EPCIS event.</p>
+<p><strong>Instance/Lot Master Data (ILMD)</strong>:</p>
+<p>ILMD is a type of EPCIS data describing a particular instance of a physical or digital object, or it can also refer to a specific batch/lot of objects. ILMD is master data that applies to a smaller group. Master data are data that refer to a broad group of objects, such as the production location, weight, or the physical measurements of goods identified by a particular GTIN. ILMD details can be different depending on smaller object classes, such as the expiry date of the objects. Unlike the weight or physical size, the expiration
+dates can be different for all trade goods depending on the day/time of production and applicable to only a small group of products produced on a specific day/time.</p>
+<p>ILMD data can contain any details, such as the date of production, exact manufacturing place, or the weight of products but applicable only for a small group. ILMD data is static in the same way as master data, meaning that they do not change over time with the life of the product. For example, the expiry date never changes for a product. Hence, ILMD cannot be used for the data that may change over the life of an object. ILMD data can be added only when the object comes into existence. Hence, ILMD data can only be specified in the ObjectEvent and in the TransformationEvent.
+<br>
+ </p>
+<p><strong>Action property</strong>:</p>
+<p>EPCIS action value offers information on how a given event is connected to the object’s life cycle. The values in action fields are independent of the business step carried out. Except for the TransformationEvent, it is mandatory to include the action property in the event. The action field can contain one of the three values irrespective of the event type, and the process carried out. The meaning of these action properties differs based on the type of event used. Following are the three values of action property that can be used within the EPCIS event: ADD, OBSERVE, and DELETE.
+<br>
+ </p>
+<p><strong>Transformation ID</strong>:</p>
+<p>As the name suggests, it is available only for the TransformationEvent. Transformation IDs are used to link the TransformationEvents together. It is an optional field, and if a value is specified, then inputs of all events sharing the same value may contribute to the output of all events sharing the same value.
+<br>
+ </p>
+<p><strong>Event identifiers</strong>:</p>
+<p>The Event Identifiers are used to populate the eventID field within the EPCIS event. EventID is not a mandatory field, but if it is included, then it should be globally unique for events except for error declarations. The EventID can be generated using either a UUID (Universally Unique Identifier) or EPCIS event hash ID. These values are unique irrespective of the event in XML, JSON, or any other data present within the EPCIS event. The event hash ID’s can be created using the SHA 256 (Secure Hash Algorithm-256) or other hash functions. An example of the EventID in UUID and hash ID for an event is as follows:</p>
+<p align="center">urn:uuid:f81d4gde-8efd-22e0-b876-00b0d92e6bf7</p>
+<p align="center">ni:///sha-256;c6407ffcac52ec159528f2b556ba4ac3844c5aa48485c1fd61643e94f0a2d678?ver=CBV2.0</p>
+<p> </p>
+<p><strong>Error declaration</strong>:</p>
+<p>Every event generated for the objects in EPCIS indicates the forward step taken by the objects in a business process. The entire business cycle consists of a sequence of steps represented in the form of EPCIS events. Sometimes the recorded event might contain some erroneous information due to a faulty device, physical conditions, operator fault, etc. so the historical event may not precisely represent what happened in the real world. EPCIS standard deliberately does not allow to delete or modify the information of already created events because it can affect the flow of business processes or other depending events. Alternatively, a new event can be generated to nullify the previous error event.</p>
+<p>The following example provides a situation when an error event is generated: Company A generates an ObjectEvent with action value DELETE for an object with identifier 111 indicating that the object has been destroyed. However, it was later discovered that the actual object had not been destroyed and it is still present in the warehouse. As an event with action DELETE is already present, new events with different values cannot be created for the same identifier in the future. Hence, an error declaration event is created, indicating that the object with identifier 111 was not destroyed.</p>
+<p>The ErrorDeclaration tag within an EPCIS event indicates that this occurrence has special meaning in comparison to regular EPCIS events. It also indicates that previous events are incorrect and contain some erroneous information. The error events include the same information as the original (erroneous) event, except that they have an additional ErrorDeclaration tag that is not present in the actual event. The ErrorDeclaration tag may contain the following elements:</p>
+<p>Declaration Time: Indicates the date and time during which declaration of error is made.</p>
+<p>Reason: It is an optional field that indicates the cause for the previous error event.</p>
+<p>Corrective Event IDs: It is also an optional field. If it is provided, it indicates the eventID field of an event that was in error.</p>
+<h2 id="other-associated-concepts-with-epcis-standards">Other associated concepts with EPCIS standards</h2>
+<p>Following are some of the additional attributes present in EPCIS standard:</p>
+<h3 id="syntax-type">Syntax type</h3>
+<p>Until EPCIS 1.2, standard vocabulary elements in the events were represented only using a URN (Uniform Resource Name) format. However, with the release of EPCIS 2.0, they can be represented using either a URN or a Web URI (Uniform Resource Identifier) scheme. So all the standard vocabularies that are available in CBV can be specified in one of the following syntaxes:</p>
+<p align="center">urn:epcglobal:cbv:qualifier:payload</p>
+<p align="center">https://gs1.org/voc/qualifier-payload</p>
+<p>The qualifier denotes the vocabulary type, and the payload defines the element in the vocabulary. Following is the example of the standard vocabulary for business step shipping in URN and Web URI format:</p>
+<p align="center">urn:epcglobal:cbv:bizstep:shipping</p>
+<p align="center">https://gs1.org/voc/Bizstep-shipping</p>
+<h3 id="gs1-company-prefix-gcp">GS1 Company Prefix (GCP)</h3>
+<p>If an organization wishes to become a member of GS1, then a unique identification code is generated and distributed to a particular organization. This identification code is known as GCP (GS1 Company Prefix). GCP string consists of four to twelve digits, and it is used to identify each organization within the context of GS1 uniquely. This GCP can be used as a foundation to generate unique identifiers for their locations (GLN), goods (GTIN), shipments (SSCC), etc. The GCP example of a product identified by an SGTIN EPC URI is as follows:</p>
+<p align="center">urn:epc:id:sgtin:CompanyPrefix.ItemRefAndIndicator.SerialNumber</p>
+<p align="center">urn:epc:id:sgtin:2345678.190123.987</p>
+<p>As we can observe from the syntax format above, 2345678 is the GCP assigned to a particular organization. 90123 is the item reference, 1 is the indicator digit, and 987 is the serial number.</p>
+<h2 id="cbv-core-business-vocabulary">CBV (Core Business Vocabulary)</h2>
+<p>Core Business Vocabulary (CBV) is the accompanying data standard for EPCIS. The main objective of the CBV is to provide various vocabulary elements that can be utilized in conjunction with the EPCIS standard. The vocabularies in this standard ensure that all parties involved in the sharing of EPCIS data have a common understanding of the data. If each organization proprietary their values/identification schemes in EPCIS, then it can be challenging for other organizations to understand the event information. The CBV-defined vocabularies are the core component of the EPCIS data model, and it covers a broad set of industry sectors that have common business scenarios. EPCIS standard has the provision to add user-specific vocabulary elements, but it is recommended to use the CBV standard to the greatest possible extent. CBV provides the standard vocabulary list for various fields in the EPCIS such as business step, disposition, source and destination type, persistent disposition, sensor elements, etc.</p>
+<p>Along with the new release of EPCIS 2.0, CBV 2.0 has also been planned to release in June 2022. CBV was previously known as Core Business Vocabulary, but with the release of 2.0, it has been renamed Core Business Vocabulary. In comparison to previous versions, CBV 2.0 consists of various new vocabularies for the fields such as business step, disposition, business transaction type, etc. Also, it includes vocabulary elements for newly introduced data fields in EPCIS 2.0, such as sensor elements, persistent disposition, etc.</p>
+<h2 id="enhancements-in-epcis-20-version">Enhancements in EPCIS 2.0 version</h2>
+<p>EPCIS 2.0, which was published in June 2022, is the most recent version and has significant enhancements over EPCIS 1.2. Following are some of the significant advancements in EPCIS 2.0, as previously discussed in some of the preceding sections:</p>
+<p>• Events were solely represented in XML format until EPCIS 1.2, however with EPCIS 2.0, events may now be specified in XML and/or JSON/JSON-LD format.</p>
+<p>• Identifiers and vocabulary information were exclusively stored in URN format until EPCIS 1.2; however, they can be expressed in URN or Web URI format with EPCIS 2.0.</p>
+<p>• A new dimension How has been introduced that can represent sensor information.</p>
+<p>• The new AssociationEvent event type has been added.</p>
+<p>• New attribute Persistent Disposition has been added.</p>
+<p>In addition, several improvements have been incorporated. For further details, refer the official GS1 EPCIS 2.0 specifications.</p>
+<h3 id="example-of-an-epcis-event">Example of an EPCIS event</h3>
+<p>So far, the documentation provided various information on EPCIS standards such as different dimensions, event types, fields available in the event, etc. The following listings provide an example of a simple EPCIS ObjectEvent in both XML and JSON/JSON-LD format. The events accommodate a single instance-level object and a single class-level identifier that is part of a shipping event. These events include four dimensions and the corresponding fields in them, such as recordTime, eventTime, readPoint, source, destination, etc. The XML format consists of the identifiers and standard vocabularies in URN format whereas the JSON/JSON-LD format consists of identifiers and standard vocabularies in Web URI format:
+<br>
+ </p>
+<p>EPCIS event in JSON/JSON-LD format:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;@context&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;https://ref.gs1.org/standards/epcis/2.0.0/epcis-context.jsonld&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ObjectEvent&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;eventTime&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2022-05-01T08:10:10Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;recordTime&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2022-05-16T13:03:43.010235Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;eventTimeZoneOffset&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;+02:00&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;eventID&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;urn:uuid:aed0c443-7be2-4b64-8fd6-972ca76ef2c2&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;epcList&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;urn:epc:id:sgtin:7547845584.887.100&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;action&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ADD&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;bizStep&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;shipping&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;disposition&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;in_transit&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;readPoint&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;urn:epc:id:sgln:7587875478.45.10&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;bizLocation&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;urn:epc:id:sgln:8577747457.85.20&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;quantityList&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;epcClass&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;urn:epc:class:lgtin:6456675455.645.200&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;quantity&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">100</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;uom&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;KGM&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;sourceList&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;owning_party&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;source&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;urn:epc:id:sgln:5747587485.84.100&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;destinationList&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;processing_party&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;destination&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;urn:epc:id:sgln:7854785487.45.200&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><p>EPCIS event in XML format:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&lt;ObjectEvent&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&lt;eventTime&gt;</span>2022-05-01T08:10:10Z<span style="color:#204a87;font-weight:bold">&lt;/eventTime&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&lt;recordTime&gt;</span>2022-05-16T13:03:43.01Z<span style="color:#204a87;font-weight:bold">&lt;/recordTime&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&lt;eventTimeZoneOffset&gt;</span>+02:00<span style="color:#204a87;font-weight:bold">&lt;/eventTimeZoneOffset&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&lt;eventID&gt;</span>urn:uuid:aed0c443-7be2-4b64-8fd6-972ca76ef2c2<span style="color:#204a87;font-weight:bold">&lt;/eventID&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&lt;epcList&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;epc&gt;</span>urn:epc:id:sgtin:7547845584.887.100<span style="color:#204a87;font-weight:bold">&lt;/epc&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&lt;/epcList&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&lt;action&gt;</span>ADD<span style="color:#204a87;font-weight:bold">&lt;/action&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&lt;bizStep&gt;</span>urn:epcglobal:cbv:bizstep:shipping<span style="color:#204a87;font-weight:bold">&lt;/bizStep&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&lt;disposition&gt;</span>urn:epcglobal:cbv:disp:in_transit<span style="color:#204a87;font-weight:bold">&lt;/disposition&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&lt;readPoint&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;id&gt;</span>urn:epc:id:sgln:7587875478.45.10<span style="color:#204a87;font-weight:bold">&lt;/id&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&lt;/readPoint&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&lt;bizLocation&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;id&gt;</span>urn:epc:id:sgln:8577747457.85.20<span style="color:#204a87;font-weight:bold">&lt;/id&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&lt;/bizLocation&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&lt;quantityList&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;quantityElement&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&lt;epcClass&gt;</span>urn:epc:class:lgtin:6456675455.645.200<span style="color:#204a87;font-weight:bold">&lt;/epcClass&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&lt;quantity&gt;</span>100.0<span style="color:#204a87;font-weight:bold">&lt;/quantity&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&lt;uom&gt;</span>KGM<span style="color:#204a87;font-weight:bold">&lt;/uom&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;/quantityElement&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&lt;/quantityList&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&lt;sourceList&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;source</span> <span style="color:#c4a000">type=</span><span style="color:#4e9a06">&#34;urn:epcglobal:cbv:sdt:owning_party&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>urn:epc:id:sgln:5747587485.84.100<span style="color:#204a87;font-weight:bold">&lt;/source&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&lt;/sourceList&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&lt;destinationList&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&lt;destination</span> <span style="color:#c4a000">type=</span><span style="color:#4e9a06">&#34;urn:epcglobal:cbv:sdt:processing_party&#34;</span><span style="color:#204a87;font-weight:bold">&gt;</span>urn:epc:id:sgln:7854785487.45.200<span style="color:#204a87;font-weight:bold">&lt;/destination&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&lt;/destinationList&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&lt;/ObjectEvent&gt;</span>
+</span></span></code></pre></div><h2 id="openepcis">OpenEPCIS</h2>
 <p>benelog GmbH &amp; Co. KG is an organization located in Kerpen, Germany that focuses on development of software and system architecture. The developed software and applications operate effectively and efficiently in the fields of big data processing, complex, scalable, cloud-based environments. benelog GmbH &amp; Co. KG designed and developed OpenEPCIS implementation based on the EPCIS standard. We are well versed with the ins and outs of the EPCIS standard because we are part of the GS1 core member group that assisted in standardizing EPCIS 2.0 and continue to work on various implementations related to EPCIS.  We have designed and developed several open source tools and projects associated with EPCIS standard as part of our contribution to the EPCIS community, which any entity can utilize for their use (Note: more on the tools and projects discussed later in this documentation).</p>
 <p>Since EPCIS documents might include thousands or millions of events, it is necessary to handle them effectively to ensure that memory utilization and the system on which they are executing are not overworked. We at OpenEPCIS team, consistently uses the latest cutting-edge processes and technologies to develop all the products and services. As a result, all our developments function effectively and efficiently even while managing enormous amounts of data without experiencing any performance problems. The OpenEPCIS team also makes sure that all our developed tools/projects are available in a various formats so users have a choice of alternatives to pick from and are free to select the best option depending on their needs, knowledge, and ease of access.</p>
 <p>If any organization wishes to implement the EPCIS standard within their system then we encourage them to make use of the open-source reference implementation OpenEPCIS, because purchasing commercial solutions can be expensive and creating a custom system can take a lot of time and effort. Based on the most recent EPCIS 2.0, OpenEPCIS has been developed utilizing cutting-edge technology and, as previously mentioned, is highly scalable. Using the current standards, tools, and knowledge, we assist enterprises of all types and scales in seamlessly and successfully integrating the EPCIS standard.</p>
 <h2 id="contact">Contact</h2>
-<p>We are delighted to talk if you have any questions, suggestions, or would want to work with us on any projects. Send us an email at <a href="mailto:info@benelog.com">info@benelog.com</a>.</p>
+<p>We are delighted to talk if you have any questions, suggestions, or would want to work with us on any projects. Send us an email at <a href="mailto:info@openepcis.io">info@openepcis.io</a>.</p>
 <h2 id="quick-links">Quick links</h2>
 <ul>
-<li><a href="https://confluence.company-group.com/x/AQOaBQ">More details on Confluence page</a></li>
+<li><a href="https://ref.gs1.org/standards/epcis/">Official EPCIS documentation</a></li>
+<li><a href="https://ref.gs1.org/standards/cbv/">Official CBV documentation</a></li>
 <li><a href="https://github.com/openepcis/openepcis-event-hash-generator-cli/releases">OpenEPCIS projects</a></li>
 <li><a href="https://www.benelog.com/">About benelog GmbH &amp; Co. KG</a></li>
 </ul>
 <style type="text/css">
     #refImage {
-        width: 600px;
-        display: block;
-        margin: 0 auto
+        display:block;
+        float:none;
+        padding-top:-10%;
+        font-size: 12px;
     }
+
+    img {
+        display:block;
+        float:none;
+        margin-left:auto;
+        margin-right:auto;
+        width:60%;
+        border: 1px solid #555;
+    }
+
 </style>
 
 </div>
@@ -430,27 +676,65 @@ This is the multi-page printable view of this section.
  </p>
 <p>OpenEPCIS wants to support the EPCIS community by providing means to convert the EPCIS documents from one format to another with ease. The developed utility aimed to convert the bulk EPCIS events effectively and efficiently with little to no load on the memory by using advanced techniques, and technologies. The application also provides a single solution for converting EPCIS events irrespective of the industry, use case, or supply chain system. It reduces the time and effort for the various organizations as each of them does not have to develop the conversion tool. Also, maintain and incorporate modifications according to the different release versions of EPCIS. The converted EPCIS events conform to the latest version of the EPCIS, i.e. EPCIS 2.0.</p>
 <h2 id="usage">Usage</h2>
-<p>Depending on expertise and easy of access, users can access the application in various ways. OpenEPCIS document format converter application is available following formats:</p>
-<ul>
-<li>
-<p><strong>Web application</strong>:
-By providing either an XML or JSON/JSON-LD EPCIS document as input, users can easily access and obtain the transformed EPCIS document. You can access the web tool from <a href="https://tools.openepcis.io/openepcis-ui/Documentconverter">here</a>.</p>
-</li>
-<li>
-<p><strong>API endpoint</strong>:
-Users and developers can use the API to send requests to the OpenEPCIS document format converter API using an EPCIS document as the input, and to receive the converted document back as a response. These APIs can also be utilized from within another application&rsquo;s code or directly online.  Users can access the REST endpoint using Swagger-UI from <a href="https://tools.openepcis.io/q/swagger-ui/#/Document%20Converter%20Resource">here</a>.</p>
-</li>
-<li>
-<p><strong>Application code</strong>:
-The Java programming language has been primarily used to develop the application. Users can access and use the entire code from the OpenEPCIS GitHub as dependencies for other projects or to import &amp; use it within their own systems. The application code is available <a href="https://github.com/openepcis/openepcis-document-converter">here</a>.</p>
-</li>
-</ul>
+<p>Following section provides quick overview of how to convert the EPCIS document from one format to other:</p>
+<h3 id="web-application">Web application</h3>
+<p>By providing either an XML or JSON/JSON-LD EPCIS document as input, users can easily access and obtain the transformed EPCIS document using the web application. You can access the web tool from <a href="https://tools.openepcis.io/openepcis-ui/Documentconverter">here</a>.</p>
+<h3 id="swagger-ui">Swagger-UI</h3>
+<p>Users/develoers can make use of the API to send requests to the OpenEPCIS document format converter API using an EPCIS document as the input, and to receive the converted document back as a response. These APIs can also be utilized from within another application’s code or directly online. Users can access the REST endpoint using Swagger-UI from <a href="https://tools.openepcis.io/q/swagger-ui/#/Document%20Converter%20Resource">here</a>.</p>
+<h3 id="command-line">Command Line</h3>
+<p>Client URL or popularly known as cURL is a command-line utility that is used to send and receive data from or to a server. As many developers and users prefer using this utility over normal web applications, OpenEPCIS Format Converter supports the conversion of EPCIS document/event using the cURL command. Users can make requests to the Document Format Converter service <code>https://tools.openepcis.io/api/jsonConverter</code> or <code>https://tools.openepcis.io/api/xmlConverter</code> using their preferred document. Following is an example of a cURL request to convert the XML document to JSON format:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#a40000">curl</span> <span style="color:#a40000">-X</span> <span style="color:#a40000">&#39;POST&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">&#39;https:</span><span style="color:#8f5902;font-style:italic">//tools.openepcis.io/api/jsonConverter&#39; \
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#a40000">-H</span> <span style="color:#a40000">&#39;accept:</span> <span style="color:#a40000">application/json&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">-H</span> <span style="color:#a40000">&#39;Content-Type:</span> <span style="color:#a40000">application/xml&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">-d</span> <span style="color:#a40000">&#39;</span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;@context&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;https://gs1.github.io/EPCIS/epcis-context.jsonld&#34;</span><span style="color:#000;font-weight:bold">,{</span><span style="color:#204a87;font-weight:bold">&#34;example&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;http://ns.example.com/epcis/&#34;</span><span style="color:#000;font-weight:bold">}],</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;https://id.example.org/document1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;EPCISDocument&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;schemaVersion&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2.0&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;creationDate&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;2019-11-01T14:00:00.000+01:00&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;epcisBody&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#204a87;font-weight:bold">&#34;eventList&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;eventID&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ni:///sha-256;025ac144187a8c5e14caf4d1cfa69250a33dc59a5bc42a68d31b1b5e55a3f15a?ver=CBV2.0&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;AssociationEvent&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;eventTime&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2019-11-01T14:00:00.000+01:00&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;eventTimeZoneOffset&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;+01:00&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;parentID&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;urn:epc:id:grai:4012345.55555.987&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;childEPCs&#34;</span><span style="color:#000;font-weight:bold">:[</span><span style="color:#4e9a06">&#34;urn:epc:id:giai:4000001.12345&#34;</span><span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;action&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ADD&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;bizStep&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;assembling&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;readPoint&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;urn:epc:id:sgln:4012345.00001.0&#34;</span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">&#39;</span>
+</span></span></code></pre></div><h3 id="application-code">Application Code</h3>
+<p>The application has been primarily developed using Java. The code is available at the OpenEPCIS GitHub account and can be accessed directly or as dependencies for other projects. The complete code can be found <a href="https://github.com/openepcis/openepcis-document-converter">here</a>.</p>
+<h4 id="converting-xml-to-jsonjson-ld-document">Converting XML to JSON/JSON-LD document</h4>
+<p>If you have a EPCIS 2.0 XML document which you want to convert to JSON/JSON-LD then provide it as <code>InputStream</code> to convert method of <a href="https://github.com/openepcis/openepcis-document-converter/blob/main/src/main/java/io/openepcis/epc/formatconverter/XmlToJsonConverter.java">XmlToJsonConverter.class</a>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">ByteArrayOutputStream</span> <span style="color:#000">jsonOutput</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">ByteArrayOutputStream</span><span style="color:#ce5c00;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">EventJSONStreamCollector</span> <span style="color:#000">collector</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">EventJSONStreamCollector</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">jsonOutput</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">EventHandler</span> <span style="color:#000">handler</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">EventHandler</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">EventValidator</span><span style="color:#ce5c00;font-weight:bold">(),</span> <span style="color:#000">collector</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">XmlToJsonConverter</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">convert</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">xmlStream</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">handler</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">println</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">jsonOutput</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toString</span><span style="color:#ce5c00;font-weight:bold">());</span>
+</span></span></code></pre></div><h4 id="converting-jsonjson-ld-to-xml-document">Converting JSON/JSON-LD to XML document</h4>
+<p>If you have a EPCIS 2.0 JSON/JSON-LD document which you want to convert to XML then provide it as <code>InputStream</code> to convert method of <a href="https://github.com/openepcis/openepcis-document-converter/blob/main/src/main/java/io/openepcis/epc/formatconverter/JsonToXmlConverter.java">JsonToXmlConverter.class</a> :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">ByteArrayOutputStream</span> <span style="color:#000">xmlOutput</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">ByteArrayOutputStream</span><span style="color:#ce5c00;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">EventJSONStreamCollector</span> <span style="color:#000">collector</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">EventJSONStreamCollector</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">xmlOutput</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">EventHandler</span> <span style="color:#000">handler</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">EventHandler</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">EventValidator</span><span style="color:#ce5c00;font-weight:bold">(),</span> <span style="color:#000">collector</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">JsonToXmlConverter</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">convert</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">jsonStream</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">handler</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">println</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toString</span><span style="color:#ce5c00;font-weight:bold">());</span>
+</span></span></code></pre></div><h2 id="dependencies">Dependencies</h2>
+<p>The event conversion logic depends on the <a href="https://github.com/openepcis/openepcis-models/tree/main/epcis">openepcis-models</a> package.</p>
 <h2 id="quick-links">Quick links</h2>
 <ul>
-<li><a href="https://confluence.company-group.com/x/3YHpAw">More details on Confluence page</a>.</li>
-<li><a href="https://tools.openepcis.io/openepcis-ui/Documentconverter">Web application</a>.</li>
-<li><a href="https://tools.openepcis.io/q/swagger-ui/#/Document%20Converter%20Resource">API endpoint</a>.</li>
-<li><a href="https://github.com/openepcis/openepcis-document-converter">Application code</a>.</li>
+<li><a href="https://tools.openepcis.io/openepcis-ui/Documentconverter">Web application</a></li>
+<li><a href="https://tools.openepcis.io/q/swagger-ui/#/Document%20Converter%20Resource">API endpoint</a></li>
+<li><a href="https://github.com/openepcis/openepcis-document-converter">Application code</a></li>
 </ul>
 
 </div>
@@ -484,26 +768,53 @@ The Java programming language has been primarily used to develop the application
 	<h2 id="introduction">Introduction</h2>
 <p>The newest EPCIS version i.e. EPCIS 2.0, offers several improvements over earlier versions, including the inclusion of sensor data (How dimension), a new event type (AssociationEvent), a new property (PersistentDisposition), etc. which were not supported in earlier versions as standard EPCIS attributes. Additionally, EPCIS 1.2 used &lt;extension&gt; wrappers to include some of the common EPCIS attribute information; however, in EPCIS 2.0, these &lt;extension&gt; wrappers will be removed to make the event more simpler and straightforward. The implementers may view this as a major change. Therefore, a tool was required to make it simple for implementers to switch from EPCIS 1.2 to EPCIS 2.0 XML documents and vice versa. Also, support the EPCIS standard with backward and forward compatibility. The OpenEPCIS team identified the issue and created a tool that makes it simple to convert XML EPCIS documents from version 1.2 to 2.0 and vice versa.</p>
 <h2 id="usage">Usage</h2>
-<ul>
-<li>
-<p><strong>Web application</strong>:
-The tool is available as a web application that users can access directly to acquire the converted EPCIS XML document by providing either an 1.2 version or 2.0 version document as input. The web application is available <a href="https://tools.openepcis.io/openepcis-ui/">here</a>.</p>
-</li>
-<li>
-<p><strong>API endpoint</strong>:
-With EPCIS document serving as request, users/developers can use the API to send request to OpenEPCIS&rsquo;s document version converter API and receive back the converted document as a response. These API&rsquo;s can also be used directly online or from within another application code.  Users can access the REST endpoint using Swagger-UI from <a href="https://tools.openepcis.io/q/swagger-ui/#/Document%20Version%20Converter%20Resource">here</a>.</p>
-</li>
-<li>
-<p><strong>Application code</strong>:
-The utility has been developed using Java with Apache Xalan. The code is available at the OpenEPCIS GitHub account and can be accessed directly or as dependencies for other projects. The complete code can be found <a href="https://github.com/openepcis">here</a>.</p>
-</li>
-</ul>
-<h2 id="quick-links">Quick links</h2>
+<p>Following section provides quick overview of how to convert the XML EPCIS document from 1.2v to 2.0v:</p>
+<h3 id="web-application">Web Application</h3>
+<p>The tool is available as a web application that users can access directly to acquire the converted EPCIS XML document by providing either an 1.2 version or 2.0 version document as input. The web application is available <a href="https://tools.openepcis.io/openepcis-ui/">here</a>.</p>
+<h3 id="api-endpoint">API Endpoint</h3>
+<p>With EPCIS document serving as request, users/developers can use the API to send request to OpenEPCIS&rsquo;s document version converter API and receive back the converted document as a response. These API&rsquo;s can also be used directly online or from within another application code.  Users can access the REST endpoint using Swagger-UI from <a href="https://tools.openepcis.io/q/swagger-ui/#/Document%20Version%20Converter%20Resource">here</a>.</p>
+<h3 id="command-line">Command Line</h3>
+<p>Client URL or popularly known as cURL is a command-line utility that is used to send and receive data from or to a server. As many developers and users prefer using this utility over normal web applications, OpenEPCIS Document Version Converter supports the conversion of XML document using the cURL command. Users can make requests to the Document Format Converter service <code>https://tools.openepcis.io/api/documentDownscaling</code> or <code>https://tools.openepcis.io/api/documentUpscaling</code> using their preferred document. Following is an example of a cURL request to convert the 1.2v XML document to 2.0v XML:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#a40000">curl</span> <span style="color:#a40000">-X</span> <span style="color:#a40000">&#39;POST&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">&#39;https:</span><span style="color:#8f5902;font-style:italic">//tools.openepcis.io/api/documentUpscaling&#39; \
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#a40000">-H</span> <span style="color:#a40000">&#39;accept:</span> <span style="color:#a40000">application/xml&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">-H</span> <span style="color:#a40000">&#39;Content-Type:</span> <span style="color:#a40000">application/xml&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">-d</span> <span style="color:#a40000">&#39;&lt;?xml</span> <span style="color:#a40000">version=</span><span style="color:#4e9a06">&#34;1.0&#34;</span> <span style="color:#a40000">encoding=</span><span style="color:#4e9a06">&#34;UTF-8&#34;</span><span style="color:#a40000">?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a40000">&lt;epcis:EPCISDocument</span> <span style="color:#a40000">xmlns:epcis=</span><span style="color:#4e9a06">&#34;urn:epcglobal:epcis:xsd:1&#34;</span> <span style="color:#a40000">schemaVersion=</span><span style="color:#4e9a06">&#34;1.2&#34;</span>
+</span></span><span style="display:flex;"><span>                     <span style="color:#a40000">creationDate=</span><span style="color:#4e9a06">&#34;2005-07-11T11:30:47.0Z&#34;</span><span style="color:#a40000">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a40000">&lt;EPCISBody&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a40000">&lt;EventList&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a40000">&lt;ObjectEvent&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a40000">&lt;eventTime&gt;</span><span style="color:#0000cf;font-weight:bold">2005-04-04</span><span style="color:#a40000">T</span><span style="color:#0000cf;font-weight:bold">20</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">33</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">31.116</span><span style="color:#0000cf;font-weight:bold">-06</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">00</span><span style="color:#a40000">&lt;/eventTime&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a40000">&lt;eventTimeZoneOffset&gt;</span><span style="color:#0000cf;font-weight:bold">-06</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">00</span><span style="color:#a40000">&lt;/eventTimeZoneOffset&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a40000">&lt;epcList&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#a40000">&lt;epc&gt;urn:epc:id:sgtin:</span><span style="color:#0000cf;font-weight:bold">0</span><span style="color:#0000cf;font-weight:bold">614141.107346</span><span style="color:#a40000">.</span><span style="color:#0000cf;font-weight:bold">2018</span><span style="color:#a40000">&lt;/epc&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a40000">&lt;/epcList&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a40000">&lt;action&gt;OBSERVE&lt;/action&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a40000">&lt;extension&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#a40000">&lt;extension&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#a40000">&lt;sensorElementList&gt;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#a40000">&lt;sensorElement&gt;</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#a40000">&lt;sensorMetadata</span> <span style="color:#a40000">time=</span><span style="color:#4e9a06">&#34;2021-05-27T13:50:00.000+01:00&#34;</span><span style="color:#a40000">/&gt;</span>
+</span></span><span style="display:flex;"><span>                                <span style="color:#a40000">&lt;sensorReport</span> <span style="color:#a40000">type=</span><span style="color:#4e9a06">&#34;gs1:MT-Length&#34;</span> <span style="color:#a40000">component=</span><span style="color:#4e9a06">&#34;Northing&#34;</span> <span style="color:#a40000">value=</span><span style="color:#4e9a06">&#34;-477979.89&#34;</span> <span style="color:#a40000">uom=</span><span style="color:#4e9a06">&#34;MTR&#34;</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#a40000">coordinateReferenceSystem=</span><span style="color:#4e9a06">&#34;http://www.opengis.net/def/crs/EPSG/0/27700&#34;</span><span style="color:#a40000">/&gt;</span>
+</span></span><span style="display:flex;"><span>                            <span style="color:#a40000">&lt;/sensorElement&gt;</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#a40000">&lt;/sensorElementList&gt;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#a40000">&lt;/extension&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a40000">&lt;/extension&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a40000">&lt;example:myField</span> <span style="color:#a40000">xmlns:example=</span><span style="color:#4e9a06">&#34;http://ns.example.com/epcis&#34;</span><span style="color:#a40000">&gt;Example</span> <span style="color:#a40000">of</span> <span style="color:#a40000">a</span> <span style="color:#a40000">vendor/user</span> <span style="color:#a40000">extension&lt;/example:myField&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a40000">&lt;/ObjectEvent&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a40000">&lt;/EventList&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a40000">&lt;/EPCISBody&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a40000">&lt;/epcis:EPCISDocument&gt;&#39;</span>
+</span></span></code></pre></div><h3 id="application-code">Application Code</h3>
+<p>The utility has been developed using Java with Apache Xalan. The code is available at the OpenEPCIS GitHub account and can be accessed directly or as dependencies for other projects. The complete code can be found <a href="https://github.com/openepcis/EPCIS/tree/master/XSL">here</a>.</p>
+<h2 id="quick-links">Quick Links</h2>
 <ul>
 <li><a href="https://ref.gs1.org/tools/epcis/xsl/">GS1 publication</a></li>
 <li><a href="https://tools.openepcis.io/openepcis-ui/">Web application</a></li>
 <li><a href="https://tools.openepcis.io/q/swagger-ui/#Document%20Version%20Converter%20Resource">API endpoint</a></li>
-<li><a href="https://github.com/openepcis">Application code</a></li>
+<li><a href="https://github.com/openepcis/EPCIS/tree/master/XSL">Application code</a></li>
 </ul>
 
 </div>
@@ -535,26 +846,78 @@ The utility has been developed using Java with Apache Xalan. The code is availab
 	<h1 id="pg-29472c441a3cc8f4eb2eb9fd3bfe9771">5 - Event Hash Generator</h1>
     <div class="lead">OpenEPCIS solution to generate event Hash-Ids for EPCIS XML/JSON document.</div>
 	<h2 id="introduction">Introduction</h2>
-<p>EPCIS standard consists of events that are triggered when objects involved progress through different steps in the supply chain. These events are sent to other organizations, stored in organization-specific repositories, or used for other purposes. There are times when the same event is triggered multiple times due to faulty hardware, poor implementations, or human mistake. Organizations typically do not want to send or store duplicate events. Consequently, a system that would allow each event to be identified individually was required. OpenEPCIS has developed the Event Hash Generator tool as a solution to this problem. Using the data contained in each event, this tool will create Hash-IDs for each EPCIS event.</p>
+<p>EPCIS standard consists of events that are triggered when objects involved progress through different steps in the supply chain. These events are sent to other organizations, stored in organization-specific repositories, or used for other purposes. There are times when the same event is triggered multiple times due to faulty hardware, poor implementations, or human mistake. Organizations typically do not want to send or store duplicate events. Consequently, a system that would allow each event to be identified individually was required. OpenEPCIS has developed the Event Hash Generator tool as a solution to this problem. Using the data contained in each event, this tool will create Hash-IDs for each EPCIS event.
+<br>
+ </p>
 <p>The tool follows a predetermined order for properties, and all event data is always canonicalized. Therefore, even if the attributes are in a different order or the information is in URN/WebURI format, it is always guaranteed that the events will have the same Hash-Ids and be considered duplicate events. Storing unique data in the repository and avoiding confusion caused by several copies of the same event, would substantially help organizations. Currently, the tool supports the generation following Hash Ids: sha-256, sha-224, sha-384, sha-512, sha3-224, sha3-256, and sha3-512.</p>
 <h2 id="usage">Usage</h2>
-<ul>
-<li>
-<p><strong>Web application</strong>:
-Users can quickly access the tool on their browser and generate Hash-Ids for EPCIS events or documents in XML/JSON format. Additionally, users have the option to view the Pre-Hash string and select multiple hash algorithm types in accordance with their needs. You can access the web application from <a href="https://tools.openepcis.io/openepcis-ui/EventHash">here</a>.</p>
-</li>
-<li>
-<p><strong>API endpoint</strong>:
-With their XML/JSON documents serving as request, users/developers can use the API to send requests to OpenEPCIS&rsquo;s Hash Generator API and receive back the converted document as a response. These API&rsquo;s can also be used directly online or from within another application code. Users can access the REST endpoint using Swagger-UI from <a href="https://tools.openepcis.io/q/swagger-ui/#/Hash%20Id%20Generator%20Resource">here</a>.</p>
-</li>
-<li>
-<p><strong>Application code</strong>:
-The utility has been developed using Java. The code is available at the OpenEPCIS GitHub account and can be accessed directly or as dependencies for other projects. The complete code can be found <a href="https://github.com/openepcis/openepcis-event-hash-generator">here</a>.</p>
-</li>
-</ul>
+<p>Following section provides quick overview of how to generate hash ids for EPCIS document:</p>
+<h3 id="web-application">Web Application</h3>
+<p>Users can quickly access the tool on their browser and generate Hash-Ids for EPCIS events or documents in XML/JSON format. Additionally, users have the option to view the Pre-Hash string and select multiple hash algorithm types in accordance with their needs. You can access the web application from <a href="https://tools.openepcis.io/openepcis-ui/EventHash">here</a>.</p>
+<h3 id="api-endpoint">API Endpoint</h3>
+<p>With their XML/JSON documents serving as request, users/developers can use the API to send requests to OpenEPCIS&rsquo;s Hash Generator API and receive back the converted document as a response. These API&rsquo;s can also be used directly online or from within another application code. Users can access the REST endpoint using Swagger-UI from <a href="https://tools.openepcis.io/q/swagger-ui/#/Hash%20Id%20Generator%20Resource">here</a>.</p>
+<h3 id="command-line">Command Line</h3>
+<p>Client URL or popularly known as cURL is a command-line utility that is used to send and receive data from or to a server. As many developers and users prefer using this utility over normal web applications, OpenEPCIS Event Hash Generator supports the generation of hash ids using the cURL command. Users can make requests to the service <code>https://tools.openepcis.io/api/hashIdGenerator</code> using their preferred document. Following is an example of a cURL request to generate hash ids for JSON document:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#a40000">curl</span> <span style="color:#a40000">-X</span> <span style="color:#a40000">&#39;POST&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">&#39;https:</span><span style="color:#8f5902;font-style:italic">//tools.openepcis.io/api/hashIdGenerator&#39; \
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#a40000">-H</span> <span style="color:#a40000">&#39;accept:</span> <span style="color:#a40000">application/json&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">-H</span> <span style="color:#a40000">&#39;Content-Type:</span> <span style="color:#a40000">application/json&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">-d</span> <span style="color:#a40000">&#39;</span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;@context&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;example&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;http://ns.example.com/epcis/&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;EPCISDocument&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;schemaVersion&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2.0&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;creationDate&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2005-07-11T11:30:47.0Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;epcisBody&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;eventList&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ObjectEvent&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;eventTime&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2005-04-04T04:33:31.116+02:00&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;eventTimeZoneOffset&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;-06:00&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;action&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ADD&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;bizStep&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;commissioning&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;disposition&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;in_transit&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;epcList&#34;</span><span style="color:#000;font-weight:bold">:[</span><span style="color:#4e9a06">&#34;urn:epc:id:grai:4012345.55555.987&#34;</span><span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;readPoint&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;urn:epc:id:sgln:0614141.07346.1234&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">&#39;</span>
+</span></span></code></pre></div><h3 id="application-code">Application Code</h3>
+<p>The utility has been developed using Java. The code is available at the OpenEPCIS GitHub account and can be accessed directly or as dependencies for other projects. The complete code can be found <a href="https://github.com/openepcis/openepcis-event-hash-generator">here</a>.</p>
+<h4 id="generating-hash-ids-from-xml-document">Generating Hash IDs from XML Document</h4>
+<p>If the users have EPCIS documents in XML format, then they can be provided as InputStream, which serves as the first parameter to the <code>fromXml</code> method, and the second parameter
+specifies the type of hash algorithm needed (by default sha-256 algorithm is used):</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">InputStream</span> <span style="color:#000">xmlStream</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">getClass</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">getResourceAsStream</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;/XmlEpcisDocument.xml&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">Multi</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">String</span><span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#000">eventHashIds</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">EventHashGenerator</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">fromXml</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">xmlStream</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;sha-512&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">//final List&lt;String&gt; eventHashIds = EventHashGenerator.fromXml(xmlStream, null).subscribe().asStream().toList();
+</span></span></span></code></pre></div><h4 id="generating-hash-ids-from-json-document">Generating Hash IDs from JSON Document</h4>
+<p>If the users have the EPCIS documents in JSON/JSON-LD format, then they can be provided as InputStream, which serves as the first argument to the <code>fromJson</code> method, and the second
+parameter specifies the type of hash algorithm needed (by default sha-256 algorithm is used):</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">InputStream</span> <span style="color:#000">jsonStream</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">getClass</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">getResourceAsStream</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;/JsonEpcisDocument.json&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">Multi</span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#000">String</span><span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#000">eventHashIds</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">EventHashGenerator</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">fromJson</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">jsonStream</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;sha3-256&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">//final List&lt;String&gt; eventHashIds = EventHashGenerator.fromJson(jsonStream, &#34;sha-512&#34;).subscribe().asStream().toList();
+</span></span></span></code></pre></div><h4 id="subscription-logic">Subscription logic</h4>
+<p>If users have a large EPCIS document in XML or JSON/JSON-LD consisting of millions of events, they may supply it to the corresponding <code>fromXml</code> or <code>fromJson</code> of the EventHashGenerator class, as previously mentioned. Additionally, users can subscribe to the method so that they can print or utilize generated HashIds for additional processing as soon as they are generated and returned using the Reactive Stream approach. A simple illustration of how the HashIds may be printed using the subscription logic is shown in the following lines of code. In this simple example, when HashId is generated it is printed out to the console. By using this approach it is not required for the process to wait until all events are completed. Hence making this approach much faster and efficient.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">InputStream</span> <span style="color:#000">xmlStream</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">getClass</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">getResourceAsStream</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;/XmlEpcisDocument.xml&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">InputStream</span> <span style="color:#000">jsonStream</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">getClass</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">getResourceAsStream</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;/JsonEpcisDocument.json&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#000">EventHashGenerator</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">fromXml</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">xmlStream</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;sha-256&#34;</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">subscribe</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">with</span><span style="color:#ce5c00;font-weight:bold">(</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#000">xmlHashId</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">println</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">xmlHashId</span><span style="color:#ce5c00;font-weight:bold">),</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#000">failure</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">println</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;XML HashId Generation Failed with : &#34;</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">failure</span><span style="color:#ce5c00;font-weight:bold">));</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#000">EventHashGenerator</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">fromJson</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">jsonStream</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#4e9a06">&#34;sha-256&#34;</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">subscribe</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">with</span><span style="color:#ce5c00;font-weight:bold">(</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#000">jsonHashId</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">println</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">jsonHashId</span><span style="color:#ce5c00;font-weight:bold">),</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#000">failure</span> <span style="color:#ce5c00;font-weight:bold">-&gt;</span> <span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">println</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;JSON HashId Generation Failed with &#34;</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">failure</span><span style="color:#ce5c00;font-weight:bold">));</span>
+</span></span></code></pre></div><h2 id="further-references">Further References</h2>
+<p>For more information on Event Hash Generation, ordering of elements, or canonicalization, please refer to the <a href="https://github.com/RalphTro/epcis-event-hash-generator">detailed Documentation</a> by Ralph Tröger.</p>
 <h2 id="quick-links">Quick links</h2>
 <ul>
-<li><a href="https://confluence.company-group.com/x/XYA6Bg">More details on Confluence page</a></li>
 <li><a href="https://tools.openepcis.io/openepcis-ui/EventHash">Web application</a></li>
 <li><a href="https://tools.openepcis.io/q/swagger-ui/#/Hash%20Id%20Generator%20Resource">API endpoint</a></li>
 <li><a href="https://github.com/openepcis/openepcis-event-hash-generator">Application code</a></li>
@@ -588,66 +951,102 @@ The utility has been developed using Java. The code is available at the OpenEPCI
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-791d2388792b9454677840d7ff389eba">6 - Identifier Converter</h1>
+	<h1 id="pg-791d2388792b9454677840d7ff389eba">6 - Identifier/Vocabulary Converter</h1>
     <div class="lead">OpenEPCIS solution to transform EPCIS identifiers from URN to DL WebURI and vice versa.</div>
 	<h2 id="introduction">Introduction</h2>
-<p>Every digital or physical object such as documents, locations, products, assets, etc. is identified by universal identifiers. Starting from EPCIS 2.0, these universal Identifiers can be either represented using the EPC URI (Pure Identity URI) or Digital Link WebURI (until EPCIS 1.2 these identifiers were represented using only URN format). Applications that are using the EPCIS standard must use one of the syntaxes to identify the objects. Pure Identity URI is represented using the URN (Uniform Resource Name) format. An example of an SSCC (Serial Shipping Container Code) represented using the URN format is as follows:<br>
-urn:epc:id:sscc: 234567.18901234567</p>
-<p>Digital Link URI (Uniform Resource Identifier) is a newly introduced format with EPCIS 2.0 in which identifiers can be represented using the Web URI format. The above SSCC identifier example can be represented in Digital Link URI format as follows:<br>
-<a href="https://id.gs1.org/00/123456789012345675">https://id.gs1.org/00/123456789012345675</a></p>
-<p>In certain scenarios organization likes to make use of both formats for better visibility and accessibility so they need the option to translate the from URN to DL URI and vice versa. Hence, this OpenEPCIS utility has been developed which can convert the standard application identifiers from URN to Digital Link URI format and vice versa. It can be used independently or in conjunction with the other OpenEPCIS standard. It supports the following identifier types:</p>
-<ul>
-<li>Supported instance-level identifiers:
-<ul>
-<li>SSCC : Serial Shipping Container Code</li>
-<li>GTIN with serial (SGTIN) : Serialised Global Trade Item Number</li>
-<li>UPUI : Unit Pack Identifier</li>
-<li>GDTI with serial : Global Document Type Identifier</li>
-<li>SGCN with serial : Serialised Global Coupon Number</li>
-<li>GINC : Global Identification Number for Consignment</li>
-<li>GSIN : Global Shipment Identification Number</li>
-<li>GRAI with serial : Global Returnable Asset Identifier</li>
-<li>GIAI : Global Individual Asset Identifier</li>
-<li>ITIP : Individual Trade Item Piece</li>
-<li>CPI with serial :  Component/Part Identifier</li>
-<li>GSRN : Global Service Relation Number - Recipient</li>
-<li>GSRNP : Global Service Relation Number – Provider</li>
-</ul>
-</li>
-<li>Supported class-level identifiers:
-<ul>
-<li>GTIN : Global Trade Item Number</li>
-<li>GTIN + Lot (LGTIN) : GTIN + Batch/Lot</li>
-<li>GDTI without serial</li>
-<li>SGCN without serial</li>
-<li>GRAI without serial</li>
-<li>CPI without serial</li>
-</ul>
-</li>
-<li>Supported location/party identifiers:
-<ul>
-<li>GLN with extension : Global Location Number without extension</li>
-<li>GLN without extension : Global Location Number with extension</li>
-<li>Party GLN : Party Global Location Number</li>
-</ul>
-</li>
-</ul>
+<p>Every digital or physical object such as documents, locations, products, assets, etc. is identified by universal identifiers. Starting from EPCIS 2.0, these universal Identifiers can be either represented using the EPC URI (Pure Identity URI) or Digital Link WebURI (until EPCIS 1.2 these identifiers were represented using only URN format). Applications that are using the EPCIS standard must use one of the syntaxes to identify the objects. Pure Identity URI is represented using the URN (Uniform Resource Name) format. An example of an SSCC (Serial Shipping Container Code) represented using the URN format is as follows:</p>
+<p align="center">urn:epc:id:sscc: 234567.18901234567</p>
+<p>Digital Link URI (Uniform Resource Identifier) is a newly introduced format with EPCIS 2.0 in which identifiers can be represented using the Web URI format. The above SSCC identifier example can be represented in Digital Link URI format as follows:</p>
+<p align="center">https://id.gs1.org/00/123456789012345675</p>
+<p>In certain scenarios organization likes to make use of both formats for better visibility and accessibility so they need the option to translate the from URN to DL URI and vice versa. Hence, this OpenEPCIS utility has been developed which can convert the standard application identifiers from URN to Digital Link URI format and vice versa. It can be used independently or in conjunction with the other OpenEPCIS standard. It supports the following identifier types:
+<br>
+ </p>
+<p>Supported instance-level identifiers:</p>
+<p>SSCC : Serial Shipping Container Code<br>
+GTIN with serial (SGTIN) : Serialised Global Trade Item Number<br>
+UPUI : Unit Pack Identifier<br>
+GDTI with serial : Global Document Type Identifier<br>
+SGCN with serial : Serialised Global Coupon Number<br>
+GINC : Global Identification Number for Consignment<br>
+GSIN : Global Shipment Identification Number<br>
+GRAI with serial : Global Returnable Asset Identifier<br>
+GIAI : Global Individual Asset Identifier<br>
+ITIP : Individual Trade Item Piece<br>
+CPI with serial :  Component/Part Identifier<br>
+GSRN : Global Service Relation Number - Recipient<br>
+GSRNP : Global Service Relation Number – Provider<br>
+<br>
+Supported class-level identifiers:</p>
+<p>GTIN : Global Trade Item Number<br>
+GTIN + Lot (LGTIN) : GTIN + Batch/Lot<br>
+GDTI without serial<br>
+SGCN without serial<br>
+GRAI without serial<br>
+CPI without serial<br>
+<br>
+Supported location/party identifiers:</p>
+<p>GLN with extension : Global Location Number without extension<br>
+GLN without extension : Global Location Number with extension<br>
+Party GLN : Party Global Location Number</p>
 <h2 id="usage">Usage</h2>
-<p>Depending on expertise and easy of access, users can access the application in various ways. OpenEPCIS identifiers converter application has been published in following formats:</p>
+<p>Following section provides quick overview of how to convert EPCIS identifier from digital link URI to URN and vice versa:</p>
+<h3 id="web-application">Web Application</h3>
+<p>The tool is available as a web application that users can access directly to acquire the converted EPCIS identifier by providing either an URN or DL WebURI EPCIS identifiers as input. The web application can be accessed from <a href="https://tools.openepcis.io/openepcis-ui/Identifiersconverter">here</a>.</p>
+<h3 id="api-endpoint">API Endpoint</h3>
+<p>With their identifiers serving as request, users/developers can use the API endpoint to send request to OpenEPCIS identifier converter and receive back the converted identifier as a response. These API’s can also be used directly online or from within another application code.  Users can access the REST endpoint using Swagger-UI from <a href="https://tools.openepcis.io/q/swagger-ui/#/Identifier%20Converter%20Resource">here</a>.</p>
+<h3 id="command-line">Command Line</h3>
+<p>Client URL or popularly known as cURL is a command-line utility that is used to send and receive data from or to a server. As many developers and users prefer using this utility over normal web applications, OpenEPCIS Identifiers Converter supports the conversion of EPCIS identifiers using the cURL command. Users can make requests to the service <code>https://tools.openepcis.io/api/urnConverter</code> or <code>https://tools.openepcis.io/api/webURIConverter</code> using their preferred identifier. Following is an example of a cURL request to convert URN to digitallink web URI:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#a40000">curl</span> <span style="color:#a40000">-X</span> <span style="color:#a40000">&#39;POST&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">&#39;https:</span><span style="color:#8f5902;font-style:italic">//tools.openepcis.io/api/webURIConverter&#39; \
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#a40000">-H</span> <span style="color:#a40000">&#39;accept:</span> <span style="color:#a40000">application/json&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">-H</span> <span style="color:#a40000">&#39;Content-Type:</span> <span style="color:#a40000">text/plain&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">-d</span> <span style="color:#a40000">&#39;urn:epc:id:sgtin:</span><span style="color:#0000cf;font-weight:bold">234567890.1123</span><span style="color:#a40000">.</span><span style="color:#0000cf;font-weight:bold">9999</span><span style="color:#a40000">&#39;</span>
+</span></span></code></pre></div><h3 id="application-code">Application code</h3>
+<p>The application has been primarily developed using the Java programming language. Users can obtain and utilize the code from <a href="https://github.com/openepcis/openepcis-epc-digitallink-translator">here</a>.</p>
+<h4 id="conversion-from-urn-to-dl-uri">Conversion from URN to DL URI</h4>
+<p>To convert the URN to DL URI call the following method and pass the URN which needs to be converted:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">ConverterUtil</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toURI</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">inputURN</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span></code></pre></div><p>The utility automatically detects the identifier type and converts it to the corresponding DL URI format. This method returns a String. If the inputURN does follow the GS1 identifier syntax format then it will throw an corresponding Exception.</p>
+<p>Following is an example of converting the SGTIN from URN to DL URI:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">println</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">ConverterUtil</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toURI</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;urn:epc:id:sgtin:2345678901.123.9999&#34;</span><span style="color:#ce5c00;font-weight:bold">));</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">//https://id.gs1.org/01/12345678901231/21/9999
+</span></span></span></code></pre></div><h4 id="conversion-from-dl-uri-to-urn">Conversion from DL URI to URN</h4>
+<p>To convert from DL URI to URN call the following method and pass the existing DL URI and GCP length:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">ConverterUtil</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toURN</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">inputURI</span><span style="color:#ce5c00;font-weight:bold">,</span><span style="color:#000">gcpLength</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span></code></pre></div><p>The utility automatically detects the DL URI type and converts it to the corresponding URN format. This method returns the <code>Map&lt;String, String&gt;</code> with various information. If the <code>inputURI</code> does follow the GS1 identifier syntax format then it throws corresponding Exception.</p>
+<p>Following is an example of converting the SGTIN from URN to DL URI:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">println</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">ConverterUtil</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toURN</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;https://id.gs1.org/01/12345678901231/21/9999&#34;</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">10</span><span style="color:#ce5c00;font-weight:bold">));</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// {gtin=12345678901231, asURN=urn:epc:id:sgtin:2345678901.123.9999, asCaptured=https://example.com/path/01/12345678901231/21/9999, serial=9999, canonicalDL=https://id.gs1.org/01/12345678901231/21/9999}
+</span></span></span></code></pre></div><h4 id="conversion-from-class-level-urn-to-web-uri">Conversion from class level URN to Web URI</h4>
+<p>To convert the class level URN to Web URI invoke the following method and pass the the existing URN. The code will automatically detect the type of identifier and converts it to appropriate Web URI. If any error found in the identifier then same will be displayed.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">ConverterUtil</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toURIForClassLevelIdentifier</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">inputURN</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span></code></pre></div><p>Following is an example of converting GTIN from URN to Web URI:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">println</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">ConverterUtil</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toURIForClassLevelIdentifier</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;urn:epc:idpat:sgtin:3489348.939489.*&#34;</span><span style="color:#ce5c00;font-weight:bold">));</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">//https://id.gs1.org/01/93489348394895
+</span></span></span></code></pre></div><h4 id="conversion-from-class-level-web-uri-to-urn">Conversion from class level Web URI to URN</h4>
+<p>To convert the Class level DL URI to URN invoke the following method and pass the existing DL URI with or without GCP Length. If GCP Length has not been provided then the code will automatically detect the GCP Length based on the GS1 standards.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">ConverterUtil</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toURNForClassLevelIdentifier</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">inputURI</span><span style="color:#ce5c00;font-weight:bold">,</span><span style="color:#000">gcpLength</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">ConverterUtil</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toURNForClassLevelIdentifier</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">inputURI</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span></code></pre></div><p>Following is an example of converting GTIN from Web URI to URN</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">println</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">ConverterUtil</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toURNForClassLevelIdentifier</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;https://id.gs1.org/01/88588588585452&#34;</span><span style="color:#ce5c00;font-weight:bold">));</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">//{gtin=88588588585452, asURN=urn:epc:idpat:sgtin:8588588.858545.*, asCaptured=https://example.com/path/01/88588588585452, canonicalDL=https://id.gs1.org/01/88588588585452}
+</span></span></span></code></pre></div><h4 id="conversion-from-urn-to-bare-string">Conversion from URN to Bare String</h4>
+<p>To convert the URN formatted CBV values into bare string, call the following method and pass the CBV string:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">ConverterUtil</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toBareStringVocabulary</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">eventVocabulary</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span></code></pre></div><p>Following is an example of converting cbv formatted business step value to bare string:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">ConverterUtil</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toBareStringVocabulary</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;urn:epcglobal:cbv:bizstep:inspecting&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">//inspecting
+</span></span></span></code></pre></div><h4 id="conversion-from-bare-string-to-urn">Conversion from Bare String to URN</h4>
+<p>To convert the bare string values to URN formatted CBV values, call the following method and pass the bare string:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">ConverterUtil</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toUrnVocabulary</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">eventVocabulary</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span></code></pre></div><p>Following is an example of converting bare string business step value to CBV formatted value:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">ConverterUtil</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toUrnVocabulary</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;inspecting&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">//urn:epcglobal:cbv:bizstep:inspecting
+</span></span></span></code></pre></div><h2 id="quick-links">Quick links</h2>
 <ul>
-<li>
-<p><strong>Web application</strong>: The tool is available as a web application that users can access directly to acquire the converted EPCIS identifier by providing either an URN or DL WebURI EPCIS identifiers as input. The web application can be accessed from <a href="https://tools.openepcis.io/openepcis-ui/Identifiersconverter">here</a>.</p>
-</li>
-<li>
-<p><strong>API endpoint</strong>: With their identifiers serving as request, users/developers can use the API endpoint to send request to OpenEPCIS identifier converter and receive back the converted identifier as a response. These API’s can also be used directly online or from within another application code.  Users can access the REST endpoint using Swagger-UI from <a href="https://tools.openepcis.io/q/swagger-ui/#/Identifier%20Converter%20Resource">here</a>.</p>
-</li>
-<li>
-<p><strong>Application code</strong>: The application has been primarily developed using the Java programming language. Users can obtain and utilize the code from <a href="https://github.com/openepcis/openepcis-epc-digitallink-translator">here</a>.</p>
-</li>
-</ul>
-<h2 id="quick-links">Quick links</h2>
-<ul>
-<li><a href="https://tools.openepcis.io/openepcis-ui/Identifiersconverter">Identifier converter</a></li>
+<li><a href="https://tools.openepcis.io/openepcis-ui/Identifiersconverter">Web application</a></li>
 <li><a href="https://tools.openepcis.io/q/swagger-ui/#/Identifier%20Converter%20Resource">Identifier converter API endpoint</a></li>
 <li><a href="https://github.com/openepcis/openepcis-epc-digitallink-translator">Identifier converter code</a></li>
 </ul>
@@ -679,27 +1078,163 @@ urn:epc:id:sscc: 234567.18901234567</p>
 <div class="td-content" style="page-break-before: always">
     
 	<h1 id="pg-d94f4af45f4f88fe0a4d4b13be5ed4ed">7 - Test Data Generator</h1>
-    <div class="lead">OpenEPCIS solution for generating EPCIS test data events for all user cases/supply chain.</div>
+    <div class="lead">OpenEPCIS solution for generating EPCIS test data events for all use cases/supply chain.</div>
 	<h2 id="introduction">Introduction</h2>
-<p>The problem for various solution providers and user companies adopting EPCIS for their projects is to generate test data for testing purposes (load tests, populating test databases, etc.). OpenEPCIS Test Data Generator was developed to assist the EPCIS community by making it simple to generate test data (e.g. hundreds or thousands of events). Regardless of the industry, use case, or supply chain system, the developed application provides a single solution for creating test events. It saves time and effort for the various organizations because they don&rsquo;t have to build, maintain, or incorporate new capabilities of EPCIS into their test data production technologies. Based on the information provided by users and their organizational needs, the application can create bulk EPCIS events. These EPCIS events are compliant with EPCIS 2.0, the most recent version of the EPCIS, and events are generated in JSON/JSON-LD format. It also includes the option to generate events and identifiers in both URN and WebURI format.</p>
-<h2 id="usage">Usage</h2>
+<p>The problem for various solution providers and user companies adopting EPCIS for their projects is to generate test data for testing purposes (load tests, populating test databases, etc.). OpenEPCIS Test Data Generator was developed to assist the EPCIS community by making it simple to generate test data (e.g. hundreds or thousands of events). Regardless of the industry, use case, or supply chain system, the developed application provides a single solution for creating test events. It saves time and effort for the various organizations because they don’t have to build, maintain, or incorporate new capabilities of EPCIS into their test data production technologies. Based on the information provided by users and their organizational needs, the application can create bulk EPCIS events. These EPCIS events are compliant with EPCIS 2.0, the most recent version of the EPCIS, and events are generated in JSON/JSON-LD format. It also includes the option to generate events and identifiers in both URN and WebURI format</p>
+<h2 id="local-set-up">Local set-up</h2>
+<p>On your local system, the OpenEPCIS Test Data Generator can be set up in various ways. The following section explains how to quickly set up the application using Podman and Docker.</p>
+<h3 id="running-with-podman">Running with Podman</h3>
+<p>As a prerequisite, you must install Podman on your system (Podman is an open-source software platform for fast-developing, testing, and deploying applications). Please refer to the following links for further information about Podman and for installation guidelines:
+<br>
+ </p>
+<p>Official Podman: <a href="https://github.com/containers/podman">https://github.com/containers/podman</a><br>
+Documentation: <a href="https://github.com/containers/podman/tree/main/docs">https://github.com/containers/podman/tree/main/docs</a><br>
+Installation instruction for Windows/macOS: <a href="https://podman.io/getting-started/installation">https://podman.io/getting-started/installation</a>
+<br>
+ </p>
+<p>Run the following command in a terminal or command prompt after installing Podman on your local machine:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#a40000">podman</span> <span style="color:#a40000">run</span> <span style="color:#a40000">--rm</span> <span style="color:#a40000">-t</span> <span style="color:#a40000">--name</span> <span style="color:#a40000">testdata-generator</span> <span style="color:#a40000">-p</span> <span style="color:#0000cf;font-weight:bold">8080</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">8080</span> <span style="color:#a40000">openepcis/testdata-generator</span>
+</span></span></code></pre></div><h3 id="running-with-docker">Running with Docker</h3>
+<p>Docker has to be installed on your system as a prerequisite (Note: Commercial usage of Docker is subject to license restrictions). Please refer to the following pages for further information about Docker and for installation guidelines:
+<br>
+ </p>
+<p>For Windows: <a href="https://docs.docker.com/desktop/install/windows-install/">https://docs.docker.com/desktop/install/windows-install/</a><br>
+For macOS: <a href="https://docs.docker.com/desktop/install/mac-install/">https://docs.docker.com/desktop/install/mac-install/</a><br>
+For Linux: <a href="https://docs.docker.com/desktop/install/linux-install/">https://docs.docker.com/desktop/install/linux-install/</a>
+<br>
+ </p>
+<p>To run the testdata generator you can simply use the <a href="https://hub.docker.com/repository/docker/openepcis/testdata-generator">Testdata Generator Docker</a> image provided on docker hub.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#a40000">docker</span> <span style="color:#a40000">run</span> <span style="color:#a40000">--rm</span> <span style="color:#a40000">-t</span> <span style="color:#a40000">--name</span> <span style="color:#a40000">testdata-generator</span> <span style="color:#a40000">-p</span> <span style="color:#0000cf;font-weight:bold">8080</span><span style="color:#a40000">:</span><span style="color:#0000cf;font-weight:bold">8080</span> <span style="color:#a40000">openepcis/testdata-generator</span>
+</span></span></code></pre></div><h2 id="usage">Usage</h2>
+<p>Following section provides quick overview of how to generate EPCIS events:</p>
+<h3 id="web-application">Web application</h3>
+<p>The web application is beneficial to users who are new to the EPCIS world as it visually provides all the components of the EPCIS which are segregated based on different dimensions. It is very easy to provide values for necessary fields based on the requirement or supply chain and generate the EPCIS events accordingly. The web application can be fround from <a href="https://test-data-generator.openepcis.io/">here</a>.</p>
+<h3 id="api-endpoint">API endpoint</h3>
+<p>Software developers wishing to explore the tool’s underlying APIs (e.g. to understand how a request and response body of an API call looks like) might be interested in the Swagger-UI page. Swagger-UI is an open source application that generates a web page which lists all the APIs according to the OpenAPI standard. The page gives a summary and visually illustrates various features of the APIs such as their request and response bodies. If you have installed and executed a Podman container as described in the set-up section, you should be able to access it via the <a href="http://localhost:8080/q/swagger-ui/">URL</a>. You can start making requests to the Test Data Generator service API by using an input template. Of course, you can also use the Swagger-UI page to generate test data (there is no limit as with the web application), but it is not as performant as using the command line.</p>
+<h3 id="command-line">Command Line</h3>
+<p>Especially in cases where you need large amounts of test data (i.e. more than 1,000 events), open your command line or terminal and issue a cURL (Client URL) request. If you followed the instructions for setting up the Podman container as described in the set-up section, you should be able to make a cURL request using your input template to API endpoint: <code>http://localhost:8080/api/generateTestData?pretty=true</code>. An exemplary cURL request with a sample InputTemplate (which you can replace with your own) looks as follows:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#a40000">curl</span> <span style="color:#a40000">-X</span> <span style="color:#a40000">&#39;POST&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">&#39;http:</span><span style="color:#8f5902;font-style:italic">//localhost:8080/api/generateTestData?pretty=true&#39; \
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#a40000">-H</span> <span style="color:#a40000">&#39;accept:</span> <span style="color:#a40000">application/json&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">-H</span> <span style="color:#a40000">&#39;Content-Type:</span> <span style="color:#a40000">application/json&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">-d</span> <span style="color:#a40000">&#39;</span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;events&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;nodeId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;eventType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ObjectEvent&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;eventCount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;locationPartyIdentifierSyntax&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;URN&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;ordinaryEvent&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;action&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ADD&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;eventID&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">false</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;eventTime&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;timeZoneOffset&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;+02:00&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;fromTime&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2022-10-01T10:22:16+02:00&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;toTime&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2022-10-31T10:22:16+02:00&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;businessStep&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;COMMISSIONING&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;disposition&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ACTIVE&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;referencedIdentifier&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;identifierId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;epcCount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;classCount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}],</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;parentReferencedIdentifier&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;outputReferencedIdentifier&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;identifiers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;identifierId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;objectIdentifierSyntax&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;URN&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;instanceData&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;sgtin&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;identifierType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;sgtin&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;gcpLength&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;sgtin&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;40584954485984&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;serialType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;random&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;randomCount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;randomType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;NUMERIC&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;randomMinLength&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">2</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;randomMaxLength&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;classData&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;parentData&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">&#39;</span>
+</span></span></code></pre></div><h3 id="application-code">Application code</h3>
+<p>The developed OpenEPCIS Test Data Generator application has been divided into 3 modules <a href="https://github.com/openepcis/epcis-testdata-generator/tree/main/testdata-generator-common">testdata-generator-common</a>, <a href="https://github.com/openepcis/epcis-testdata-generator/tree/main/testdata-generator-rest-api">testdata-generator-rest-api</a>, and <a href="https://github.com/openepcis/epcis-testdata-generator/tree/main/testdata-generator-ui">testdata-generator-ui</a>. Following is the overview of the individual module:</p>
+<h4 id="testdata-generator-commonhttpsgithubcomopenepcisepcis-testdata-generatortreemaintestdata-generator-common-generic-java-library-for-generating-testdata-events"><a href="https://github.com/openepcis/epcis-testdata-generator/tree/main/testdata-generator-common">testdata-generator-common</a> (Generic java library for generating testdata events)</h4>
+<p>This is the core of the OpenEPCIS Test Data Generator where the events are actually generated. It includes the logic for generating the events and formatting the values according to the EPCIS standard. To make the application memory efficient and to generate a large number of test events quickly only one event information is stored in memory at a time. It employs the Reactive Stream approach to do the same. This module has been developed primarily using Java with some additional libraries such as Jackson, Lombok, SmallRye Mutiny etc.</p>
+<h4 id="testdata-generator-rest-apihttpsgithubcomopenepcisepcis-testdata-generatortreemaintestdata-generator-rest-api-rest-service-wrapper-for-generating-testdata-events"><a href="https://github.com/openepcis/epcis-testdata-generator/tree/main/testdata-generator-rest-api">testdata-generator-rest-api</a> (REST service wrapper for generating testdata events)</h4>
+<p>This is the service that acts as a bridge between the front-end and back-end server. When a user provides the input information in the form of InputTemplate to generate the test data events then this service module will capture that information and validates it. If the InputTemplate adheres to all the constraints and rules then it&rsquo;s sent to the backend server (<a href="https://github.com/openepcis/epcis-testdata-generator/tree/main/testdata-generator-common">testdata-generator-common</a>) to generate the events. This service can also be directly accessed via the cURL command or Swagger-UI. This module has been developed using the latest technologies such as Java with the Quarkus framework. However, it also utilizes some libraries such as Jackson, OpenAPI, Hibernate validator, etc.</p>
+<h4 id="testdata-generator-uitestdata-generator-uihttpsgithubcomopenepcisepcis-testdata-generatortreemaintestdata-generator-ui-user-interface-for-generating-testdata-events"><a href="%5Btestdata-generator-ui%5D(https://github.com/openepcis/epcis-testdata-generator/tree/main/testdata-generator-ui)">testdata-generator-ui</a> (user interface for generating testdata events)</h4>
+<p>This is the user&rsquo;s view of the application where users can interact with various fields of EPCIS and provide the necessary values. Also, It does the task of converting the user-provided values
+into the InputTemplate required for the subsequent modules. It has been developed primarily using the technologies such as  HTML (HyperText Markup Language), JavaScript library Nuxt.js/Vue.js, and
+CSS(Cascading Style Sheets). It also includes some important front-end libraries/frameworks such as Drawflow, Bootstrap, Bootstrap icons, CodeMirror, etc.</p>
+<h4 id="direct-usage">Direct usage</h4>
+<p>The <a href="%5Btestdata-generator-common%5D(https://github.com/openepcis/epcis-testdata-generator/tree/main/testdata-generator-common)/src/main/java/io/openepcis/testdata/generator/EPCISEventGenerator.java">EPCISEventGenerator class</a> within <a href="%5Btestdata-generator-common%5D(https://github.com/openepcis/epcis-testdata-generator/tree/main/testdata-generator-common)">testdata-generator-common</a> contains the Java method <code>generate</code> for producing test data events. To generate events, you must have the proper <code>inputTemplate</code> JSON prepared with all necessary data, which you can pass to the following method to obtain the required events:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic">// Pass the required JSON inputTemplate to generate EPCIS testdata events.
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">EPCISEventGenerator</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">generate</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">inputTemplate</span><span style="color:#ce5c00;font-weight:bold">).</span><span style="color:#c4a000">collect</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">asList</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">await</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">indefinitely</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">forEach</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">e</span> <span style="color:#ce5c00;font-weight:bold">-</span> <span style="color:#ce5c00;font-weight:bold">&gt;</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">try</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">println</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">e</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toString</span><span style="color:#ce5c00;font-weight:bold">());</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ce5c00;font-weight:bold">}</span> <span style="color:#204a87;font-weight:bold">catch</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">JsonProcessingException</span> <span style="color:#000">ex</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#ce5c00;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">throw</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">CompletionException</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">ex</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ce5c00;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">});</span>
+</span></span></code></pre></div><p>Sample inputTemplate:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;events&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;nodeId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;eventType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ObjectEvent&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;eventCount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;locationPartyIdentifierSyntax&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;URN&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;ordinaryEvent&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;action&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ADD&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;eventID&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;eventTime&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;timeZoneOffset&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;+02:00&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;fromTime&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2022-04-01T18:30:04+02:00&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;toTime&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2022-04-05T18:30:04+02:00&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;recordTimeType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;CURRENT_TIME&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;businessStep&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;COMMISSIONING&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;disposition&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ACTIVE&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;referencedIdentifier&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;identifierId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;epcCount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;classCount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">}],</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;parentReferencedIdentifier&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;outputReferencedIdentifier&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;identifiers&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;identifierId&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;objectIdentifierSyntax&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;URN&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;instanceData&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;sgtin&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;identifierType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;sgtin&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;gcpLength&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;sgtin&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;89384989388934&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;serialType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;range&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;rangeFrom&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">100</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;rangeTo&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">110</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;classData&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#204a87;font-weight:bold">&#34;grai&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;identifierType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;grai&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;gcpLength&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;quantityType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;uom&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;serialType&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;grai&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;8384783874378&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#204a87;font-weight:bold">&#34;classIdentifiersCount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">5</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#000;font-weight:bold">},</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;parentData&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}]</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div><h2 id="quick-links">Quick links</h2>
 <ul>
-<li>
-<p><strong>Web application</strong>:
-The web application is beneficial to users who are new to the EPCIS world as it visually provides all the components of the EPCIS which are segregated based on different dimensions. It is very easy to provide values for necessary fields based on the requirement or supply chain and generate the EPCIS events accordingly. The web application can be fround from <a href="https://test-data-generator.openepcis.io/">here</a>.</p>
-</li>
-<li>
-<p><strong>API endpoint</strong>:
-Users can make use of API endpoint to generate test data events. The required template with all information can be sent to Restful API end point which will be analysed and events are generated. Finally, these events are sent as response to user. Users can access the REST endpoint using Swagger-UI from <a href="https://test-data-generator.openepcis.io/q/swagger-ui">here</a>.</p>
-</li>
-<li>
-<p><strong>Application code</strong>:
-The utility&rsquo;s back-end has been developed using Java and web application using Nuxtjs. The code is available at the OpenEPCIS GitHub account and can be accessed directly or as dependencies for other projects. The complete code can be from <a href="https://github.com/openepcis/epcis-testdata-generator">here</a>.</p>
-</li>
-</ul>
-<h2 id="quick-links">Quick links</h2>
-<ul>
-<li><a href="https://confluence.company-group.com/display/OEPCISDOC/OpenEPCIS+Test+Data+Generator">More details on Confluence page</a></li>
 <li><a href="https://test-data-generator.openepcis.io/">Web application</a></li>
 <li><a href="https://test-data-generator.openepcis.io/q/swagger-ui">API endpoint</a></li>
 <li><a href="https://github.com/openepcis/epcis-testdata-generator">Application code</a></li>

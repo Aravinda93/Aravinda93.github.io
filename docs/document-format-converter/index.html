@@ -140,7 +140,7 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsevent-hash-generator-li">
   <a href="/docs/event-hash-generator/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsevent-hash-generator"><span class="">Event Hash Generator</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsidentifiers-converter-li">
-  <a href="/docs/identifiers-converter/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsidentifiers-converter"><span class="">Identifier Converter</span></a>
+  <a href="/docs/identifiers-converter/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsidentifiers-converter"><span class="">Identifier/Vocabulary Converter</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstest-data-generator-li">
   <a href="/docs/test-data-generator/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docstest-data-generator"><span class="">Test Data Generator</span></a>
 </li>
@@ -155,6 +155,22 @@
             
             
 
+
+<div class="td-toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#usage">Usage</a>
+      <ul>
+        <li><a href="#web-application">Web application</a></li>
+        <li><a href="#swagger-ui">Swagger-UI</a></li>
+        <li><a href="#command-line">Command Line</a></li>
+        <li><a href="#application-code">Application Code</a></li>
+      </ul>
+    </li>
+    <li><a href="#dependencies">Dependencies</a></li>
+    <li><a href="#quick-links">Quick links</a></li>
+  </ul>
+</nav></div>
 
 
 
@@ -214,27 +230,65 @@
  </p>
 <p>OpenEPCIS wants to support the EPCIS community by providing means to convert the EPCIS documents from one format to another with ease. The developed utility aimed to convert the bulk EPCIS events effectively and efficiently with little to no load on the memory by using advanced techniques, and technologies. The application also provides a single solution for converting EPCIS events irrespective of the industry, use case, or supply chain system. It reduces the time and effort for the various organizations as each of them does not have to develop the conversion tool. Also, maintain and incorporate modifications according to the different release versions of EPCIS. The converted EPCIS events conform to the latest version of the EPCIS, i.e. EPCIS 2.0.</p>
 <h2 id="usage">Usage</h2>
-<p>Depending on expertise and easy of access, users can access the application in various ways. OpenEPCIS document format converter application is available following formats:</p>
-<ul>
-<li>
-<p><strong>Web application</strong>:
-By providing either an XML or JSON/JSON-LD EPCIS document as input, users can easily access and obtain the transformed EPCIS document. You can access the web tool from <a href="https://tools.openepcis.io/openepcis-ui/Documentconverter">here</a>.</p>
-</li>
-<li>
-<p><strong>API endpoint</strong>:
-Users and developers can use the API to send requests to the OpenEPCIS document format converter API using an EPCIS document as the input, and to receive the converted document back as a response. These APIs can also be utilized from within another application&rsquo;s code or directly online.  Users can access the REST endpoint using Swagger-UI from <a href="https://tools.openepcis.io/q/swagger-ui/#/Document%20Converter%20Resource">here</a>.</p>
-</li>
-<li>
-<p><strong>Application code</strong>:
-The Java programming language has been primarily used to develop the application. Users can access and use the entire code from the OpenEPCIS GitHub as dependencies for other projects or to import &amp; use it within their own systems. The application code is available <a href="https://github.com/openepcis/openepcis-document-converter">here</a>.</p>
-</li>
-</ul>
+<p>Following section provides quick overview of how to convert the EPCIS document from one format to other:</p>
+<h3 id="web-application">Web application</h3>
+<p>By providing either an XML or JSON/JSON-LD EPCIS document as input, users can easily access and obtain the transformed EPCIS document using the web application. You can access the web tool from <a href="https://tools.openepcis.io/openepcis-ui/Documentconverter">here</a>.</p>
+<h3 id="swagger-ui">Swagger-UI</h3>
+<p>Users/develoers can make use of the API to send requests to the OpenEPCIS document format converter API using an EPCIS document as the input, and to receive the converted document back as a response. These APIs can also be utilized from within another application’s code or directly online. Users can access the REST endpoint using Swagger-UI from <a href="https://tools.openepcis.io/q/swagger-ui/#/Document%20Converter%20Resource">here</a>.</p>
+<h3 id="command-line">Command Line</h3>
+<p>Client URL or popularly known as cURL is a command-line utility that is used to send and receive data from or to a server. As many developers and users prefer using this utility over normal web applications, OpenEPCIS Format Converter supports the conversion of EPCIS document/event using the cURL command. Users can make requests to the Document Format Converter service <code>https://tools.openepcis.io/api/jsonConverter</code> or <code>https://tools.openepcis.io/api/xmlConverter</code> using their preferred document. Following is an example of a cURL request to convert the XML document to JSON format:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#a40000">curl</span> <span style="color:#a40000">-X</span> <span style="color:#a40000">&#39;POST&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">&#39;https:</span><span style="color:#8f5902;font-style:italic">//tools.openepcis.io/api/jsonConverter&#39; \
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#a40000">-H</span> <span style="color:#a40000">&#39;accept:</span> <span style="color:#a40000">application/json&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">-H</span> <span style="color:#a40000">&#39;Content-Type:</span> <span style="color:#a40000">application/xml&#39;</span> <span style="color:#a40000">\</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">-d</span> <span style="color:#a40000">&#39;</span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;@context&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span><span style="color:#4e9a06">&#34;https://gs1.github.io/EPCIS/epcis-context.jsonld&#34;</span><span style="color:#000;font-weight:bold">,{</span><span style="color:#204a87;font-weight:bold">&#34;example&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;http://ns.example.com/epcis/&#34;</span><span style="color:#000;font-weight:bold">}],</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;https://id.example.org/document1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;EPCISDocument&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;schemaVersion&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2.0&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;creationDate&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;2019-11-01T14:00:00.000+01:00&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&#34;epcisBody&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#204a87;font-weight:bold">&#34;eventList&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;eventID&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ni:///sha-256;025ac144187a8c5e14caf4d1cfa69250a33dc59a5bc42a68d31b1b5e55a3f15a?ver=CBV2.0&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;AssociationEvent&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;eventTime&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2019-11-01T14:00:00.000+01:00&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;eventTimeZoneOffset&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;+01:00&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;parentID&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;urn:epc:id:grai:4012345.55555.987&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;childEPCs&#34;</span><span style="color:#000;font-weight:bold">:[</span><span style="color:#4e9a06">&#34;urn:epc:id:giai:4000001.12345&#34;</span><span style="color:#000;font-weight:bold">],</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;action&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ADD&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;bizStep&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;assembling&#34;</span><span style="color:#000;font-weight:bold">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#204a87;font-weight:bold">&#34;readPoint&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span><span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;urn:epc:id:sgln:4012345.00001.0&#34;</span><span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#000;font-weight:bold">]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">&#39;</span>
+</span></span></code></pre></div><h3 id="application-code">Application Code</h3>
+<p>The application has been primarily developed using Java. The code is available at the OpenEPCIS GitHub account and can be accessed directly or as dependencies for other projects. The complete code can be found <a href="https://github.com/openepcis/openepcis-document-converter">here</a>.</p>
+<h4 id="converting-xml-to-jsonjson-ld-document">Converting XML to JSON/JSON-LD document</h4>
+<p>If you have a EPCIS 2.0 XML document which you want to convert to JSON/JSON-LD then provide it as <code>InputStream</code> to convert method of <a href="https://github.com/openepcis/openepcis-document-converter/blob/main/src/main/java/io/openepcis/epc/formatconverter/XmlToJsonConverter.java">XmlToJsonConverter.class</a>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">ByteArrayOutputStream</span> <span style="color:#000">jsonOutput</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">ByteArrayOutputStream</span><span style="color:#ce5c00;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">EventJSONStreamCollector</span> <span style="color:#000">collector</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">EventJSONStreamCollector</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">jsonOutput</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">EventHandler</span> <span style="color:#000">handler</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">EventHandler</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">EventValidator</span><span style="color:#ce5c00;font-weight:bold">(),</span> <span style="color:#000">collector</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">XmlToJsonConverter</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">convert</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">xmlStream</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">handler</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">println</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">jsonOutput</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toString</span><span style="color:#ce5c00;font-weight:bold">());</span>
+</span></span></code></pre></div><h4 id="converting-jsonjson-ld-to-xml-document">Converting JSON/JSON-LD to XML document</h4>
+<p>If you have a EPCIS 2.0 JSON/JSON-LD document which you want to convert to XML then provide it as <code>InputStream</code> to convert method of <a href="https://github.com/openepcis/openepcis-document-converter/blob/main/src/main/java/io/openepcis/epc/formatconverter/JsonToXmlConverter.java">JsonToXmlConverter.class</a> :</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">ByteArrayOutputStream</span> <span style="color:#000">xmlOutput</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">ByteArrayOutputStream</span><span style="color:#ce5c00;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">EventJSONStreamCollector</span> <span style="color:#000">collector</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">EventJSONStreamCollector</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">xmlOutput</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">final</span> <span style="color:#000">EventHandler</span> <span style="color:#000">handler</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">EventHandler</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">EventValidator</span><span style="color:#ce5c00;font-weight:bold">(),</span> <span style="color:#000">collector</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">new</span> <span style="color:#000">JsonToXmlConverter</span><span style="color:#ce5c00;font-weight:bold">().</span><span style="color:#c4a000">convert</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">jsonStream</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">handler</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">System</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">println</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">out</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">toString</span><span style="color:#ce5c00;font-weight:bold">());</span>
+</span></span></code></pre></div><h2 id="dependencies">Dependencies</h2>
+<p>The event conversion logic depends on the <a href="https://github.com/openepcis/openepcis-models/tree/main/epcis">openepcis-models</a> package.</p>
 <h2 id="quick-links">Quick links</h2>
 <ul>
-<li><a href="https://confluence.company-group.com/x/3YHpAw">More details on Confluence page</a>.</li>
-<li><a href="https://tools.openepcis.io/openepcis-ui/Documentconverter">Web application</a>.</li>
-<li><a href="https://tools.openepcis.io/q/swagger-ui/#/Document%20Converter%20Resource">API endpoint</a>.</li>
-<li><a href="https://github.com/openepcis/openepcis-document-converter">Application code</a>.</li>
+<li><a href="https://tools.openepcis.io/openepcis-ui/Documentconverter">Web application</a></li>
+<li><a href="https://tools.openepcis.io/q/swagger-ui/#/Document%20Converter%20Resource">API endpoint</a></li>
+<li><a href="https://github.com/openepcis/openepcis-document-converter">Application code</a></li>
 </ul>
 
         <div class="section-index">
