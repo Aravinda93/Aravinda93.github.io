@@ -34,8 +34,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.eb4439104c9cdd117ae850120f6bb1e7cbaa8f61aab3167765c74b27363ee063.css" as="style">
-<link href="/scss/main.min.eb4439104c9cdd117ae850120f6bb1e7cbaa8f61aab3167765c74b27363ee063.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.938955b56840897e7b632629120f69a00c0abe55a711635df50c174847633cba.css" as="style">
+<link href="/scss/main.min.938955b56840897e7b632629120f69a00c0abe55a711635df50c174847633cba.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -59,7 +59,7 @@
           <nav class="main-nav navbar">
             
             <a href="/" class="logo">
-              <img src="/images/openepcis-logo.png" alt="OpenEPCIS" width="75" height="75">
+              <img src="/images/openepcis-logo.svg" alt="OpenEPCIS" width="90" height="90">
             </a>
             <ul class="nav">
               
@@ -177,21 +177,18 @@
         <li><a href="#where">Where</a></li>
         <li><a href="#why">Why</a></li>
         <li><a href="#how">How</a></li>
-        <li><a href="#additional-fields">Additional fields</a></li>
       </ul>
     </li>
-    <li><a href="#other-associated-concepts-with-epcis-standards">Other associated concepts with EPCIS standards</a>
+    <li><a href="#additional-attributes">Additional attributes</a></li>
+    <li><a href="#terms-associated-to-epcis-standard">Terms associated to EPCIS standard</a>
       <ul>
         <li><a href="#syntax-type">Syntax type</a></li>
         <li><a href="#gs1-company-prefix-gcp">GS1 Company Prefix (GCP)</a></li>
       </ul>
     </li>
-    <li><a href="#cbv-core-business-vocabulary">CBV (Core Business Vocabulary)</a></li>
-    <li><a href="#enhancements-in-epcis-20-version">Enhancements in EPCIS 2.0 version</a>
-      <ul>
-        <li><a href="#example-of-an-epcis-event">Example of an EPCIS event</a></li>
-      </ul>
-    </li>
+    <li><a href="#core-business-vocabulary-cbv">Core Business Vocabulary (CBV)</a></li>
+    <li><a href="#enhancements-in-epcis-20-version">Enhancements in EPCIS 2.0 version</a></li>
+    <li><a href="#example-of-an-epcis-event">Example of an EPCIS event</a></li>
     <li><a href="#openepcis">OpenEPCIS</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#quick-links">Quick links</a></li>
@@ -252,11 +249,14 @@
 	</header>
 	<h2 id="introduction--history">Introduction &amp; History</h2>
 <p>EPCIS is an open ISO/IEC/GS1 standard that allows visibility data information to be captured and shared within an organization or between multiple organizations in the form of an event. The EPCIS standard is beneficial to organizations that move products between stages within the same organization as well as between organizations. The EPCIS event data can be used for all physical objects such as assets, products, logical units, reusable transport items, etc., or can also be used for digital objects such as music downloads, electronic books, electronic coupons, subscriptions, etc. The EPCIS standard was designed to improve cooperation between trading partners by exchanging comprehensive information on physical and digital items. The initial version of EPCIS 1.0 was released at the beginning of 2007. Later, EPCIS 1.1 and 1.2 were released in 2014 and 2016 respectively with various enhancements. The latest version, EPCIS 2.0, is published in June 2022 with a lot of significant enhancements.</p>
+<p> </p>
 <p>The main objective of the EPCIS data is to provide visibility information within a specific business process. The following figure 1 describes how EPCIS data may be generated within a simple business process.</p>
-<p><img src="./Figure_1_Supply_Chain.png" alt="Figure 1: Generation of EPCIS events in a simple business process."></p>
+<p> </p>
+<img class="images" src="./Figure_1_Supply_Chain.png" alt="EPCIS events generation in simple supply chain.">
 <p id="refImage" align="center">Figure 1: Generation of EPCIS events in a simple business process.</p>
 &nbsp;
 <p>Above figure depicts a simplified business process in which a manufacturer produces an item, which is then packed and shipped to the Retailer DC (Distribution Center). The item is received by Retailer DC, who then sends it to the appropriate Retail Store. The item is received by the retail store and moved to a sales area where a consumer can purchase it. The simplified flow of goods can consist of the following critical tracking events: packing, shipping, receiving the items, etc. At every step within these business processes, an EPCIS event is created. This EPCIS event provides information on what exactly was occurring to the items at that particular step. The entirety of all these EPCIS events provides a complete picture of the whole business process.</p>
+<p> </p>
 <p>EPCIS events consist of context information comprising the five different dimensions What, When, Where, Why, and How. Each of these dimensions consists of multiple fields that make up the event information. Each dimension is independent of one another and not mandatory to include all dimensions/fields of dimensions in the EPCIS event. For example, the following pieces of information are produced for four dimensions when a product is shipped from the manufacturer to retail DC in the V2 business process mentioned above:</p>
 <ul>
 <li>
@@ -315,67 +315,56 @@
 <h2 id="dimensions-of-epcis">Dimensions of EPCIS</h2>
 <p>As mentioned previously EPCIS events consist of context information in the form of five dimensions. Each of these dimensions consists of various other fields depending on the type of the event. Following are the five dimensions:</p>
 <h3 id="what">What</h3>
-<p>The What dimension of an EPCIS event comprises identifiers of the physical or digital objects that were involved in the particular event. For each business object, GS1 provides appropriate identification schemes, for instance, GTIN (Global Trade Item Number), SGTIN (GTIN with serial number), SSCC (Serial Shipping Container Code), GIAI (Global Individual Asset Identifier), etc. The following figure 2 describes various attributes available in the What dimension based on different event types:
-<br>
- </p>
-<p><img src="./Figure_2_What.png" alt="Figure 2: Attributes of What dimension corresponds to respective event types."></p>
+<p>The What dimension of an EPCIS event comprises identifiers of the physical or digital objects that were involved in the particular event. For each business object, GS1 provides appropriate identification schemes, for instance, GTIN (Global Trade Item Number), SGTIN (GTIN with serial number), SSCC (Serial Shipping Container Code), GIAI (Global Individual Asset Identifier), etc. The following figure 2 describes various attributes available in the What dimension based on different event types:</p>
+<p> </p>
+<img class="images" src="./Figure_2_What.png" alt="Attributes of What dimension."/>
 <p id="refImage" align="center">Figure 2: Attributes of What dimension corresponds to respective event types.</p>
 <p><strong>Instance Level</strong>:</p>
-<p>When an identifier is associated with each participating object, it is called an instance-level identifier. Therefore, no two objects can be related to the same identifier. For example, manufacturers may use a unique number to differentiate each product, such as a toy, phone, etc. Instance level identifiers are represented using the EPC. GS1-compliant values of instance-level identifiers can either be represented as an EPC URI (Uniform Resource Identifier) or GS1 Digital Link URI format.
-<br>
- </p>
+<p>When an identifier is associated with each participating object, it is called an instance-level identifier. Therefore, no two objects can be related to the same identifier. For example, manufacturers may use a unique number to differentiate each product, such as a toy, phone, etc. Instance level identifiers are represented using the EPC. GS1-compliant values of instance-level identifiers can either be represented as an EPC URI (Uniform Resource Identifier) or GS1 Digital Link URI format.</p>
+<p> </p>
 <p><strong>Class level</strong>:</p>
 <p>If multiple objects are associated with the same identifier, then these types of identifiers may be considered class-level identifiers. For example, an identifier can be attached to a pallet which may consist of hundreds of produced toys. Class level identifiers can also, populate the Quantity element. The structure of the Quantity element consists of the following items:</p>
 <p>EPC Class: A class level identifier to which the specified quantity of objects belongs.</p>
 <p>Quantity: It is an optional field indicating how many or how much of the EPC Class. If not provided, it is assumed to be of an unknown quantity.</p>
 <p>UOM: It stands for Unit Of Measure. It is an optional field, and if provided, indicates the measurement of the quantity by a specific unit code (e.g. KGM for a kilogram).</p>
 <h3 id="when">When</h3>
-<p>The When dimension of an EPCIS event provides information related to the date and time of the event. The following figure 3 provides an overview of the attributes available in the When dimension:
-<br>
- </p>
-<p><img src="./Figure_3_When.png" alt="Figure 3: Attributes of When dimension."></p>
+<p>The When dimension of an EPCIS event provides information related to the date and time of the event. The following figure 3 provides an overview of the attributes available in the When dimension:</p>
+<p> </p>
+<img class="images" src="./Figure_3_When.png"  alt="Attributes of When dimension."/>
 <p id="refImage" align="center">Figure 3: Attributes of When dimension.</p>
 <p><strong>Event time</strong>:</p>
-<p>It is the date and time at which the event took place. For example, if the objects are received at a docking station on the destination, then an event is triggered. This event includes the exact date and time at which objects were received as event time.
-<br>
- </p>
+<p>It is the date and time at which the event took place. For example, if the objects are received at a docking station on the destination, then an event is triggered. This event includes the exact date and time at which objects were received as event time.</p>
+<p> </p>
 <p><strong>Event time zone offset</strong>:</p>
-<p>It consists of the time zone in which the event took place. It is essential to display the EPCIS event information with regard to the local time zone; hence time zone offset is critical. For example, if an item is shipped from Germany to India, then the triggered event includes the time zone offset as Germany time zone (Central Europe Time). This time zone information is used on the receiving side, and information can be displayed in IST (Indian Standard Time) time zone.
-<br>
- </p>
+<p>It consists of the time zone in which the event took place. It is essential to display the EPCIS event information with regard to the local time zone; hence time zone offset is critical. For example, if an item is shipped from Germany to India, then the triggered event includes the time zone offset as Germany time zone (Central Europe Time). This time zone information is used on the receiving side, and information can be displayed in IST (Indian Standard Time) time zone.</p>
+<p> </p>
 <p><strong>Record time</strong>:</p>
 <p>It is the date and time at which an EPCIS event is stored in the EPCIS repository. The record time does not provide information concerning the business steps of the EPCIS event. In contrast to other EPCIS event data, this is not captured at the time of event creation. It is used just for reference which may be useful when retrieving the data from the EPCIS repository.</p>
 <h3 id="where">Where</h3>
-<p>The Where dimension of an EPCIS event provides information corresponding to the actual physical location where the event took place. It can also offer information about where precisely the items are present after the event. The following figure 4 provides an overview of attributes available in the Where dimension of an EPCIS event:
-<br>
- </p>
-<p><img src="./Figure_4_Where.png" alt="Figure 4: Attributes of Where dimension."></p>
+<p>The Where dimension of an EPCIS event provides information corresponding to the actual physical location where the event took place. It can also offer information about where precisely the items are present after the event. The following figure 4 provides an overview of attributes available in the Where dimension of an EPCIS event:</p>
+<p> </p>
+<img class="images" src="./Figure_4_Where.png"  alt="Attributes of Where dimension."/>
 <p id="refImage" align="center">Figure 4: Attributes of Where dimension.</p>
 <p><strong>Read point</strong>:</p>
-<p>Read point is the exact location where the actual event took place. The event capturing devices such as RFID readers can determine the read point of the event. Consider if the receiving site or docking station receives a box of objects. It is now made to pass through a door portal where scanning is carried out then the location identifier tied to the door is populated as the Read Point for that event.
-<br>
- </p>
+<p>Read point is the exact location where the actual event took place. The event capturing devices such as RFID readers can determine the read point of the event. Consider if the receiving site or docking station receives a box of objects. It is now made to pass through a door portal where scanning is carried out then the location identifier tied to the door is populated as the Read Point for that event.</p>
+<p> </p>
 <p><strong>Business location</strong>:</p>
 <p>It is the location of items after the particular business process step. Business location is the position where items are considered to be placed or present after a specific event. Suppose the box of items is collected at the receiving side and passes through the door portal to record the receiving event. Following the event, the items are placed in a warehouse, then the location identifier tied to the warehouse acts as Business Location in the EPCIS event.</p>
 <h3 id="why">Why</h3>
-<p>The Why dimension of an EPCIS event represents the business context of the event. The following figure 5 provides an overview of attributes available in the Why dimension:
-<br>
- </p>
-<p><img src="./Figure_5_Why.png" alt="Figure 5: Attributes of Why dimension."></p>
+<p>The Why dimension of an EPCIS event represents the business context of the event. The following figure 5 provides an overview of attributes available in the Why dimension:</p>
+<p> </p>
+<img class="images" src="./Figure_5_Why.png"  alt="Attributes of Why dimension."/>
 <p id="refImage" align="center">Figure 5: Attributes of Why dimension.</p>
 <p><strong>Business step</strong>:</p>
-<p>The business step attribute indicates what type of process was taking place at the time of the event within the context of the business. Some examples of the business step from CBV (Core Business Vocabulary) include receiving, picking, shipping, etc.
-<br>
- </p>
+<p>The business step attribute indicates what type of process was taking place at the time of the event within the context of the business. Some examples of the business step from CBV (Core Business Vocabulary) include receiving, picking, shipping, etc.</p>
+<p> </p>
 <p><strong>Disposition</strong>:</p>
-<p>The disposition attribute represents the state of the object immediately after the current EPCIS event. Some vocabularies for the disposition fields from CBV (Core Business Vocabulary) are expired, recalled, active, in_transit, etc. For example: If the business step of the current EPCIS event is shipping, then the disposition field can be populated with the keyword in_transit.
-<br>
- </p>
+<p>The disposition attribute represents the state of the object immediately after the current EPCIS event. Some vocabularies for the disposition fields from CBV (Core Business Vocabulary) are expired, recalled, active, in_transit, etc. For example: If the business step of the current EPCIS event is shipping, then the disposition field can be populated with the keyword in_transit.</p>
+<p> </p>
 <p><strong>Persistent Disposition</strong>:</p>
 <p>The persistent disposition field is newly introduced with EPCIS 2.0 latest version. It includes one or more business conditions of the object participating in the event after a particular event in a business process. The one or more values in this field can be set or unset independently
-of each other. The values provided for this attribute are assumed to be in the set condition until it is explicitly unset. According to the CBV, the field values for persistent disposition are similar to the disposition field.
-<br>
- </p>
+of each other. The values provided for this attribute are assumed to be in the set condition until it is explicitly unset. According to the CBV, the field values for persistent disposition are similar to the disposition field.</p>
+<p> </p>
 <p><strong>Business Transaction</strong>:</p>
 <p>In this field, one or more business transactions corresponding to the EPCIS event may be represented. Some examples of the business transactions from CBV are inv (invoice), PO (purchase order), desadv (dispatch advice), etc. The business transaction is constructed using two fields:</p>
 <p>Type: This is an optional field that indicates what kind of transaction this particular business transaction denotes.</p>
@@ -391,33 +380,28 @@ of each other. The values provided for this attribute are assumed to be in the s
 <p>Processing party: It denotes the parties who currently have the physical procession of the objects at the initial or final endpoint such as third-party delivery services.</p>
 <p>Location: It refers to the physical location of the start or end of the business step.</p>
 <h3 id="how">How</h3>
-<p>The How dimension of an EPCIS event contains the information related to the list of sensor elements. It denotes the condition of the objects as captured by the sensor devices such as temperature, pressure, speed, etc. The sensor element structure consists of sensor metadata and sensor report. Each parent of the sensor element can have only one metadata and several sensor elements, This is the newly introduced dimension with EPCIS 2.0. The following figure 6 provides an overview of How dimensions:
-<br>
- </p>
-<p><img src="./Figure_6_How.png" alt="Figure 6: Attributes of How dimension."></p>
+<p>The How dimension of an EPCIS event contains the information related to the list of sensor elements. It denotes the condition of the objects as captured by the sensor devices such as temperature, pressure, speed, etc. The sensor element structure consists of sensor metadata and sensor report. Each parent of the sensor element can have only one metadata and several sensor elements, This is the newly introduced dimension with EPCIS 2.0. The following figure 6 provides an overview of How dimensions:</p>
+<p> </p>
+<img class="images" src="./Figure_6_How.png"  alt="Attributes of Why dimension."/>
 <p id="refImage" align="center">Figure 6: Attributes of How dimension.</p>
 <p><strong>Sensor Metadata</strong>:</p>
-<p>It is an optional parameter that contains metadata attributes. If included, this metadata is applicable for all sensor report elements which belong to the particular sensor element. Some fields that are available in metadata are time, start time, end time, device id, etc.
-<br>
- </p>
+<p>It is an optional parameter that contains metadata attributes. If included, this metadata is applicable for all sensor report elements which belong to the particular sensor element. Some fields that are available in metadata are time, start time, end time, device id, etc.</p>
+<p> </p>
 <p><strong>Sensor Report</strong>:</p>
 <p>It is an element that contains one or more attributes that provide information sensor reading. For example, the sensor report may contain information about the temperature, pressure, speed, etc. of the objects. It may also include other attributes such as time, device id, value, UOM, etc.</p>
-<h3 id="additional-fields">Additional fields</h3>
-<p>Apart from the fields that are available in the five dimensions, EPCIS provides some additional fields that can or must be part of the events depending on the type of event. The following figure 7 provides an overview of some additional fields that can enhance the meaning of the EPCIS events:
-<br>
- </p>
-<p><img src="./Figure_7_Others.png" alt="Figure 7: Additional attributes available in the EPCIS event."></p>
+<h2 id="additional-attributes">Additional attributes</h2>
+<p>Apart from the attributes that are available in the five dimensions, EPCIS provides some additional attributes that can or must be part of the events depending on the type of event. The following figure 7 provides an overview of some additional fields that can enhance the meaning of the EPCIS events:</p>
+<p> </p>
+<img class="images" src="./Figure_7_Others.png"  alt="Additional attributes available in the EPCIS."/>
 <p id="refImage" align="center">Figure 7: Additional attributes available in the EPCIS event.</p>
 <p><strong>Instance/Lot Master Data (ILMD)</strong>:</p>
-<p>ILMD is a type of EPCIS data describing a particular instance of a physical or digital object, or it can also refer to a specific batch/lot of objects. ILMD is master data that applies to a smaller group. Master data are data that refer to a broad group of objects, such as the production location, weight, or the physical measurements of goods identified by a particular GTIN. ILMD details can be different depending on smaller object classes, such as the expiry date of the objects. Unlike the weight or physical size, the expiration
-dates can be different for all trade goods depending on the day/time of production and applicable to only a small group of products produced on a specific day/time.</p>
-<p>ILMD data can contain any details, such as the date of production, exact manufacturing place, or the weight of products but applicable only for a small group. ILMD data is static in the same way as master data, meaning that they do not change over time with the life of the product. For example, the expiry date never changes for a product. Hence, ILMD cannot be used for the data that may change over the life of an object. ILMD data can be added only when the object comes into existence. Hence, ILMD data can only be specified in the ObjectEvent and in the TransformationEvent.
-<br>
- </p>
+<p>ILMD is a type of EPCIS data describing a particular instance of a physical or digital object, or it can also refer to a specific batch/lot of objects. ILMD is master data that applies to a smaller group. Master data are data that refer to a broad group of objects, such as the production location, weight, or the physical measurements of goods identified by a particular GTIN. ILMD details can be different depending on smaller object classes, such as the expiry date of the objects. Unlike the weight or physical size, the expiration dates can be different for all trade goods depending on the day/time of production and applicable to only a small group of products produced on a specific day/time.</p>
+<p> </p>
+<p>ILMD data can contain any details, such as the date of production, exact manufacturing place, or the weight of products but applicable only for a small group. ILMD data is static in the same way as master data, meaning that they do not change over time with the life of the product. For example, the expiry date never changes for a product. Hence, ILMD cannot be used for the data that may change over the life of an object. ILMD data can be added only when the object comes into existence. Hence, ILMD data can only be specified in the ObjectEvent and in the TransformationEvent.</p>
+<p> </p>
 <p><strong>Action property</strong>:</p>
-<p>EPCIS action value offers information on how a given event is connected to the object’s life cycle. The values in action fields are independent of the business step carried out. Except for the TransformationEvent, it is mandatory to include the action property in the event. The action field can contain one of the three values irrespective of the event type, and the process carried out. The meaning of these action properties differs based on the type of event used. Following are the three values of action property that can be used within the EPCIS event: ADD, OBSERVE, and DELETE.
-<br>
- </p>
+<p>EPCIS action value offers information on how a given event is connected to the object’s life cycle. The values in action fields are independent of the business step carried out. Except for the TransformationEvent, it is mandatory to include the action property in the event. The action field can contain one of the three values irrespective of the event type, and the process carried out. The meaning of these action properties differs based on the type of event used. Following are the three values of action property that can be used within the EPCIS event: ADD, OBSERVE, and DELETE.</p>
+<p> </p>
 <p><strong>Transformation ID</strong>:</p>
 <p>As the name suggests, it is available only for the TransformationEvent. Transformation IDs are used to link the TransformationEvents together. It is an optional field, and if a value is specified, then inputs of all events sharing the same value may contribute to the output of all events sharing the same value.
 <br>
@@ -428,14 +412,18 @@ dates can be different for all trade goods depending on the day/time of producti
 <p align="center">ni:///sha-256;c6407ffcac52ec159528f2b556ba4ac3844c5aa48485c1fd61643e94f0a2d678?ver=CBV2.0</p>
 <p> </p>
 <p><strong>Error declaration</strong>:</p>
-<p>Every event generated for the objects in EPCIS indicates the forward step taken by the objects in a business process. The entire business cycle consists of a sequence of steps represented in the form of EPCIS events. Sometimes the recorded event might contain some erroneous information due to a faulty device, physical conditions, operator fault, etc. so the historical event may not precisely represent what happened in the real world. EPCIS standard deliberately does not allow to delete or modify the information of already created events because it can affect the flow of business processes or other depending events. Alternatively, a new event can be generated to nullify the previous error event.</p>
-<p>The following example provides a situation when an error event is generated: Company A generates an ObjectEvent with action value DELETE for an object with identifier 111 indicating that the object has been destroyed. However, it was later discovered that the actual object had not been destroyed and it is still present in the warehouse. As an event with action DELETE is already present, new events with different values cannot be created for the same identifier in the future. Hence, an error declaration event is created, indicating that the object with identifier 111 was not destroyed.</p>
+<p>Every event generated for the objects in EPCIS indicates the forward step taken by the objects in a business process. The entire business cycle consists of a sequence of steps represented in the form of EPCIS events. Sometimes the recorded event might contain some erroneous information due to a faulty device, physical conditions, operator fault, etc. so the historical event may not precisely represent what happened in the real world. EPCIS standard deliberately does not allow to delete or modify the information of already created events because it can affect the flow of business processes or other depending events. Alternatively, a new event can be generated to nullify the previous error event.
+<br>
+ </p>
+<p>The following example provides a situation when an error event is generated: Company A generates an ObjectEvent with action value DELETE for an object with identifier 111 indicating that the object has been destroyed. However, it was later discovered that the actual object had not been destroyed and it is still present in the warehouse. As an event with action DELETE is already present, new events with different values cannot be created for the same identifier in the future. Hence, an error declaration event is created, indicating that the object with identifier 111 was not destroyed.
+<br>
+ </p>
 <p>The ErrorDeclaration tag within an EPCIS event indicates that this occurrence has special meaning in comparison to regular EPCIS events. It also indicates that previous events are incorrect and contain some erroneous information. The error events include the same information as the original (erroneous) event, except that they have an additional ErrorDeclaration tag that is not present in the actual event. The ErrorDeclaration tag may contain the following elements:</p>
 <p>Declaration Time: Indicates the date and time during which declaration of error is made.</p>
 <p>Reason: It is an optional field that indicates the cause for the previous error event.</p>
 <p>Corrective Event IDs: It is also an optional field. If it is provided, it indicates the eventID field of an event that was in error.</p>
-<h2 id="other-associated-concepts-with-epcis-standards">Other associated concepts with EPCIS standards</h2>
-<p>Following are some of the additional attributes present in EPCIS standard:</p>
+<h2 id="terms-associated-to-epcis-standard">Terms associated to EPCIS standard</h2>
+<p>Following are some of the additional terms associated to EPCIS standard:</p>
 <h3 id="syntax-type">Syntax type</h3>
 <p>Until EPCIS 1.2, standard vocabulary elements in the events were represented only using a URN (Uniform Resource Name) format. However, with the release of EPCIS 2.0, they can be represented using either a URN or a Web URI (Uniform Resource Identifier) scheme. So all the standard vocabularies that are available in CBV can be specified in one of the following syntaxes:</p>
 <p align="center">urn:epcglobal:cbv:qualifier:payload</p>
@@ -448,8 +436,10 @@ dates can be different for all trade goods depending on the day/time of producti
 <p align="center">urn:epc:id:sgtin:CompanyPrefix.ItemRefAndIndicator.SerialNumber</p>
 <p align="center">urn:epc:id:sgtin:2345678.190123.987</p>
 <p>As we can observe from the syntax format above, 2345678 is the GCP assigned to a particular organization. 90123 is the item reference, 1 is the indicator digit, and 987 is the serial number.</p>
-<h2 id="cbv-core-business-vocabulary">CBV (Core Business Vocabulary)</h2>
-<p>Core Business Vocabulary (CBV) is the accompanying data standard for EPCIS. The main objective of the CBV is to provide various vocabulary elements that can be utilized in conjunction with the EPCIS standard. The vocabularies in this standard ensure that all parties involved in the sharing of EPCIS data have a common understanding of the data. If each organization proprietary their values/identification schemes in EPCIS, then it can be challenging for other organizations to understand the event information. The CBV-defined vocabularies are the core component of the EPCIS data model, and it covers a broad set of industry sectors that have common business scenarios. EPCIS standard has the provision to add user-specific vocabulary elements, but it is recommended to use the CBV standard to the greatest possible extent. CBV provides the standard vocabulary list for various fields in the EPCIS such as business step, disposition, source and destination type, persistent disposition, sensor elements, etc.</p>
+<h2 id="core-business-vocabulary-cbv">Core Business Vocabulary (CBV)</h2>
+<p>Core Business Vocabulary (CBV) is the accompanying data standard for EPCIS. The main objective of the CBV is to provide various vocabulary elements that can be utilized in conjunction with the EPCIS standard. The vocabularies in this standard ensure that all parties involved in the sharing of EPCIS data have a common understanding of the data. If each organization proprietary their values/identification schemes in EPCIS, then it can be challenging for other organizations to understand the event information. The CBV-defined vocabularies are the core component of the EPCIS data model, and it covers a broad set of industry sectors that have common business scenarios. EPCIS standard has the provision to add user-specific vocabulary elements, but it is recommended to use the CBV standard to the greatest possible extent. CBV provides the standard vocabulary list for various fields in the EPCIS such as business step, disposition, source and destination type, persistent disposition, sensor elements, etc.
+<br>
+ </p>
 <p>Along with the new release of EPCIS 2.0, CBV 2.0 has also been planned to release in June 2022. CBV was previously known as Core Business Vocabulary, but with the release of 2.0, it has been renamed Core Business Vocabulary. In comparison to previous versions, CBV 2.0 consists of various new vocabularies for the fields such as business step, disposition, business transaction type, etc. Also, it includes vocabulary elements for newly introduced data fields in EPCIS 2.0, such as sensor elements, persistent disposition, etc.</p>
 <h2 id="enhancements-in-epcis-20-version">Enhancements in EPCIS 2.0 version</h2>
 <p>EPCIS 2.0, which was published in June 2022, is the most recent version and has significant enhancements over EPCIS 1.2. Following are some of the significant advancements in EPCIS 2.0, as previously discussed in some of the preceding sections:</p>
@@ -459,11 +449,11 @@ dates can be different for all trade goods depending on the day/time of producti
 <p>• The new AssociationEvent event type has been added.</p>
 <p>• New attribute Persistent Disposition has been added.</p>
 <p>In addition, several improvements have been incorporated. For further details, refer the official GS1 EPCIS 2.0 specifications.</p>
-<h3 id="example-of-an-epcis-event">Example of an EPCIS event</h3>
+<h2 id="example-of-an-epcis-event">Example of an EPCIS event</h2>
 <p>So far, the documentation provided various information on EPCIS standards such as different dimensions, event types, fields available in the event, etc. The following listings provide an example of a simple EPCIS ObjectEvent in both XML and JSON/JSON-LD format. The events accommodate a single instance-level object and a single class-level identifier that is part of a shipping event. These events include four dimensions and the corresponding fields in them, such as recordTime, eventTime, readPoint, source, destination, etc. The XML format consists of the identifiers and standard vocabularies in URN format whereas the JSON/JSON-LD format consists of identifiers and standard vocabularies in Web URI format:
 <br>
  </p>
-<p>EPCIS event in JSON/JSON-LD format:</p>
+<p><strong>EPCIS event in JSON/JSON-LD format</strong>:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">{</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">&#34;@context&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#4e9a06">&#34;https://ref.gs1.org/standards/epcis/2.0.0/epcis-context.jsonld&#34;</span>
@@ -499,7 +489,7 @@ dates can be different for all trade goods depending on the day/time of producti
 </span></span><span style="display:flex;"><span>      <span style="color:#204a87;font-weight:bold">&#34;destination&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;urn:epc:id:sgln:7854785487.45.200&#34;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}]</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#000;font-weight:bold">}</span>
-</span></span></code></pre></div><p>EPCIS event in XML format:</p>
+</span></span></code></pre></div><p><strong>EPCIS event in XML format</strong>:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&lt;ObjectEvent&gt;</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&lt;eventTime&gt;</span>2022-05-01T08:10:10Z<span style="color:#204a87;font-weight:bold">&lt;/eventTime&gt;</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&lt;recordTime&gt;</span>2022-05-16T13:03:43.01Z<span style="color:#204a87;font-weight:bold">&lt;/recordTime&gt;</span>
@@ -532,8 +522,12 @@ dates can be different for all trade goods depending on the day/time of producti
 </span></span><span style="display:flex;"><span>  <span style="color:#204a87;font-weight:bold">&lt;/destinationList&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">&lt;/ObjectEvent&gt;</span>
 </span></span></code></pre></div><h2 id="openepcis">OpenEPCIS</h2>
-<p>benelog GmbH &amp; Co. KG is an organization located in Kerpen, Germany that focuses on development of software and system architecture. The developed software and applications operate effectively and efficiently in the fields of big data processing, complex, scalable, cloud-based environments. benelog GmbH &amp; Co. KG designed and developed OpenEPCIS implementation based on the EPCIS standard. We are well versed with the ins and outs of the EPCIS standard because we are part of the GS1 core member group that assisted in standardizing EPCIS 2.0 and continue to work on various implementations related to EPCIS.  We have designed and developed several open source tools and projects associated with EPCIS standard as part of our contribution to the EPCIS community, which any entity can utilize for their use (Note: more on the tools and projects discussed later in this documentation).</p>
-<p>Since EPCIS documents might include thousands or millions of events, it is necessary to handle them effectively to ensure that memory utilization and the system on which they are executing are not overworked. We at OpenEPCIS team, consistently uses the latest cutting-edge processes and technologies to develop all the products and services. As a result, all our developments function effectively and efficiently even while managing enormous amounts of data without experiencing any performance problems. The OpenEPCIS team also makes sure that all our developed tools/projects are available in a various formats so users have a choice of alternatives to pick from and are free to select the best option depending on their needs, knowledge, and ease of access.</p>
+<p>benelog GmbH &amp; Co. KG is an organization located in Kerpen, Germany that focuses on development of software and system architecture. The developed software and applications operate effectively and efficiently in the fields of big data processing, complex, scalable, cloud-based environments. benelog GmbH &amp; Co. KG designed and developed OpenEPCIS implementation based on the EPCIS standard. We are well versed with the ins and outs of the EPCIS standard because we are part of the GS1 core member group that assisted in standardizing EPCIS 2.0 and continue to work on various implementations related to EPCIS.  We have designed and developed several open source tools and projects associated with EPCIS standard as part of our contribution to the EPCIS community, which any entity can utilize for their use (Note: more on the tools and projects discussed later in this documentation).
+<br>
+ </p>
+<p>Since EPCIS documents might include thousands or millions of events, it is necessary to handle them effectively to ensure that memory utilization and the system on which they are executing are not overworked. We at OpenEPCIS team, consistently uses the latest cutting-edge processes and technologies to develop all the products and services. As a result, all our developments function effectively and efficiently even while managing enormous amounts of data without experiencing any performance problems. The OpenEPCIS team also makes sure that all our developed tools/projects are available in a various formats so users have a choice of alternatives to pick from and are free to select the best option depending on their needs, knowledge, and ease of access.
+<br>
+ </p>
 <p>If any organization wishes to implement the EPCIS standard within their system then we encourage them to make use of the open-source reference implementation OpenEPCIS, because purchasing commercial solutions can be expensive and creating a custom system can take a lot of time and effort. Based on the most recent EPCIS 2.0, OpenEPCIS has been developed utilizing cutting-edge technology and, as previously mentioned, is highly scalable. Using the current standards, tools, and knowledge, we assist enterprises of all types and scales in seamlessly and successfully integrating the EPCIS standard.</p>
 <h2 id="contact">Contact</h2>
 <p>We are delighted to talk if you have any questions, suggestions, or would want to work with us on any projects. Send us an email at <a href="mailto:info@openepcis.io">info@openepcis.io</a>.</p>
@@ -549,10 +543,11 @@ dates can be different for all trade goods depending on the day/time of producti
         display:block;
         float:none;
         padding-top:-10%;
+        padding-left:20%;
         font-size: 12px;
     }
 
-    img {
+    .images {
         display:block;
         float:none;
         margin-left:auto;
@@ -560,7 +555,6 @@ dates can be different for all trade goods depending on the day/time of producti
         width:60%;
         border: 1px solid #555;
     }
-
 </style>
 
         <div class="section-index">

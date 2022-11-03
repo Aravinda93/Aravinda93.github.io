@@ -34,8 +34,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.eb4439104c9cdd117ae850120f6bb1e7cbaa8f61aab3167765c74b27363ee063.css" as="style">
-<link href="/scss/main.min.eb4439104c9cdd117ae850120f6bb1e7cbaa8f61aab3167765c74b27363ee063.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.938955b56840897e7b632629120f69a00c0abe55a711635df50c174847633cba.css" as="style">
+<link href="/scss/main.min.938955b56840897e7b632629120f69a00c0abe55a711635df50c174847633cba.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -59,7 +59,7 @@
           <nav class="main-nav navbar">
             
             <a href="/" class="logo">
-              <img src="/images/openepcis-logo.png" alt="OpenEPCIS" width="75" height="75">
+              <img src="/images/openepcis-logo.svg" alt="OpenEPCIS" width="90" height="90">
             </a>
             <ul class="nav">
               
@@ -159,6 +159,9 @@
 <div class="td-toc"><nav id="TableOfContents">
   <ul>
     <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#need-for-epcis-test-data-generator">Need for EPCIS Test Data Generator</a></li>
+    <li><a href="#openepcis-test-data-generator">OpenEPCIS test data generator</a></li>
+    <li><a href="#key-features">Key Features</a></li>
     <li><a href="#local-set-up">Local set-up</a>
       <ul>
         <li><a href="#running-with-podman">Running with Podman</a></li>
@@ -230,7 +233,30 @@
 		
 	</header>
 	<h2 id="introduction">Introduction</h2>
-<p>The problem for various solution providers and user companies adopting EPCIS for their projects is to generate test data for testing purposes (load tests, populating test databases, etc.). OpenEPCIS Test Data Generator was developed to assist the EPCIS community by making it simple to generate test data (e.g. hundreds or thousands of events). Regardless of the industry, use case, or supply chain system, the developed application provides a single solution for creating test events. It saves time and effort for the various organizations because they don’t have to build, maintain, or incorporate new capabilities of EPCIS into their test data production technologies. Based on the information provided by users and their organizational needs, the application can create bulk EPCIS events. These EPCIS events are compliant with EPCIS 2.0, the most recent version of the EPCIS, and events are generated in JSON/JSON-LD format. It also includes the option to generate events and identifiers in both URN and WebURI format</p>
+<p>For various business requirements, including traceability (of goods, assets, etc.), process automation, compliance, and supply chain management, you and your trading partners must capture and share visibility data in addition to master data (such as the description and weight of a trade item) and transactional data (such as an order, invoice, etc.). This data category&rsquo;s fundamental and open-source standard, EPCIS has been already widely used across a number of industries.</p>
+<p> </p>
+<p>The open standard for capturing and exchanging visibility data is EPCIS. It has been endorsed by GS1, ISO, and IEC. It includes a ready-to-use data model that enables you to consolidate every stage of a business process into a single dataset. The basic details of what happened, when, where, why, and how are recorded as EPCIS events. The key to making your items traceable is to keep track of all pertinent events (such as harvesting, producing, packing, shipping, and selling) throughout your supply network.</p>
+<h2 id="need-for-epcis-test-data-generator">Need for EPCIS Test Data Generator</h2>
+<p>End users, solution providers, research institutions, and other parties frequently need test data for load/performance tests, PoCs/research projects (for example, to populate test databases), initiating data interchange between business partners, and more. However, creating EPCIS test data can literally take you days of effort and is usually tedious. If you are in such a situation, you&rsquo;ll be relieved to learn that our new open-source tool OpenEPCIS test data generator. It is now available that can assist you in completing this task in a matter of minutes.</p>
+<h2 id="openepcis-test-data-generator">OpenEPCIS test data generator</h2>
+<p>The initial version of the EPCIS test data generator was developed as part of master thesis with the collaboration of GS1 Germany from June to November 2020. Various users of the EPCIS community were involved in the development process, which enabled the application to be customised according to their needs and requirements. The latest version of the tool has been developed as part of an organisational effort at benelog GmbH &amp; Co. KG with many improvements and more advanced functionality. Anyone interested in adopting or implementing EPCIS can get assistance from the interactive application OpenEPCIS Test Data Generator. It is being offered as an open-source project. This essentially means that anyone is welcome to use the tool.</p>
+<p> </p>
+<p>Regardless of the industry, use case, or application domain, the OpenEPCIS test data generator tool offers a flexible and potent solution for creating test events. The generated events adhere to the most recent EPCIS specification, i.e. EPCIS 2.0. Events are produced in JSON/JSON-LD, but if businesses need EPCIS events in XML (either in accordance with EPCIS 1.2 or the most recent version, i.e., 2.0), there are additional open source tools that can transform them into the required data format.</p>
+<h2 id="key-features">Key Features</h2>
+<p>The following are some of the tool&rsquo;s key characteristics:</p>
+<p>• Adheres to the most recent revisions of CBV 2.0 and EPCIS 2.0.</p>
+<p>• Supports object/location IDs using both GS1 Digital Link URIs and EPC/EPC Class URIs.</p>
+<p>• Generates JSON/JSON-LD events (which in turn can be translated to XML through other tools).</p>
+<p>• Contains a randomization technique for elements like timestamps and serial numbers.</p>
+<p>• Supports the use of both UUIDs and EPCIS Event Hash IDs to identify EPCIS events.</p>
+<p>• Offers functionality for modelling uniquely tailored event sequences.</p>
+<p>• Offers copying or exporting of designs or events for later use.</p>
+<p>• Supports object/location IDs using both GS1 Digital Link URIs and EPC/EPC Class URIs.</p>
+<p>• Generates JSON/JSON-LD events (which in turn can be translated to XML through other tools).</p>
+<p>• Contains a randomization technique for elements like timestamps and serial numbers.</p>
+<p>• Supports the use of both UUIDs and EPCIS Event Hash IDs to identify EPCIS events.</p>
+<p>• Offers functionality for modelling uniquely tailored event sequences.</p>
+<p>• Offers copying or exporting of designs or events for later use.</p>
 <h2 id="local-set-up">Local set-up</h2>
 <p>On your local system, the OpenEPCIS Test Data Generator can be set up in various ways. The following section explains how to quickly set up the application using Podman and Docker.</p>
 <h3 id="running-with-podman">Running with Podman</h3>

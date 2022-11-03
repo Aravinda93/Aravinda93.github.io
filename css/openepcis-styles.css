@@ -1121,7 +1121,7 @@ Banner Style
   position: absolute;
   left: 0px;
   top: 0px;
-  width: 100%;
+  width: 200%;
   height: 100%;
   z-index: 1;
 }
@@ -1160,7 +1160,9 @@ Banner Style
 }
 
 .main-banner .right-image img {
-  max-width: 710px;
+  margin-left:-10%;
+  width:200%;
+  max-width: 1100px;
 }
 
 .main-banner .left-content .white-button a {
@@ -1443,6 +1445,10 @@ Footer Style
 --------------------------------------------- 
 */
 
+#footerInfo{
+  margin-top:7%;
+}
+
 footer {
   background-image: url(../images/footer-bg.png);
   background-position: center top;
@@ -1546,6 +1552,15 @@ responsive
 }
 
 @media (max-width: 992px) {
+  #footerInfo{
+    margin-top:30%;
+  }
+
+  .main-banner .right-image img {
+    width:150%;
+    max-width: 500px;
+  }
+
   .header-area {
     background-color: #fff;
   }
