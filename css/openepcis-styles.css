@@ -1510,6 +1510,9 @@ footer .copyright-text p {
   margin-bottom: 0px;
   color: #fff;
 }
+footer .copyright-text p span a {
+  margin-left: 1%;
+}
 
 footer p a {
   color: #fff;
