@@ -33,50 +33,119 @@
       <div class="row">
         <div class="col-12">
           <nav class="main-nav navbar">
-            
             <a href="/" class="logo">
-              <img src="/images/openepcis-logo.svg" alt="OpenEPCIS" width="90" height="90">
+              <img  class="openEpcisLogo" src="/images/openepcis-logo.svg" alt="OpenEPCIS" width="90" height="90">
             </a>
+            
             <ul class="nav">
               
-              <li class="scroll-to-section active" active-class="active" exact><a href="/"><span  class="active">Home</span></a></li>
+
               
+
               <li class="scroll-to-section">
-                
-                
-                
-                
-                
-                
-                
-                
-                <a href="/docs/" ><span >Documentation</span></a>
+                <a href="/">
+                  <span  class="active" >
+                    <em class="navbarIcon bi bi-house-fill"></em> 
+                    Home
+                  </span>
+                </a>
               </li>
               
-              <li class="scroll-to-section">
-                
-                
-                
-                
-                
-                
-                
-                
-                <a href="/privacy/" ><span >Privacy</span></a>
-              </li>
               
-              <li class="scroll-to-section">
-                
-                
-                
-                
-                
-                
-                
-                
-                <a href="/imprint/" ><span >Imprint</span></a>
-              </li>
+                <li class="scroll-to-section">
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  <a href="/docs/" >
+                    
+                    
+
+                    <span >
+                      
+                      
+                        <em class="navbarIcon bi bi-file-earmark-fill"></em>
+                      
+
+                      
+
+                      
+                      
+
+                      Documentation
+                    </span>
+                    
+                    
+                  </a>
+                </li>
               
+                <li class="scroll-to-section">
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  <a href="/privacy/" >
+                    
+                    
+
+                    <span >
+                      
+                      
+
+                      
+                        <em class="navbarIcon bi bi-shield-fill"></em>
+                      
+
+                      
+                      
+
+                      Privacy
+                    </span>
+                    
+                    
+                  </a>
+                </li>
+              
+                <li class="scroll-to-section">
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  <a href="/imprint/" >
+                    
+                    
+
+                    <span >
+                      
+                      
+
+                      
+
+                      
+                        <em class="navbarIcon bi bi-printer-fill"></em>
+                      
+                      
+
+                      Imprint
+                    </span>
+                    
+                    
+                  </a>
+                </li>
+              
+
             </ul>
             <a class='menu-trigger'>
               <span>Menu</span>
@@ -170,7 +239,7 @@
                      <em class="bi bi-geo-fill fa-hover-show"></em>
                   </div>
                   <h4>Tracking</h4>
-                  <p>Find exactly where the items are present using the most recent EPCIS event.</p>
+                  <p>Utilize the most recent EPCIS event to determine the precise location of the objects.</p>
                </div>
             </div>
             <div class="col-lg-3">
@@ -190,7 +259,7 @@
                      <em class="bi bi-bar-chart-line-fill fa-hover-show"></em>
                   </div>
                   <h4>Analysing</h4>
-                  <p>All the EPCIS events collected over a particular time can be interpreted in a specific business context.</p>
+                  <p>EPCIS events collected over a interval can be interpreted for a business context.</p>
                </div>
             </div>
             <div class="col-lg-3">
@@ -200,7 +269,7 @@
                      <em class="bi bi-three-dots-vertical fa-hover-show"></em>
                   </div>
                   <h4>And many more...</h4>
-                  <p>EPCIS provides various other benefits such as automation, verification, etc. <a href="/docs/epcis" target="_blank">Read More <em class="fa fa-arrow-right"></em></a></p>
+                  <p>Other advantages offered by EPCIS include automation, verification, etc. <a href="/docs/epcis" target="_blank">read <em class="fa fa-arrow-right"></em></a></p>
                </div>
             </div>
          </div>
@@ -216,7 +285,7 @@
     
 
 /images/heading-line-dec.png>
-                  <p>OpenEPCIS is an open-source reference implementation based on the EPCIS standard. We encourage business to make use of the open-source reference implementation OpenEPCIS to incorporate EPCIS standard.</p>
+                  <p>OpenEPCIS is an open-source reference implementation based on the EPCIS standard. We encourage business to make use of our open-source reference implementation OpenEPCIS to incorporate the EPCIS standard.</p>
                </div>
                <div class="row  wow fadeInLeft">
                   <div class="col-lg-6">
@@ -290,8 +359,8 @@
                      <em class="bi bi-file-earmark-text fa-hover-hidden"></em>
                      <em class="bi bi-file-earmark-text-fill fa-hover-show"></em>
                   </div>
-                  <h4>XML <-> JSON converter</h4>
-                  <p>EPCIS documents from XML <-> JSON converter.</p>
+                  <h4>Format converter</h4>
+                  <p>Convert EPCIS documents from XML <-> JSON.</p>
                   <div class="border-button">
                      <a href="/docs/document-format-converter/" target="_blank">Read More <em class="fa fa-arrow-right"></em></a>
                   </div>
@@ -304,7 +373,7 @@
                      <em class="bi bi-key-fill fa-hover-show"></em> 
                   </div>
                   <h4>Event Hash generator</h4>
-                  <p>Generate Hash-Ids for EPCIS document in XML/JSON document.</p>
+                  <p>Generate event Hash-Ids for EPCIS document.</p>
                   <div class="border-button">
                      <a href="/docs/event-hash-generator/" target="_blank">Read More <em class="fa fa-arrow-right"></em></a>
                   </div>
@@ -317,7 +386,7 @@
                      <em class="bi bi-gear-fill fa-hover-show"></em>
                   </div>
                   <h4>Test Data Generator</h4>
-                  <p>Generate test data events for user specific requirements.</p>
+                  <p>Generate events based on user requirements.</p>
                   <div class="border-button">
                      <a href="/docs/test-data-generator/" target="_blank">Read More <em class="fa fa-arrow-right"></em></a>
                   </div>
@@ -352,10 +421,11 @@
       <div class="col-lg-3 offset-lg-1">
         <div class="footer-widget">
           <h4>Contact Us</h4>
-          <span style="color:white">benelog GmbH & Co. KG, 
-            <br/> Bahnhofstraße 11,
-            <br/>50169 Kerpen, Germany
-            <br/>Email: <a href="mailTo:info@openepcis.io" style="color:white">info@openepcis.io</a>
+          <span style="color:white">benelog GmbH & Co. KG
+            <br/>Bahnhofstraße 11
+            <br/>50169 Kerpen
+            <br/>Germany
+            <br/>Email: <a href="mailto:info@openepcis.io" style="color:white">info@openepcis.io</a>
           </span>
         </div>
       </div>
@@ -387,11 +457,10 @@
         <div class="copyright-text">
           <p>
             Copyright © 2022 <a href="https://openepcis.io/" target="_blank">OpenEPCIS </a>All Rights Reserved.
-            <span>
-              <a href="https://github.com/openepcis" target="_blank"><em class="bi bi-github"></em></a>
-              <a href="https://www.linkedin.com/company/benelog/" target="_blank"><em class="bi bi-linkedin"></em></a>
-              <a href="https://www.benelog.com/" target="_blank"><em class="bi bi-globe"></em></a>
-            </span>
+            <br/>
+            <a href="https://github.com/openepcis" target="_blank" class="footerLinks"><em class="bi bi-github"></em></a>
+            <a href="https://www.linkedin.com/company/benelog/" target="_blank" class="footerLinks"><em class="bi bi-linkedin"></em></a>
+            <a href="https://www.benelog.com/" target="_blank" class="footerLinks"><em class="bi bi-globe"></em></a>
           </p>
         </div>
       </div>

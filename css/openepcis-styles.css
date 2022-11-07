@@ -67,7 +67,7 @@ header, nav, section, article, aside, footer, hgroup {
 }
 
 html, body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Arial', 'Helvetica', sans-serif;
   font-weight: 400;
   background-color: #fff;
   -ms-text-size-adjust: 100%;
@@ -89,15 +89,19 @@ ul {
 }
 
 p {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 30px;
   font-weight: 300;
-  color: #626567;
+  color: #101010;
 }
 
 img {
   width: 100%;
   overflow: hidden;
+}
+
+.openEpcisLogo{
+  margin-left:-100%;
 }
 
 /* 
@@ -179,7 +183,7 @@ body {
   padding: 10px 20px !important;
   color: #4b8ef1 !important;
   text-transform: capitalize;
-  font-size: 15px;
+  font-size: 16px;
   background-color: #fff;
   border-radius: 23px;
   font-weight: 500 !important;
@@ -197,7 +201,7 @@ body {
 }
 
 .text-button a {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .text-button a i {
@@ -215,7 +219,7 @@ body {
   padding: 10px 20px !important;
   color: #fff !important;
   text-transform: capitalize;
-  font-size: 15px;
+  font-size: 16px;
   background: rgb(19,175,240);
   background: linear-gradient(105deg, rgba(91,104,235,1) 0%, rgba(40,225,253,1) 100%);
   border-radius: 23px;
@@ -236,7 +240,7 @@ body {
   color: #4b8ef1 !important;
   border: 1px solid #4b8ef1;
   text-transform: capitalize;
-  font-size: 15px;
+  font-size: 16px;
   display: inline-block;
   background-color: #fff;
   border-radius: 23px;
@@ -264,6 +268,10 @@ header
 /**
   * Desktop Navigation
   */
+  .navbarIcon{
+    font-size: 18px!important;
+  }
+
   .navbar {
     padding: 0;
   }
@@ -291,7 +299,7 @@ header
     align-items: center;
     justify-content: space-between;
     padding: 0 3px;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     color: #222222;
     white-space: nowrap;
@@ -453,7 +461,7 @@ header
   
   .navbar-mobile a {
     padding: 10px 20px;
-    font-size: 15px;
+    font-size: 16px;
     color: #222222;
   }
   
@@ -631,7 +639,7 @@ header
 .header-area .main-nav .nav li a {
   display: block;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 16px;
   color: #2a2a2a;
   text-transform: capitalize;
   -webkit-transition: all 0.3s ease 0s;
@@ -856,7 +864,19 @@ header
   color: #4b8ef1;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1650px) {
+  .openEpcisLogo{
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 2700px) {
+  .main-banner:after {
+    display: none;
+  } 
+}
+
+@media (max-width: 1400px) {
   .header-area .main-nav .nav li {
     padding-left: 12px;
     padding-right: 12px;
@@ -1254,7 +1274,7 @@ About us Style
 
 .service-item p {
   transition: all .3s;
-  font-size: 15px;
+  font-size: 16px;
   margin-bottom: 20px;
 }
 
@@ -1341,19 +1361,6 @@ About Us
   z-index: 1;
 }
 
-.about-us:after {
-  background-image: url(../images/about-bg.jpg);
-  width: 777px;
-  height: 1132px;
-  content: '';
-  position: absolute;
-  background-repeat: no-repeat;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 0;
-}
-
 /* 
 ---------------------------------------------
 The Projects section
@@ -1387,28 +1394,6 @@ The Projects section
   padding-bottom:30px;
 }
 
-.projects-item-regular:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url(../images/regular-table-top.png);
-  z-index: 0;
-  content: '';
-  width: 274px;
-  height: 221px;
-}
-
-.projects-item-regular:after {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background-image: url(../images/regular-table-bottom.png);
-  z-index: 0;
-  content: '';
-  width: 370px;
-  height: 171px;
-}
-
 .projects-item-regular h4 {
   font-size: 20px;
   font-weight: 700;
@@ -1434,7 +1419,7 @@ The Projects section
   height: 50px;
   transition: all .3s;
   font-size:40px;
-  margin-top: -20%;
+  margin-top: -18%;
   margin-bottom: 10%;
 }
 
@@ -1459,7 +1444,7 @@ footer {
 }
 
 .footer-widget .logo img {
-  max-width: 96px;
+  max-width: 160px;
   margin-bottom: 30px;
 }
 
@@ -1495,7 +1480,7 @@ footer {
 }
 
 .footer-widget ul li a {
-  font-size: 15px;
+  font-size: 16px;
   color: #fff;
   transition: all .3s;;
 }
@@ -1510,8 +1495,9 @@ footer .copyright-text p {
   margin-bottom: 0px;
   color: #fff;
 }
-footer .copyright-text p span a {
-  margin-left: 1%;
+
+.footerLinks{
+  padding-left:1%;
 }
 
 footer p a {
@@ -1551,6 +1537,12 @@ responsive
   .main-banner .left-content p {
     margin-bottom: 45px;
   }
+}
+
+@media (max-width:1100px){
+  .main-banner:after {
+    display: none;
+  } 
 }
 
 @media (max-width: 992px) {
@@ -1615,7 +1607,7 @@ responsive
     margin-bottom: 45px;;
   }
   .aboutus .naccs .menu div {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
   }
   .service-item {
