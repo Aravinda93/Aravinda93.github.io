@@ -20,16 +20,16 @@
 <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<meta name="description" content="OpenEPCIS solution to differentiate events using unique Hash-Ids.">
+<meta name="description" content="OpenEPCIS solution to generate unique event hash for EPCIS XML or JSON/JSON-LD document or event list.">
 <meta property="og:title" content="Event Hash Generator" />
-<meta property="og:description" content="OpenEPCIS solution to differentiate events using unique Hash-Ids." />
+<meta property="og:description" content="OpenEPCIS solution to generate unique event hash for EPCIS XML or JSON/JSON-LD document or event list." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://openepcis.github.io/docs/event-hash-generator/" /><meta property="og:site_name" content="OpenEPCIS" />
 
 <meta itemprop="name" content="Event Hash Generator">
-<meta itemprop="description" content="OpenEPCIS solution to differentiate events using unique Hash-Ids."><meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="OpenEPCIS solution to generate unique event hash for EPCIS XML or JSON/JSON-LD document or event list."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Event Hash Generator"/>
-<meta name="twitter:description" content="OpenEPCIS solution to differentiate events using unique Hash-Ids."/>
+<meta name="twitter:description" content="OpenEPCIS solution to generate unique event hash for EPCIS XML or JSON/JSON-LD document or event list."/>
 
 
 
@@ -202,14 +202,14 @@
   <a href="/docs/introduction/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsintroduction"><span class="">Introduction</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsepcis-li">
   <a href="/docs/epcis/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsepcis"><span class="">EPCIS</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdocument-format-converter-li">
-  <a href="/docs/document-format-converter/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdocument-format-converter"><span class="">Document Format Converter</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdocument-version-converter-li">
-  <a href="/docs/document-version-converter/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdocument-version-converter"><span class="">Document Version Converter</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsformat-converter-li">
+  <a href="/docs/format-converter/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsformat-converter"><span class="">Format Converter</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsversion-converter-li">
+  <a href="/docs/version-converter/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsversion-converter"><span class="">Version Converter</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsidentifier-converter-li">
+  <a href="/docs/identifier-converter/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsidentifier-converter"><span class="">Identifier Converter</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsevent-hash-generator-li">
   <a href="/docs/event-hash-generator/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id="m-docsevent-hash-generator"><span class="td-sidebar-nav-active-item">Event Hash Generator</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsidentifiers-converter-li">
-  <a href="/docs/identifiers-converter/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsidentifiers-converter"><span class="">Identifier/Vocabulary Converter</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docstest-data-generator-li">
   <a href="/docs/test-data-generator/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docstest-data-generator"><span class="">Test Data Generator</span></a>
 </li>
@@ -277,7 +277,7 @@
             
 <div class="td-content">
 	<h1>Event Hash Generator</h1>
-  <div class="lead">OpenEPCIS solution to differentiate events using unique Hash-Ids.</div>
+  <div class="lead">OpenEPCIS solution to generate unique event hash for EPCIS XML or JSON/JSON-LD document or event list.</div>
 	<header class="article-meta">
 		
 
@@ -305,9 +305,9 @@
 <h3 id="api-endpoint">API Endpoint</h3>
 <p>With their XML/JSON documents serving as request, users/developers can use the API to send requests to OpenEPCIS&rsquo;s Hash Generator API and receive back the converted document as a response. These API&rsquo;s can also be used directly online or from within another application code. Users can access the REST endpoint using Swagger-UI from <a href="https://tools.openepcis.io/q/swagger-ui/#/Hash%20Id%20Generator%20Resource">here</a>.</p>
 <h3 id="command-line">Command Line</h3>
-<p>Client URL or popularly known as cURL is a command-line utility that is used to send and receive data from or to a server. As many developers and users prefer using this utility over normal web applications, OpenEPCIS Event Hash Generator supports the generation of hash ids using the cURL command. Users can make requests to the service <code>https://tools.openepcis.io/api/hashIdGenerator</code> using their preferred document. Following is an example of a cURL request to generate hash ids for JSON document:</p>
+<p>Client URL or popularly known as cURL is a command-line utility that is used to send and receive data from or to a server. As many developers and users prefer using this utility over normal web applications, OpenEPCIS Event Hash Generator supports the generation of hash ids using the cURL command. Users can make requests to the service <code>https://tools.openepcis.io/api/generate/event-hash/document</code> using their preferred document or if you have list of EPCIS events then make request to <code>https://tools.openepcis.io/api/generate/event-hash/events</code>. Following is an example of a cURL request to generate hash ids for JSON document:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#a40000">curl</span> <span style="color:#a40000">-X</span> <span style="color:#a40000">&#39;POST&#39;</span> <span style="color:#a40000">\</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a40000">&#39;https:</span><span style="color:#8f5902;font-style:italic">//tools.openepcis.io/api/hashIdGenerator&#39; \
+</span></span><span style="display:flex;"><span>  <span style="color:#a40000">&#39;https:</span><span style="color:#8f5902;font-style:italic">//tools.openepcis.io/api/generate/event-hash/document&#39; \
 </span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span>  <span style="color:#a40000">-H</span> <span style="color:#a40000">&#39;accept:</span> <span style="color:#a40000">application/json&#39;</span> <span style="color:#a40000">\</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a40000">-H</span> <span style="color:#a40000">&#39;Content-Type:</span> <span style="color:#a40000">application/json&#39;</span> <span style="color:#a40000">\</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#a40000">-d</span> <span style="color:#a40000">&#39;</span><span style="color:#000;font-weight:bold">{</span>

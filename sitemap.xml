@@ -6,13 +6,13 @@
   </url><url>
     <loc>https://openepcis.github.io/docs/epcis/</loc>
   </url><url>
-    <loc>https://openepcis.github.io/docs/document-format-converter/</loc>
+    <loc>https://openepcis.github.io/docs/format-converter/</loc>
   </url><url>
-    <loc>https://openepcis.github.io/docs/document-version-converter/</loc>
+    <loc>https://openepcis.github.io/docs/version-converter/</loc>
+  </url><url>
+    <loc>https://openepcis.github.io/docs/identifier-converter/</loc>
   </url><url>
     <loc>https://openepcis.github.io/docs/event-hash-generator/</loc>
-  </url><url>
-    <loc>https://openepcis.github.io/docs/identifiers-converter/</loc>
   </url><url>
     <loc>https://openepcis.github.io/docs/test-data-generator/</loc>
   </url><url>
